@@ -3,7 +3,8 @@
 **Proyecto SIGA — Sistema Inteligente de Gestion de Aulas · Equipo FGMMN**
 Universidad Tecnica Estatal de Quevedo · ISR-401 Ingenieria de Requerimientos
 
-Actualizado el 2026-09-03, tras la reincorporacion de un integrante y la retirada de otro.
+Actualizado el 2026-09-03, tras la reincorporacion de un integrante, y el 2026-09-12, para declarar
+retirados a los dos nombres del SGA que no forman parte del equipo.
 
 ---
 
@@ -19,6 +20,19 @@ Actualizado el 2026-09-03, tras la reincorporacion de un integrante y la retirad
 califico; la tercera se reincorpora para la ronda terminal de campo y responde por el
 trabajo que produzca a partir de su fecha de incorporacion.
 
+### Integrantes retirados
+
+| Integrante | Situacion |
+|---|---|
+| Mendoza Palma, Allan Jeremy | **Retirado del equipo** |
+| Gilces Carranza, Jose Ignacio | **Retirado del equipo** |
+
+Los dos figuran en el grupo `FGMMN` del Sistema de Gestion Academica y ninguno forma parte
+del equipo activo. **No produjeron artefactos ni confirmaciones en este repositorio**, no
+participan en la Entrega Final ni en el examen final, y no se les atribuye ninguna parte del
+trabajo ni responsabilidad sobre lo entregado. Por eso no tienen commits, ni fila en el
+aporte individual, ni firma en ningun documento del equipo. El apartado 3 da el detalle.
+
 ## 2. Que dice el historial, que es lo que se puede comprobar
 
 Esta declaracion no pide que se le crea. El recuento por autor sobre la rama por defecto es
@@ -26,11 +40,12 @@ comprobable con `git shortlog -sne main`:
 
 | Autor del historial | Commits | Correo de la firma | Situacion |
 |---|---|---|---|
-| Gary Alberto Sanchez Cornejo | 163 | gsanchezc6@uteq.edu.ec | Acreditado |
+| Gary Alberto Sanchez Cornejo | 169 | gsanchezc6@uteq.edu.ec | Acreditado |
 | Yeranick Esther Munoz Quinonez | 83 | ymunozq@uteq.edu.ec | Acreditada |
 | Winston Damian Cedeno Avila | 12 | wcedenoa2@uteq.edu.ec | Acreditado. **Incorporado el 2026-09-02**; sus confirmaciones empiezan con la ronda terminal |
 
-Recuento actualizado el 2026-09-12 sobre el commit `3080481`.
+Recuento actualizado el 2026-09-12 sobre el commit `13dd0af`. Mendoza Palma y Gilces Carranza,
+retirados, no tienen ninguna confirmacion.
 
 Hasta el 2026-09-03 esta tabla declaraba **cero** confirmaciones para el tercer integrante, y
 se dejaba el cero a la vista porque la alternativa habria sido afirmar una contribucion que el
@@ -68,13 +83,13 @@ cuatro, y observo --correctamente-- que dos de ellos no tenian ninguna confirmac
 historial. Sobre el listado completo del SGA **son dos los que no aparecen en el historial**,
 y este apartado resuelve a los dos:
 
-| Integrante declarado en el SGA | Situacion a 2026-09-07 |
+| Integrante declarado en el SGA | Situacion a 2026-09-12 |
 |---|---|
 | Sanchez Cornejo, Gary Alberto | Activo. Analista lider |
 | Munoz Quinonez, Yeranick Esther | Activa. Documentacion, trazabilidad y auditoria |
 | Cedeno Avila, Winston Damian | **Reincorporado** el 2026-09-02. Asume la transcripcion y anonimizacion del corpus de entrevistas de la ronda terminal |
-| Mendoza Palma, Allan Jeremy | **Retirado del equipo.** No produjo artefactos ni confirmaciones en este repositorio y no participa en el examen final |
-| Gilces Carranza, Jose Ignacio | **No participo en ningun momento.** Consta en el grupo del SGA y no produjo artefactos ni confirmaciones. No se le atribuye ninguna parte del trabajo |
+| Mendoza Palma, Allan Jeremy | **Retirado del equipo.** No produjo artefactos ni confirmaciones en este repositorio y no participa en la Entrega Final ni en el examen final |
+| Gilces Carranza, Jose Ignacio | **Retirado del equipo.** No produjo artefactos ni confirmaciones en este repositorio, no participo en el trabajo en ningun momento y no participa en la Entrega Final ni en el examen final |
 
 **Se declara de mas, no de menos.** El recuento anterior de este documento decia cuatro
 porque seguia a la caratula; el listado del SGA dice cinco. Se corrige al alza aunque el

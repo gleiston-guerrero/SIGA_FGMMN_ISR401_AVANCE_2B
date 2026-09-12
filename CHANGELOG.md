@@ -8,6 +8,35 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.15.1] - 2026-09-12
+
+Declaracion uniforme de la composicion del equipo.
+
+### Cambiado
+
+- **El equipo activo son tres integrantes** --- Sanchez Cornejo, Munoz Quinonez y Cedeno
+  Avila --- y **Mendoza Palma, Allan Jeremy y Gilces Carranza, Jose Ignacio estan retirados del
+  equipo**. Hasta ahora varios documentos solo nombraban a Mendoza Palma como retirado y a
+  Gilces Carranza como alguien que «no participo». Se declara igual en `README.md`,
+  `04_Trazabilidad/composicion_equipo.md`, el ERS, `registro_osf.md`, el banco de preguntas y
+  el README de `10_Autoria`: no produjeron artefactos ni confirmaciones, no participan en la
+  Entrega Final ni en el examen final y no se les atribuye ninguna parte del trabajo.
+- **El folleto de la defensa** listaba a los cinco como autores; ahora lista a los tres.
+- `composicion_equipo.md` pone al dia el recuento por autor.
+
+### Sin cambios, a proposito
+
+- Los documentos firmados en fechas anteriores --- el expediente etico, el registro OSF archivado
+  y la solicitud de cambio de composicion --- conservan la composicion de su momento.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.4`. `2B-final-v5.3` (`13dd0af`) y todas las anteriores pasan a ser
+historicas; la tabla completa esta en `[2B-1.15.0]`.
+
+---
+
 ## [2B-1.15.0] - 2026-09-12
 
 Cierre de las filas de la matriz de trazabilidad que se podian cerrar sin inventar evidencia.

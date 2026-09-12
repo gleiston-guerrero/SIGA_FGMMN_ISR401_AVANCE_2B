@@ -46,10 +46,13 @@ la razon por la que no se revirtio estan declaradas en
 | Munoz Quinonez, Yeranick Esther | Documentacion, trazabilidad y gestion de evidencias | ymunozq@uteq.edu.ec | [`0009-0005-7711-8730`](https://orcid.org/0009-0005-7711-8730) |
 | Cedeno Avila, Winston Damian | Transcripcion y anonimizacion del corpus de entrevistas | wcedenoa2@uteq.edu.ec | [`0009-0000-6086-6269`](https://orcid.org/0009-0000-6086-6269) |
 
-> **Sobre la composicion.** Cedeno Avila se reincorpora el 2026-09-02 para la ronda terminal
-> de campo. Mendoza Palma, Allan Jeremy, que figuraba en la caratula del SGA, se retiro del
-> equipo sin producir artefactos ni confirmaciones. Quien responde por que, y desde cuando,
-> se declara en
+> **Sobre la composicion.** El equipo activo son **tres integrantes**: los de la tabla. Cedeno
+> Avila se reincorporo el 2026-09-02 para la ronda terminal de campo. Los otros dos nombres
+> que figuran en el grupo `FGMMN` del SGA, **Mendoza Palma, Allan Jeremy** y **Gilces
+> Carranza, Jose Ignacio**, estan **retirados del equipo**: no produjeron artefactos ni
+> confirmaciones en este repositorio, no participan en la Entrega Final ni en el examen final
+> y no se les atribuye ninguna parte del trabajo. Por eso no tienen commits, ni aporte
+> individual, ni firma. Quien responde por que, y desde cuando, se declara en
 > [`04_Trazabilidad/composicion_equipo.md`](04_Trazabilidad/composicion_equipo.md).
 
 > **Sobre los ORCID.** El apartado 9.2 de la guia los exige. Los tres integrantes se
@@ -97,7 +100,7 @@ solo en el repositorio de su entrega.
 | Version citada por el manuscrito | [`10.5281/zenodo.22663649`](https://doi.org/10.5281/zenodo.22663649) --- version `2B-1.12.0`, la que corresponde a este arbol |
 | Registro previo del protocolo en OSF | [`10.17605/OSF.IO/7PQ3H`](https://doi.org/10.17605/OSF.IO/7PQ3H) |
 | **Caratula de identificacion** | [`caratula_identificacion_SGA.pdf`](caratula_identificacion_SGA.pdf), con la URL del repositorio, el identificador del ultimo commit y la etiqueta de linea base. Se deposita aqui ademas de subirse al Sistema de Gestion Academica |
-| **Linea base vigente** | Etiqueta anotada **`2B-final-v5.3`**, la **unica vigente**: la version entregada a la rubrica de cierre del Proyecto Fin de Curso, con el aporte individual y la verificacion previa firmados el 2026-09-12. Esta sobre el ultimo commit de la rama `main`. **Quien revise este repositorio debe ir directamente a esa etiqueta** (`git checkout 2B-final-v5.3`). Sustituye a `2B-final-v5.2`. `2B-final`, `2B-final-v2.1`, `2B-final-v3.0`, `2B-final-v4.0`, `2B-final-v5.0`, `2B-final-v5.1` y `2B-final-v5.2` se conservan **solo como referencia historica** de lo que se califico o deposito en cada fecha; ninguna es linea base. La caratula nombra el commit anterior al que la deposita, porque un archivo no puede contener el identificador del commit que lo contiene |
+| **Linea base vigente** | Etiqueta anotada **`2B-final-v5.4`**, la **unica vigente**: la version entregada a la rubrica de cierre del Proyecto Fin de Curso, con el aporte individual y la verificacion previa firmados el 2026-09-12. Esta sobre el ultimo commit de la rama `main`. **Quien revise este repositorio debe ir directamente a esa etiqueta** (`git checkout 2B-final-v5.4`). Sustituye a `2B-final-v5.3`. `2B-final`, `2B-final-v2.1`, `2B-final-v3.0`, `2B-final-v4.0`, `2B-final-v5.0`, `2B-final-v5.1`, `2B-final-v5.2` y `2B-final-v5.3` se conservan **solo como referencia historica** de lo que se califico o deposito en cada fecha; ninguna es linea base. La caratula nombra el commit anterior al que la deposita, porque un archivo no puede contener el identificador del commit que lo contiene |
 | Desviaciones respecto del protocolo | `06_Experimento/registro_previo/bitacora_desviaciones.pdf` |
 | Codigo archivado en Software Heritage | `swh:1:snp:861295fead33417e3efc2753fd4a34897014a891` |
 | Autoevaluacion FAIR | [`fair_assessment.pdf`](fair_assessment.pdf) --- **22 de 26 indicadores, 84,62 %**, nivel *moderate*. Salida real de F-UJI 4.0.0; el volcado crudo esta en `fair_assessment.json` y el informe lo genera `generar_fair_assessment.py` |

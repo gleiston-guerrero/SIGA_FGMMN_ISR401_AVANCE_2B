@@ -30,9 +30,9 @@ Este README declara el estado real de cada elemento. **Los doce estan depositado
 
 ## Sobre las firmas de A10
 
-El elemento pide el documento **«firmado por los cinco»**. Este equipo son tres: la propia
-guia declara cuatro integrantes en su pagina de identificacion, y de esos cuatro uno se
-retiro. Se consulto por escrito al docente responsable, que respondio el 2026-09-04:
+El elemento pide el documento **«firmado por los cinco»**. Este equipo son tres: de los cinco
+nombres del grupo del SGA, **Mendoza Palma, Allan Jeremy** y **Gilces Carranza, Jose Ignacio**
+estan retirados del equipo y no produjeron ningun artefacto. Se consulto por escrito al docente responsable, que respondio el 2026-09-04:
 **«No debe aparecer nadie mas en el documento.»**
 
 La consulta y la respuesta constan en

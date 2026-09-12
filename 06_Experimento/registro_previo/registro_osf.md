@@ -130,8 +130,8 @@ dos fotografías, porque no tienen el mismo valor probatorio.
 | Yeranick Esther Munoz Quinonez | write | si |
 
 **Eran los dos integrantes del equipo cuando se registro el protocolo.** Desde el
-2026-09-02 el equipo son tres: Cedeno Avila, Winston Damian se reincorporo y Mendoza Palma,
-Allan Jeremy se retiro. El registro del protocolo **no se modifica** --alterar un
+2026-09-02 el equipo activo son tres: Cedeno Avila, Winston Damian se reincorporo, y Mendoza
+Palma, Allan Jeremy y Gilces Carranza, Jose Ignacio estan retirados. El registro del protocolo **no se modifica** --alterar un
 pre-registro despues de recoger datos es justamente lo que el pre-registro existe para
 impedir--; la incorporacion posterior se documenta en `osf_deviations.pdf`.
 

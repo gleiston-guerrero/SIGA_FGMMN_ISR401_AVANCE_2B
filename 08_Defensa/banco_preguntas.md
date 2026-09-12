@@ -250,9 +250,9 @@ el repositorio donde se resuelve.
 → `04_Trazabilidad/aporte_individual.csv`
 
 **G2. Como se reparte el trabajo entre los integrantes?**
-De forma equilibrada entre los dos que sostuvieron la entrega calificada, y el historial lo
-demuestra sin necesidad de creer en la declaracion: 65 commits de Sanchez Cornejo y 55 de
-Munoz Quinonez, los dos con correo institucional. No hay ningun otro autor en el historial.
+Entre los tres integrantes activos, y el historial lo muestra con correo institucional:
+Sanchez Cornejo, Munoz Quinonez y Cedeno Avila son los unicos autores. El recuento vigente
+esta en `04_Trazabilidad/composicion_equipo.md`.
 La declaracion de aporte tiene una fila por commit, cada una con su identificador, y todas
 resuelven.
 
@@ -260,7 +260,8 @@ El equipo son hoy **tres**: Cedeno Avila, Winston Damian se reincorporo el 2026-
 asume la transcripcion y anonimizacion del corpus de la ronda terminal. Sus confirmaciones
 empiezan con ese trabajo, y hasta que existan la declaracion muestra su recuento en cero en
 lugar de atribuirle una contribucion que el historial todavia no respalda. Mendoza Palma,
-Allan Jeremy, que figuraba en la caratula del SGA, se retiro sin producir artefactos.
+Allan Jeremy y Gilces Carranza, Jose Ignacio, que figuran en el grupo del SGA, estan
+retirados del equipo: no produjeron artefactos ni commits y no se les atribuye trabajo.
 -> `04_Trazabilidad/aporte_individual.csv` y `04_Trazabilidad/composicion_equipo.md`
 
 **G2b. El registro previo en OSF declara mas personas de las que firman. Por que?**
