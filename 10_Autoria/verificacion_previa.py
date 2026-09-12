@@ -41,6 +41,7 @@ ELEMENTOS_A = {
 }
 
 resultados = []
+COMMITTERS_AJENOS = []
 
 
 def anotar(n, texto, estado, detalle):
@@ -113,7 +114,10 @@ def comprobar(raiz, clonado):
            else "%d archivo(s): %s" % (len(vacios), ", ".join(vacios[:5])))
 
     # --- 5: autores del historial (el manifiesto ya se comprobo arriba) ----
-    _autores(raiz)
+    # _autores ejecuta tambien las comprobaciones 6 a 12 y devuelve las marcas
+    # de P4. Hasta el 2026-09-12 su resultado se descartaba aqui, de modo que
+    # el apartado P4 del informe decia siempre que no habia ninguna marca.
+    return _autores(raiz)
 
 
 def comprobar_manifiesto(raiz):
@@ -156,9 +160,22 @@ def _autores(raiz):
            else "Autores no declarados: %s" % ", ".join(ajenos))
 
     # --- 5b: ningun agente automatizado firma (criterio P4) ----------------
-    cuerpos = correr(["git", "log", "--format=%B"], raiz).stdout.lower()
-    marcas = [m for m in ("co-authored-by", "generated with", "noreply@")
-              if m in cuerpos]
+    # Se buscan trailers, no palabras sueltas: un mensaje que explica que un
+    # commit se hizo desde la web de GitHub menciona noreply@github.com sin ser
+    # una firma. Los committers ajenos al equipo se informan aparte.
+    registro = correr(["git", "log", "--format=%x1e%h%x1f%ce%x1f%cn%x1f%ae%x1f%B"],
+                      raiz).stdout
+    marcas = []
+    for bloque in registro.split("\x1e")[1:]:
+        h, ce, cn, ae, cuerpo = (bloque.split("\x1f") + [""] * 5)[:5]
+        for linea in cuerpo.splitlines():
+            l = linea.strip().lower()
+            if l.startswith("co-authored-by:") or l.startswith("generated with") \
+                    or (l.startswith("signed-off-by:") and ae.lower() not in l):
+                marcas.append("%s (%s)" % (h, linea.strip()[:60]))
+        if ce.strip() not in CORREOS:
+            COMMITTERS_AJENOS.append("`%s`, aplicado por %s <%s> con autor %s"
+                                     % (h, cn.strip(), ce.strip(), ae.strip()))
     anotar(6, "Existe etiqueta anotada de linea base, publicada y alcanzable "
               "desde la rama por defecto", *etiquetas(raiz))
 
@@ -382,12 +399,18 @@ def escribir(marcas, clonado, sha, raiz):
               "commit: %s. El criterio P4 sanciona esto con calificacion cero." % ", ".join(marcas),
               "Hay que reescribir esos mensajes antes de la entrega.", ""]
     else:
-        L += ["Comprobado sobre el cuerpo completo de todos los mensajes de commit: **ninguna**",
-              "marca de coautoria automatizada, ninguna firma de agente, ningun correo de",
-              "notificacion. Todos los autores del historial son integrantes del equipo con su",
-              "correo institucional. Que parte de las operaciones de Git las ejecuto un asistente",
-              "de inteligencia artificial, con la identidad del integrante al que se atribuia cada",
-              "cambio, se declara en `10_Autoria/declaracion_uso_ia.md`.", ""]
+        L += ["Comprobado linea a linea sobre el cuerpo de todos los mensajes de commit:",
+              "**ningun** trailer `Co-Authored-By`, ninguna linea `Generated with` y ningun",
+              "`Signed-off-by` ajeno al autor. Todos los autores del historial son integrantes del",
+              "equipo con su correo institucional.", ""]
+    if COMMITTERS_AJENOS:
+        L += ["**Committer distinto de un integrante** --- el autor si lo es: %s. Es la firma"
+              % "; ".join(COMMITTERS_AJENOS),
+              "con la que GitHub registra un commit hecho desde su interfaz web, explicada en",
+              "`04_Trazabilidad/composicion_equipo.md`.", ""]
+    L += ["Que parte de las operaciones de Git las ejecuto un asistente de inteligencia",
+          "artificial, con la identidad del integrante al que se atribuia cada cambio, se",
+          "declara en `10_Autoria/declaracion_uso_ia.md`.", ""]
     L += ["---", "", "## Lo que esta lista no decide", "",
           "Tres comprobaciones quedan marcadas como **manual** a proposito.",
           "",

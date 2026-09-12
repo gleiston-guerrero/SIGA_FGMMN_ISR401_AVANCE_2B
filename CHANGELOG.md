@@ -8,6 +8,47 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.14.2] - 2026-09-12
+
+Segunda auditoria contra la rubrica de cierre, sobre un checkout limpio de `2B-final-v5.1`.
+Todos los criterios de piso y los once items cumplen; ningun residuo en el arbol ni en los
+metadatos de los archivos. Se corrigen los tres defectos que encontro.
+
+### Corregido
+
+- **La declaracion de uso de IA no cubria el ultimo tramo del 2026-09-12** (criterio de piso
+  P9): el reparto de firmas calculado por script, el armado de los PDF firmados, las etiquetas
+  v5.0 a v5.2 y esta auditoria. Se anaden.
+- **La comprobacion P4 de `verificacion_previa.py` no se ejecutaba.** La funcion que la calcula
+  devolvia su resultado y quien la llamaba lo descartaba, de modo que el informe decia siempre
+  que no habia ninguna marca de coautoria. Ademas buscaba palabras sueltas, y habria marcado un
+  mensaje que solo explica un commit hecho desde la web de GitHub. Ahora busca trailers linea a
+  linea e informa aparte de los committers ajenos al equipo. **Resultado real sobre el
+  historial: ningun trailer `Co-Authored-By` ni `Generated with`; un unico committer ajeno,
+  `GitHub <noreply@github.com>` en `d0a3138`, con autor Cedeno Avila**, explicado en
+  `04_Trazabilidad/composicion_equipo.md`. El apartado P4 de la verificacion firmada el
+  2026-09-12 salio de la version defectuosa; su conclusion coincide con el resultado real, salvo
+  que no mencionaba ese committer. No se vuelve a firmar.
+- **El README no listaba todos los paquetes de LaTeX.** Faltaban `array`, que usa el ERS desde
+  la 2B-1.14.0, y `inputenc`, `fontenc`, `amsmath` y `csquotes`. Ahora se listan por documento.
+
+### Linea base
+
+Esta tabla sustituye a la de `[2B-1.14.1]`. **Quien revise el repositorio debe ir directamente
+a la etiqueta vigente**: `git checkout 2B-final-v5.2`.
+
+| Etiqueta | Estado | Que identifica |
+|---|---|---|
+| **`2B-final-v5.2`** | **VIGENTE** | La version entregada a la rubrica de cierre: el ultimo commit de `main` |
+| `2B-final-v5.1` | Historica | La 2B-1.14.1, con los documentos firmados y antes de esta auditoria, sobre `09edc04` |
+| `2B-final-v5.0` | Historica | La 2B-1.14.0 antes de depositar los documentos firmados, sobre `3530bb2` |
+| `2B-final-v4.0` | Historica | La del examen final de la semana 19, sobre `6bb3b08` |
+| `2B-final-v3.0` | Historica | La depositada en Zenodo el 2026-09-04 |
+| `2B-final-v2.1` | Historica | La que el docente califico provisionalmente sobre `0e69071` |
+| `2B-final` | Historica | Apunta al mismo commit que `2B-final-v2.1` |
+
+---
+
 ## [2B-1.14.1] - 2026-09-12
 
 Deposito de los dos documentos firmados que cerraban la version 2B-1.14.0.
