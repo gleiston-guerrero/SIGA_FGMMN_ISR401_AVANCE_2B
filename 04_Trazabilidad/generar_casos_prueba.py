@@ -59,7 +59,7 @@ def cobertura_mvp():
 def fichas_ia():
     if not os.path.isfile(FICHA_IA):
         return {}
-    with io.open(FICHA_IA, encoding="utf-8") as f:
+    with io.open(FICHA_IA, encoding="utf-8-sig") as f:
         return {r["Caso_de_prueba"]: r for r in csv.DictReader(f)}
 
 
@@ -112,7 +112,9 @@ def procedimiento(tipo, objetivo, elemento, umbral):
 
 
 def main():
-    with io.open(MATRIZ, encoding="utf-8") as f:
+    # utf-8-sig: la matriz lleva marca de orden de bytes, y con utf-8 a secas la
+    # primera columna se lee como "﻿ID" y el script falla.
+    with io.open(MATRIZ, encoding="utf-8-sig") as f:
         filas = list(csv.DictReader(f))
     mvp = cobertura_mvp()
     ia = fichas_ia()

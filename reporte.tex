@@ -665,7 +665,7 @@ antes de saber esto --- pero su consecuencia s\'i.
 
 La versi\'on 2.0 del ERS/SRS especifica \textbf{25 requisitos funcionales} con sus ocho
 atributos, \textbf{16 requisitos no funcionales} cuantificados sobre las
-caracter\'isticas de ISO/IEC 25010:2023, 16 casos de uso textuales, 17 historias de
+caracter\'isticas de ISO/IEC 25010:2023, 16 casos de uso textuales, 38 historias de
 usuario y 18 restricciones de dise\~no. El documento completo se entrega compilado en
 \texttt{01\_ERS/}.
 
@@ -702,10 +702,10 @@ una correcci\'on de redacci\'on.
 
 La matriz de trazabilidad contiene \textbf{75 filas}, por encima de las
 \textbf{60} que exige el criterio, y sin una sola celda vac\'ia. De ellas,
-\textbf{41 cierran la cadena de extremo a extremo}; las 34 restantes se declaran una
+\textbf{59 cierran la cadena de extremo a extremo}; las 16 restantes se declaran una
 a una con su causa en \texttt{04\_Trazabilidad/huerfanos\_y\_cadenas\_rotas.md}:
 nueve son hu\'erfanas porque el requisito nace de an\'alisis normativo y no de campo,
-diecis\'eis est\'an parciales a falta de un eslab\'on hacia adelante, y nueve son
+una est\'a parcial a falta de una clase que la realice, y seis son
 restricciones de dise\~no con alg\'un eslab\'on que no aplica, porque no se verifican por
 caso de prueba sino por revisi\'on. La cifra se recalcula con
 \texttt{python 04\_Trazabilidad/verificar\_matriz.py}.

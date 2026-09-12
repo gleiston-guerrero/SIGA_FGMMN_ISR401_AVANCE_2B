@@ -8,6 +8,64 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.15.0] - 2026-09-12
+
+Cierre de las filas de la matriz de trazabilidad que se podian cerrar sin inventar evidencia.
+
+### Anadido
+
+- **Diecisiete historias de usuario con su criterio de aceptacion, `HU-22` a `HU-38`**, en el
+  ERS (version 4.6), para `RF-06`, `RF-09`, `RF-14`, `RF-17`, `RF-18`, `RNF-01`, `RNF-04`,
+  `RNF-08`, `RNF-11`, `RNF-13`, `RNF-14`, `RNF-16`, `RD-01`, `RD-10`, `RD-11`, `RNF-IA-07` y
+  `RNF-IA-08`. Cada criterio reproduce el criterio de verificacion que el requisito ya tenia:
+  ningun umbral, actor ni cifra es nuevo. El ERS escribia historias solo para los requisitos
+  Must; desde la 4.6 las escribe tambien para los que tienen fuente declarada.
+
+### Cambiado
+
+- **La matriz pasa de 41 a 59 filas con la cadena completa**, de 75. Se cierran 18 filas,
+  entre ellas `RNF-IA-07` y `RNF-IA-08`, las dos del componente inteligente que seguian
+  parciales. El caso de uso de `RNF-IA-08` pasa a «No aplica»: es un requisito de gobernanza que
+  se verifica por revision documental. Los requisitos funcionales con la cadena hacia adelante
+  completa pasan de 23 a **25 de 25**. Se actualizan la copia de la matriz del paquete de
+  Zenodo, los casos de prueba, `huerfanos_y_cadenas_rotas.md`, el reporte y el banco de
+  preguntas de la defensa. El ERS pasa a 134 paginas, sin desbordes.
+- **Quedan abiertas 16 filas, a proposito:** las 13 sin fuente de campo, porque escribirles
+  historia seria atribuir a alguien una necesidad que nadie expreso; `RD-02`, porque su fila
+  en la matriz y su ficha en el ERS describen restricciones distintas; y `RNF-15`, porque
+  ninguna clase del modelo la realiza.
+
+### Corregido
+
+- `generar_casos_prueba.py` fallaba al leer la matriz y la ficha de IA por su marca de orden
+  de bytes, y por eso `casos_prueba.csv` no se regeneraba desde el 2026-09-08: la fila de
+  `RNF-IA-03` no reflejaba el respaldo de campo que se le dio ese dia. Regenerado, la recoge.
+
+### Pendiente declarado
+
+- La copia de la matriz en `07_Publicacion/dataset_zenodo/` ya no coincide con la depositada
+  en Zenodo `2B-1.12.0`. El tablero de Jira sigue nombrando las historias anteriores; su export
+  se regenera desde la herramienta y no se edita a mano.
+- La verificacion previa firmada sigue siendo la del clon limpio de `3530bb2`.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.3`.
+
+| Etiqueta | Estado | Que identifica |
+|---|---|---|
+| **`2B-final-v5.3`** | **VIGENTE** | La version entregada a la rubrica de cierre: el ultimo commit de `main` |
+| `2B-final-v5.2` | Historica | La 2B-1.14.2, antes de cerrar las filas de la matriz, sobre `1f05c14` |
+| `2B-final-v5.1` | Historica | La 2B-1.14.1, con los documentos firmados, sobre `09edc04` |
+| `2B-final-v5.0` | Historica | La 2B-1.14.0, sobre `3530bb2` |
+| `2B-final-v4.0` | Historica | La del examen final de la semana 19, sobre `6bb3b08` |
+| `2B-final-v3.0` | Historica | La depositada en Zenodo el 2026-09-04 |
+| `2B-final-v2.1` | Historica | La que el docente califico provisionalmente sobre `0e69071` |
+| `2B-final` | Historica | Apunta al mismo commit que `2B-final-v2.1` |
+
+---
+
 ## [2B-1.14.2] - 2026-09-12
 
 Segunda auditoria contra la rubrica de cierre, sobre un checkout limpio de `2B-final-v5.1`.

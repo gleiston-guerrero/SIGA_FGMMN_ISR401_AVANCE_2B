@@ -85,12 +85,12 @@ implementan los componentes SensorIoT y LecturaSensor.
 Completa en filas, no en cadenas, y conviene decirlo en ese orden. Son **75 filas** sobre
 las **60** que pide el criterio, con **cero celdas vacias** y las cuatro columnas que
 faltaban -clase, proceso, caso de prueba y estado de la traza- ya anadidas: la matriz paso
-de 13 a 18 columnas. El **92 %** de los requisitos, 23 de 25, tiene la cadena hacia
+de 13 a 18 columnas. El **100 %** de los requisitos funcionales, 25 de 25, tiene la cadena hacia
 adelante completa; antes era 12 de 25.
 
-Ahora la parte incomoda, por si la preguntan: de las 75 filas, **41 cierran la cadena
-entera**. Las otras 34 no se esconden, se clasifican: **nueve huerfanas** -el requisito nace
-de la ley, no de una entrevista-, **dieciseis parciales** y **nueve restricciones de diseno**
+Ahora la parte incomoda, por si la preguntan: de las 75 filas, **59 cierran la cadena
+entera**. Las otras 16 no se esconden, se clasifican: **nueve huerfanas** -el requisito nace
+de la ley, no de una entrevista-, **una parcial** y **seis restricciones de diseno**
 con algun eslabon que no aplica, porque se verifican por revision y no por caso de prueba.
 Cada una con su causa y su accion, y la cifra se recalcula con
 `python 04_Trazabilidad/verificar_matriz.py`.
@@ -373,14 +373,15 @@ estadistica alcanza un panel ciego de tres jueces y que tamano necesitaria una r
 estaba calculada por script antes de enunciarla.
 → `06_Experimento/resultados/power_calculation.csv`
 
-**I7. La matriz tiene 41 filas con cadena completa de 75. ¿Y las otras 34?**
+**I7. La matriz tiene 59 filas con cadena completa de 75. ¿Y las otras 16?**
 Las setenta y cinco tienen **todos sus eslabones declarados**: ninguna celda dice nada
 ambiguo. Las que no cierran no estan a medio hacer, **no pueden** cerrar: nueve nacen del
 analisis normativo de la Ley Organica de Proteccion de Datos y no de entrevista --inventarles
-evidencia de campo seria fabricarla--, once son restricciones de diseno que se verifican por
-revision y no por caso de prueba, y `RF-09` y `RF-18` no llevan historia de usuario porque
-**no son Must**, y el ERS escribe una historia por requisito obligatorio: escribirlas
-contradiria su propia regla. La columna se comprueba por script.
+evidencia de campo seria fabricarla--, seis son restricciones de diseno que no tienen fuente o que se verifican por
+revision y no por caso de prueba, `RNF-15` no tiene ninguna clase que la realice, y `RD-02`
+se deja abierta a proposito: su fila de la matriz y su ficha del ERS dicen cosas distintas, y
+escribirle una historia fijaria la contradiccion. Las demas se cerraron con historias
+`HU-22` a `HU-38`: tenian fuente y solo les faltaba la historia. La columna se comprueba por script.
 → `04_Trazabilidad/huerfanos_y_cadenas_rotas.md`, `python 04_Trazabilidad/verificar_matriz.py`
 
 **I8. Hay dieciseis entrevistas y quince videos. ¿Donde esta el que falta?**

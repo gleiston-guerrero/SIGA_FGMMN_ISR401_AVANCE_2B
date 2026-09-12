@@ -16,6 +16,7 @@
 4.3 & 31/08/2026 & Equipo FGMMN & Se aplican las decisiones del comite de control de cambios CCB-01: RF-12 fija plazo de primera respuesta por prioridad y estados intermedios visibles (SC-02), y RF-24 y RF-25 pasan a Must por ser obligaciones legales (SC-04). RF-11 dirige la notificacion al tecnico asignado. Cada ficha declara ahora de que requisitos depende y a cuales alimenta. Esta version corresponde a la linea base \textbf{v2.1} acordada en CCB-01. SC-03 queda diferida a verificacion tecnica, de modo que RF-06 no se modifica. \\ \hline
 4.4 & 03/09/2026 & Equipo FGMMN & Se atiende la seccion 8 de la guia de desarrollo individualizada: la subseccion 3.3.3 especifica los ocho requisitos no funcionales del componente inteligente, RNF-IA-01 a RNF-IA-08, con enunciado verificable, metrica, unidad, umbral, metodo de verificacion, responsable y frecuencia de medicion, y los ocho se incorporan a la matriz de trazabilidad con su elemento de diseno y su caso de prueba. Se anade el plan de monitoreo posterior al despliegue con once indicadores. El documento se recompone en A4. Se actualiza el Anexo A.1 con la reincorporacion de un integrante y la retirada de otro. \\ \hline
 4.5 & 12/09/2026 & Equipo FGMMN & Se atiende el item A4 de la rubrica de cierre: las 68 tablas pasan de anchos fijos en centimetros, que sumaban mas que la caja de texto de A4, a anchos proporcionales a ella, y se corrigen los parrafos que se salian del margen. El registro de compilacion queda sin ningun desborde horizontal ni vertical. No cambia el contenido de ningun requisito. \\ \hline
+4.6 & 12/09/2026 & Equipo FGMMN & Se escriben diecisiete historias de usuario con su criterio de aceptación, HU-22 a HU-38, para los requisitos Should, no funcionales, del componente inteligente y restricciones de diseño que tenían fuente declarada en la matriz y les faltaba solo la historia y el criterio. Cierran 18 filas de la matriz, que pasa de 41 a 59 cadenas completas. No cambia el enunciado de ningún requisito. \\ \hline
 \caption{Historial de versiones}
 \end{longtable}
 \endgroup
@@ -1101,7 +1102,7 @@ RD-18 & Alcance & El sistema no controlará la red eléctrica general del campus
 
 \addcontentsline{toc}{subsection}{3.6 Historias de usuario (formato Connextra) y criterios de aceptación (Gherkin)}
 
-Nuevo en esta entrega. Se redacta una historia de usuario en formato Connextra (``Como ⟨rol⟩, quiero ⟨funcionalidad⟩, para ⟨beneficio⟩'', Cohn, 2004) para cada RF de prioridad Must, con al menos un escenario de aceptación en formato Gherkin (Dado-Cuando-Entonces).
+Nuevo en esta entrega. Se redacta una historia de usuario en formato Connextra (``Como ⟨rol⟩, quiero ⟨funcionalidad⟩, para ⟨beneficio⟩'', Cohn, 2004) para cada RF de prioridad Must, con al menos un escenario de aceptación en formato Gherkin (Dado-Cuando-Entonces). Desde la versión 4.6 se escriben también, con el mismo formato, para los requisitos Should, no funcionales, del componente inteligente y restricciones de diseño que tienen fuente declarada en la matriz de trazabilidad: HU-22 a HU-38. Los requisitos sin fuente de campo no reciben historia, porque redactarla exigiría atribuir a una persona una necesidad que nadie expresó.
 
 
 \subsubsection*{HU-01 (RF-01)}
@@ -1978,6 +1979,160 @@ solicitud con esa prioridad y el plazo vence sin primera respuesta, entonces el 
 escala la solicitud al rol superior y lo notifica; y dado que una solicitud queda en espera
 de tramite externo, cuando el solicitante la consulta, entonces ve el estado y la causa de
 la espera.}
+
+\subsubsection*{HU-22 (RF-06)}
+
+\addcontentsline{toc}{subsubsection}{HU-22 (RF-06)}
+
+Como Personal de Infraestructura y Mantenimiento, quiero ver en el panel una vista complementaria de la camara de un aula cuando la infraestructura lo permita, para comprobar el estado del aula sin desplazarme y sin reemplazar el sistema de videovigilancia existente.
+
+
+\textbf{CA-22.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que la camara del aula esta operativa, autorizada y accesible en la red institucional, cuando el usuario abre la vista de esa aula en el panel, entonces el flujo de la camara se muestra embebido con una latencia $\leq{}$ 3 s y el sistema de videovigilancia existente sigue funcionando sin cambios.}
+
+\subsubsection*{HU-23 (RF-09)}
+
+\addcontentsline{toc}{subsubsection}{HU-23 (RF-09)}
+
+Como Coordinadora de la Carrera, quiero conocer la probabilidad estimada de falla de cada equipo a partir de su comportamiento historico, para anticipar las fallas antes de que ocurran.
+
+
+\textbf{CA-23.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que cada equipo acumula al menos 30 dias de datos historicos y el conjunto de prueba contiene fallas conocidas, cuando se ejecuta el analisis predictivo, entonces el modelo identifica correctamente al menos el 70 \% de esas fallas y el indicador queda disponible en el panel y exportable.}
+
+\subsubsection*{HU-24 (RF-14)}
+
+\addcontentsline{toc}{subsubsection}{HU-24 (RF-14)}
+
+Como Coordinadora de la Carrera, quiero analizar el consumo energetico de cada aula, para identificar oportunidades de ahorro y recibir recomendaciones.
+
+
+\textbf{CA-24.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que hay al menos un mes de datos de consumo y dos aulas cuyas horas de ocupacion mensual difieren en al menos un 20 \%, cuando se generan las recomendaciones, entonces cada aula recibe una recomendacion que difiere de la de la otra en al menos un parametro accionable: equipo, franja horaria o umbral.}
+
+\subsubsection*{HU-25 (RF-17)}
+
+\addcontentsline{toc}{subsubsection}{HU-25 (RF-17)}
+
+Como Coordinadora de la Carrera, quiero generar reportes estadisticos sobre uso de aulas, ocupacion, condiciones ambientales, consumo energetico y estado de equipos, para disponer de informacion consolidada de las aulas.
+
+
+\textbf{CA-25.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que existen datos historicos almacenados de al menos dos aulas, cuando un usuario autorizado solicita un reporte para un rango de fechas valido, entonces el reporte se genera con los datos consolidados de esas aulas y queda disponible para los usuarios autorizados.}
+
+\subsubsection*{HU-26 (RF-18)}
+
+\addcontentsline{toc}{subsubsection}{HU-26 (RF-18)}
+
+Como Coordinadora de la Carrera, quiero exportar los reportes administrativos en PDF y en Excel, para usarlos fuera del sistema.
+
+
+\textbf{CA-26.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que el usuario esta autenticado con permisos de reportes y hay un reporte generado, cuando elige exportarlo en PDF o en Excel, entonces el archivo queda disponible para descarga en el formato elegido, con encabezados, filtros y datos completos.}
+
+\subsubsection*{HU-27 (RNF-01)}
+
+\addcontentsline{toc}{subsubsection}{HU-27 (RNF-01)}
+
+Como Personal de Infraestructura y Mantenimiento, quiero recibir las alertas de anomalia en no mas de 60 segundos desde que se detectan, para atender a tiempo la condicion del aula.
+
+
+\textbf{CA-27.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un entorno de prueba con 50 aulas simuladas, cuando se provoca una anomalia en una de ellas, entonces la alerta llega a su destinatario en $\leq{}$ 60 s medidos desde la deteccion.}
+
+\subsubsection*{HU-28 (RNF-04)}
+
+\addcontentsline{toc}{subsubsection}{HU-28 (RNF-04)}
+
+Como docente, quiero consultar el estado de un aula sin haber recibido capacitacion previa, para usar el sistema desde el primer dia.
+
+
+\textbf{CA-28.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un grupo de al menos tres usuarios reales sin capacitacion previa, cuando cada uno realiza la tarea de consultar el estado de un aula en la prueba de usabilidad, entonces la completa en $\leq{}$ 5 min.}
+
+\subsubsection*{HU-29 (RNF-08)}
+
+\addcontentsline{toc}{subsubsection}{HU-29 (RNF-08)}
+
+Como Coordinacion de la carrera, quiero que el horario academico se sincronice con el sistema sin perdida de datos, para no cruzar los horarios a mano.
+
+
+\textbf{CA-29.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un conjunto de datos de horario de prueba, cuando se sincroniza con el Sistema de Horario Academico, entonces el 100 \% de los registros importados coinciden con los de origen segun su checksum.}
+
+\subsubsection*{HU-30 (RNF-11)}
+
+\addcontentsline{toc}{subsubsection}{HU-30 (RNF-11)}
+
+Como usuario del sistema, quiero recibir exportados mis datos personales en no mas de 15 dias habiles desde que los solicito, para ejercer el derecho de acceso del articulo 13 de la Ley Organica de Proteccion de Datos Personales.
+
+
+\textbf{CA-30.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado que un usuario registra una solicitud de acceso a sus datos, cuando se mide el tiempo hasta que el archivo exportado esta disponible, entonces ese tiempo es de $\leq{}$ 15 dias habiles.}
+
+\subsubsection*{HU-31 (RNF-13)}
+
+\addcontentsline{toc}{subsubsection}{HU-31 (RNF-13)}
+
+Como Personal de Infraestructura y Mantenimiento, quiero que el sistema reanude la recepcion de datos de un aula poco despues de restablecerse la conexion de su gateway, para no perder el seguimiento del aula.
+
+
+\textbf{CA-31.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un gateway de prueba en un aula con conectividad normalmente disponible, cuando se corta y se restablece su conexion, entonces la recepcion de datos se reanuda en $\leq{}$ 5 min y no se pierde ninguna lectura posterior al reinicio.}
+
+\subsubsection*{HU-32 (RNF-14)}
+
+\addcontentsline{toc}{subsubsection}{HU-32 (RNF-14)}
+
+Como Personal de Infraestructura y Mantenimiento, quiero diagnosticar cada falla reportada dentro del tiempo que corresponde a su clase, para que una falla menor no espere como una mayor.
+
+
+\textbf{CA-32.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado el registro de tiempos de diagnostico del periodo de prueba, cuando se diagnostica una falla reportada por el sistema, entonces el tiempo desde la alerta hasta la causa es de $\leq{}$ 15 min si la falla es menor y atendible in situ, y de $\leq{}$ 24 h si exige retirar el equipo.}
+
+\subsubsection*{HU-33 (RNF-16)}
+
+\addcontentsline{toc}{subsubsection}{HU-33 (RNF-16)}
+
+Como docente, quiero que el sistema me avise explicitamente cuando un aula no tiene conectividad de red, para no tomar decisiones con datos obsoletos.
+
+
+\textbf{CA-33.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un aula piloto, cuando se desconecta totalmente su red, entonces el sistema muestra al usuario un aviso explicito de falta de conectividad, en lugar de fallar en silencio o mostrar datos obsoletos sin advertencia.}
+
+\subsubsection*{HU-34 (RD-01)}
+
+\addcontentsline{toc}{subsubsection}{HU-34 (RD-01)}
+
+Como Personal de Tecnologias de la Informacion, quiero que la comunicacion entre sensores, gateways, controladores y plataforma use protocolos compatibles con entornos IoT, para que sea interoperable, liviana y compatible con la red institucional.
+
+
+\textbf{CA-34.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado el diseno de la arquitectura de comunicacion, cuando el Personal de TI lo revisa, entonces cada enlace entre sensores, gateways, controladores y plataforma central usa MQTT, HTTP o API REST y cuenta con su validacion tecnica.}
+
+\subsubsection*{HU-35 (RD-10)}
+
+\addcontentsline{toc}{subsubsection}{HU-35 (RD-10)}
+
+Como Personal de TI, quiero que las funciones administrativas, tecnicas y de control remoto solo esten disponibles para los roles autorizados, para que nadie sin permiso actue sobre equipos, reportes, bitacoras o configuraciones.
+
+
+\textbf{CA-35.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un usuario autenticado cuyo rol no tiene permiso de control remoto, cuando intenta ejecutar un comando sobre un equipo, entonces el sistema deniega la operacion; y dado un usuario con un rol autorizado, la misma operacion se ejecuta.}
+
+\subsubsection*{HU-36 (RD-11)}
+
+\addcontentsline{toc}{subsubsection}{HU-36 (RD-11)}
+
+Como Personal de TI, quiero que cada accion de los usuarios quede registrada en la bitacora, para saber quien realizo cada operacion, cuando y con que resultado.
+
+
+\textbf{CA-36.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado un usuario autenticado, cuando ejecuta una accion de control, de reportes o de configuracion, entonces la bitacora registra el usuario, la accion, la fecha y hora y el resultado.}
+
+\subsubsection*{HU-37 (RNF-IA-07)}
+
+\addcontentsline{toc}{subsubsection}{HU-37 (RNF-IA-07)}
+
+Como Coordinacion de la carrera, quiero que el plan de monitoreo del componente inteligente se cumpla ciclo a ciclo, para detectar a tiempo cualquier degradacion del componente.
+
+
+\textbf{CA-37.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado el componente en operacion y el calendario del plan de monitoreo, cuando se revisa trimestralmente el registro de mediciones, entonces al menos el 95 \% de los ciclos previstos constan con su fecha, su valor y quien midio, y ningun indicador tiene dos ciclos consecutivos sin medir.}
+
+\subsubsection*{HU-38 (RNF-IA-08)}
+
+\addcontentsline{toc}{subsubsection}{HU-38 (RNF-IA-08)}
+
+Como Coordinacion de la carrera, quiero que la clasificacion de riesgo del componente inteligente se revise al menos una vez al ano y ante cada cambio de su alcance, para que siga correspondiendo a lo que el componente hace.
+
+
+\textbf{CA-38.} \textit{Escenario }\textit{Gherkin}\textit{ --- Dado el registro de cambios del alcance del componente en el CHANGELOG, cuando se contrasta con la fecha de la revision vigente de su clasificacion de riesgo, entonces esa revision tiene 12 meses o menos y el 100 \% de los cambios de alcance tiene su revision asociada.}
+
 
 \section*{V. PRIORIZACIÓN Y TRAZABILIDAD EXTENDIDA}
 

@@ -3,8 +3,8 @@
 **Proyecto SIGA - Equipo FGMMN - ISR-401 - Universidad Tecnica Estatal de Quevedo**
 Generado el 2026-08-31 sobre `matriz_trazabilidad.csv`, y actualizado el 2026-09-03
 al anadirse los ocho requisitos no funcionales del componente inteligente y, el 2026-09-06,
-la restriccion `RD-01`: **75 filas**
-y 18 columnas. De ellas, **41 cierran la cadena de extremo a extremo** y las 75 tienen todos sus eslabones declarados.
+la restriccion `RD-01` y, el 2026-09-12, las historias `HU-22` a `HU-38`: **75 filas**
+y 18 columnas. De ellas, **59 cierran la cadena de extremo a extremo** y las 75 tienen todos sus eslabones declarados.
 
 La guia exige que los huerfanos y las cadenas rotas se listen **con su causa y su
 accion**, no que no existan. Este documento los enumera uno a uno.
@@ -15,10 +15,10 @@ accion**, no que no existan. Este documento los enumera uno a uno.
 
 | Estado | Filas | Que significa |
 |---|---|---|
-| Completa | **38** | La fila enlaza fuente, caso de uso, clase, proceso, caso de prueba, historia y criterio |
+| Completa | **53** | La fila enlaza fuente, caso de uso, clase, proceso, caso de prueba, historia y criterio |
 | Huerfana | 9 | No procede de evidencia de campo: nace de analisis normativo o de decision tecnica |
-| Parcial | **16** | Tiene fuente de campo, pero le falta algun eslabon hacia adelante |
-| Restriccion de diseno | 11 | Restriccion RD: no se verifica por caso de prueba sino por revision de diseno |
+| Parcial | **1** | Tiene fuente de campo, pero le falta algun eslabon hacia adelante |
+| Restriccion de diseno | 12 | Restriccion RD: no se verifica por caso de prueba sino por revision de diseno |
 
 **Cero celdas vacias.** Toda celda que antes estaba en blanco declara ahora si el
 eslabon existe o por que no aplica.
@@ -31,8 +31,8 @@ cuenta como cerrada en esta matriz, porque hay dos lecturas y las dos cifras son
 | Lectura | Cifra |
 |---|---|
 | Filas **sin ningun eslabon sin declarar** --- cada celda dice que enlace existe o por que no aplica | **75 de 75** |
-| Filas con la cadena **completa**: fuente, caso de uso, clase, proceso, caso de prueba, historia y criterio | **41 de 75** --- 38 clasificadas «Completa» y 3 que la tienen entera pero son restricciones de diseno |
-| Filas que **no cierran** | **34 de 75** --- 9 huerfanas, 16 parciales y 9 restricciones de diseno con algun eslabon que no aplica |
+| Filas con la cadena **completa**: fuente, caso de uso, clase, proceso, caso de prueba, historia y criterio | **59 de 75** --- 53 clasificadas «Completa» y 6 que la tienen entera pero son restricciones de diseno |
+| Filas que **no cierran** | **16 de 75** --- 9 huerfanas, 1 parcial y 6 restricciones de diseno con algun eslabon que no aplica |
 
 La diferencia no son filas a medio hacer: son filas que **no pueden** tener todos los
 eslabones, y el motivo esta declarado fila a fila en los apartados que siguen.
@@ -49,12 +49,22 @@ eslabones, y el motivo esta declarado fila a fila en los apartados que siguen.
   campo», «Dependencia del horario academico vigente» o «Evidencia del sistema de camaras
   existente» son filas de evidencia y de restriccion, no requisitos que un mockup pueda
   realizar. Exigirles un mockup es un error de categoria, no un eslabon roto.
-- Dos requisitos, **RF-09 y RF-18**, no llevan historia ni criterio porque **no son Must** en
-  la priorizacion MoSCoW, y el ERS escribe una historia por requisito obligatorio. Escribirlas
-  contradiria la regla que el propio ERS declara.
+- **Dieciocho filas se cerraron el 2026-09-12** escribiendo diecisiete historias con su
+  criterio de aceptacion, `HU-22` a `HU-38`, en el ERS (version 4.6). Tenian fuente --- de
+  campo o un «No aplica» declarado ---, caso de uso y clase, y solo les faltaba la historia.
+  El ERS escribia historias solo para los requisitos Must; desde la version 4.6 las escribe
+  tambien para los Should, los no funcionales, los del componente inteligente y las
+  restricciones de diseno **que tienen fuente**. A las que no la tienen no se les escribe:
+  una historia atribuye una necesidad a alguien, y eso seria inventarlo.
+- **`RD-02` no se cerro a proposito.** Su fila en la matriz dice «detectar ausencia de
+  conectividad como riesgo critico», y la ficha de `RD-02` en el ERS dice que los dispositivos
+  operaran solo dentro de la red institucional. Escribirle una historia fijaria esa
+  contradiccion; primero hay que decidir cual de los dos textos es el correcto.
+- **`RNF-15`** tiene fuente (`EV-20`) pero ninguna clase del diagrama la realiza, y asignarle
+  una seria modelar por conveniencia.
 
 **La metrica que mide lo que se puede exigir** es la del apartado 4: requisitos funcionales
-con la cadena hacia adelante completa. Ahi la referencia es 90 % y el proyecto esta en 92 %.
+con la cadena hacia adelante completa. Ahi la referencia es 90 % y el proyecto esta en 100 %.
 
 El equipo prefiere declarar las dos cifras a elegir la que le favorece. La segunda es la
 exigente, y es la que figura tambien en el README.
@@ -80,27 +90,31 @@ como derivados normativos y no se les inventa una evidencia que no tienen.
 
 | Requisito | Causa | Accion |
 |---|---|---|
-| **RF-24** Exportar los datos personales del usuario a solicitu | Derivado normativo: Art. 13 | Mantener la trazabilidad a la ley; recoger evidencia de campo si el requisito asciende a Must |
-| **RF-25** Rectificar los datos personales del usuario | Derivado normativo: Art. 14 | Mantener la trazabilidad a la ley; recoger evidencia de campo si el requisito asciende a Must |
+| **RF-25** Rectificar los datos personales del usuario | Derivado normativo: Art. 14 | Mantener la trazabilidad a la ley; recoger evidencia de campo cuando un participante lo exprese |
+
+`RF-24`, que figuraba aqui, tiene fuente de campo desde el 2026-09-04: `EV-21`.
 
 ## 3. Requisitos funcionales con la cadena incompleta
 
 | Requisito | Eslabon que falta | Causa | Accion |
 |---|---|---|---|
-| **RF-09** | historia, criterio | El requisito no es Must en la priorizacion MoSCoW; el ERS escribe una historia por requisito obligatorio | Redactar su historia y su criterio de aceptacion si asciende a Must |
-| **RF-18** | historia, criterio | El requisito no es Must en la priorizacion MoSCoW; el ERS escribe una historia por requisito obligatorio | Redactar su historia y su criterio de aceptacion si asciende a Must |
+| Requisito | Estado |
+|---|---|
+| **RF-06**, **RF-09**, **RF-14**, **RF-17** y **RF-18** | **Cerrados el 2026-09-12** con `HU-22` a `HU-26` y sus criterios. Les faltaban la historia y el criterio porque eran Should |
+
+Ningun requisito funcional queda hoy con la cadena hacia adelante incompleta.
 
 ## 4. Metricas resultantes
 
 | Submetrica | Antes | Ahora | Referencia |
 |---|---|---|---|
-| Requisitos con fuente identificada | 23/25 = 92,0 % | 23/25 = 92.0 % | 100 % |
-| Requisitos con cadena adelante completa | 12/25 = 48,0 % | 23/25 = 92.0 % | >= 90 % |
+| Requisitos con fuente identificada | 23/25 = 92,0 % | **24/25 = 96,0 %** | 100 % |
+| Requisitos con cadena adelante completa | 12/25 = 48,0 % | **25/25 = 100,0 %** | >= 90 % |
 | Celdas vacias en la matriz | 308 | **0** | - |
 | Columnas de la cadena | 13 | **18** | clase, proceso, caso de prueba y estado anadidos |
 
-La submetrica de fuente **no llega al 100 %** y no se fuerza: los requisitos de la
-seccion 2 no proceden de campo, y declararlo es lo correcto. La guia pide que los
+La submetrica de fuente **no llega al 100 %** y no se fuerza: el requisito de la
+seccion 2 no procede de campo, y declararlo es lo correcto. La guia pide que los
 huerfanos se listen con causa y accion, que es lo que hace este documento.
 
 ## 5. Enlaces que se corrigieron
