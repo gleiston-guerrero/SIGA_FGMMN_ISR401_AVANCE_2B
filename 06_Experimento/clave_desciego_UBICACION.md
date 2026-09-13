@@ -29,7 +29,8 @@ Esta nota es esa nota. La anotacion de la desviacion se mantiene, sin editar, en
 
 En el **contenedor cifrado con AES-256 y nombres de archivo ocultos** que es la zona
 restringida del proyecto. Desde el 2026-09-06 ese contenedor esta **en este mismo
-repositorio**, partido en 272 fragmentos: se abre desde
+repositorio**, partido en 316 fragmentos desde su regeneracion del 2026-09-08 (272 hasta
+entonces): se abre desde
 [`../02_Evidencias/00_Restringido/contenedor/SIGA_zona_restringida.7z.001`](../02_Evidencias/00_Restringido/contenedor/SIGA_zona_restringida.7z.001)
 y su descripcion completa esta en
 [`../02_Evidencias/00_Restringido/README_Restringido.md`](../02_Evidencias/00_Restringido/README_Restringido.md).

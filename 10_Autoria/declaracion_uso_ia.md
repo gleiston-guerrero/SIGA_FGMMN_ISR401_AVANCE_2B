@@ -1,7 +1,7 @@
 # Declaracion de uso de inteligencia artificial
 
 Proyecto SIGA — Entrega Final (2B) — ISR-401 — Equipo FGMMN
-Ultima actualizacion: 2026-09-12
+Ultima actualizacion: 2026-09-13
 
 Elemento **A9** de la evidencia de autoria. Cubre, seccion por seccion, la herramienta
 empleada, el tipo de asistencia recibida y el metodo concreto con el que el equipo valido
@@ -20,8 +20,13 @@ El Conjunto A de Requisitos Funcionales del componente empirico fue **generado p
 modelo grande de lenguaje**, deliberadamente y como variable independiente del
 cuasi-experimento. No es asistencia de redaccion: es el material que el estudio compara.
 
-La consigna literal, el modelo, sus parametros y el material fuente estan en
-[`06_Experimento/prompts_llm/`](../06_Experimento/prompts_llm/). Las limitaciones
+El registro integro de la generacion, el modelo declarado y el material fuente estan en
+[`06_Experimento/prompts_llm/`](../06_Experimento/prompts_llm/). **No hubo una consigna
+literal enviada en una sesion aparte ni parametros controlados**: el Conjunto A se genero el
+2026-08-02 dentro de la conversacion de trabajo del proyecto, a partir de la instruccion «usa
+tu propio modelo», y la interfaz de chat no expone temperatura, top-p ni semilla. Consta en
+[`registro_generacion_conjunto_A.md`](../06_Experimento/prompts_llm/registro_generacion_conjunto_A.md)
+y como desviacion 6 en `07_Datos/desviaciones.md`. Las limitaciones
 metodologicas de esa generacion —incluida la exposicion previa parcial del modelo al
 Conjunto B en la misma sesion de chat— se declaran en
 `06_Experimento/prompts_llm/prompt_llm_conjunto_A.md` y se recogen como amenaza a la
@@ -40,6 +45,33 @@ validez de constructo en el reporte.
 | `07_Publicacion/dataset_zenodo/diccionario_datos.csv` | Claude (Anthropic) | Redaccion de las definiciones a partir de las cabeceras reales de cada archivo de datos | El equipo contrasto cada fila con la cabecera del archivo que describe |
 | `07_Publicacion/dataset_zenodo/correspondencia_salidas.csv` | Claude (Anthropic) | Emparejamiento de cada salida con el script que la produce, leido del Makefile | Se ejecuto `make all` y se comprobo que cada salida listada aparece regenerada |
 | Auditoria del repositorio contra la rubrica | Claude (Anthropic) | Contraste sistematico del arbol y del historial contra los criterios de piso y las evidencias exigibles | El equipo verifico a mano cada hallazgo antes de actuar sobre el: conteos de archivos, ausencia de etiquetas y presencia de marcadores de plantilla |
+
+---
+
+### Trabajo del 1 y 2 de agosto de 2026, en la Entrega 2A
+
+Anadido el 2026-09-12, cuando la exportacion de la conversacion de trabajo del proyecto en
+claude.ai permitio documentar lo que el asistente produjo ese dia. Estos artefactos se
+crearon en la Entrega 2A y llegaron a este repositorio con la migracion del 2026-08-30.
+
+| Seccion o artefacto | Herramienta | Tipo de asistencia | Metodo de validacion aplicado |
+|---|---|---|---|
+| Conjunto A de requisitos | Claude (Anthropic), interfaz de chat | Generacion de los 26 requisitos: es el objeto de estudio, apartado 1 | Registro integro en `06_Experimento/prompts_llm/registro_generacion_conjunto_A.md`, con la huella SHA-256 del extracto |
+| Protocolo del cuasi-experimento: PICOC, hipotesis, variables y plan de analisis | Claude (Anthropic), interfaz de chat | Redaccion del primer texto del protocolo en la misma respuesta que genero el Conjunto A | El equipo lo registro en OSF el 2026-08-02 (`10.17605/OSF.IO/7PQ3H`). Toda diferencia posterior entre lo registrado y lo ejecutado consta en `07_Datos/desviaciones.md` |
+| Rubrica de evaluacion, hoja de puntuacion, paquete de evaluacion ciega y tabla de desciego | Claude (Anthropic), interfaz de chat | Armado de los instrumentos y mezcla de los 51 items con semilla fija | La tabla de desciego se custodia fuera de la zona publica (`06_Experimento/clave_desciego_UBICACION.md`). Los tres jueces, externos a los entrevistados, los eligio el equipo |
+| `06_Experimento/scripts_analisis/analizar_resultados.py`, primera version | Claude (Anthropic), interfaz de chat | Script de consolidacion y analisis, probado con datos simulados que se borraron antes de recibir las hojas reales | Las salidas actuales se regeneran identicas byte a byte con `python 07_Datos/scripts/ejecutar.py` |
+
+### Artefactos de la Entrega 2A incorporados en la migracion del 2026-08-30
+
+Declarados el 2026-09-13. Se elaboraron con asistencia en las entregas anteriores y llegaron
+a este repositorio con la migracion; hasta esta fecha la declaracion no los nombraba en ningun
+apartado.
+
+| Seccion o artefacto | Herramienta | Tipo de asistencia | Metodo de validacion aplicado |
+|---|---|---|---|
+| Texto de la Especificacion de Requisitos, `01_ERS/secciones_generadas.tex` | Claude (Anthropic) | Asistencia en la redaccion de la especificacion | Auditoria de calidad con las seis metricas y sus conteos base (`01_ERS/Auditoria_Calidad/`); inspeccion formal `INS-01`, re-inspeccion `REINS-01` y comite de cambios `CCB-01` (`02_Evidencias/Validacion_Walkthrough/`); cada requisito con fuente trazado a su evidencia de campo en la matriz, comprobada con `verificar_matriz.py` |
+| Componente inteligente, `01_ERS/Componentes_IA/` | Claude (Anthropic) | Asistencia en la redaccion de la clasificacion de riesgo, la ficha de `RF-09`, los requisitos `RNF-IA`, el plan de monitoreo y la evidencia de explicabilidad | Los ocho `RNF-IA` constan en la matriz con su caso de prueba; `evidencia_explicabilidad.csv` se regenera con su script; el respaldo de campo de `RNF-IA-03` procede del cuestionario depositado |
+| Codigo del prototipo, `05_MVP/codigo_fuente/` | Claude (Anthropic) | Asistencia en la escritura del codigo | Cobertura contrastada requisito por requisito en `05_MVP/cobertura_requisitos.csv` (17 de 20 Must), recorrido funcional grabado en `05_MVP/demostracion/`. Comprobado de nuevo el 2026-09-12: instala, siembra la base, arranca, y el inicio de sesion y los seis modulos de la API responden |
 
 ---
 
@@ -175,11 +207,12 @@ correccion de lo que encontro.
 | Historias `HU-22` a `HU-38` y cierre de 18 filas de la matriz | Claude (Anthropic) | Redaccion de diecisiete historias de usuario con su criterio de aceptacion Gherkin, a partir del enunciado, el actor, la precondicion y el criterio de verificacion que cada requisito ya tenia en el ERS o en su ficha; actualizacion de la matriz, su copia del deposito, los casos de prueba regenerados, el documento de huerfanos, el reporte y el banco de preguntas. Correccion de `generar_casos_prueba.py`, que fallaba al leer la matriz por su marca de orden de bytes | **Ningun umbral, actor ni cifra es nuevo**: cada criterio reproduce el criterio de verificacion del propio requisito. Solo se cerraron filas con fuente declarada; las 13 sin fuente, `RD-02` ---cuya fila contradice su ficha--- y `RNF-15` ---sin clase--- se dejan abiertas. `verificar_matriz.py` confirma 59 de 75 y la coincidencia de la columna de estado en las 75 filas |
 | Auditoria de `2B-final-v5.1` y sus correcciones | Claude (Anthropic) | Segunda auditoria contra la rubrica de cierre sobre un checkout limpio de la etiqueta, busqueda de residuos en archivos y metadatos, y correccion de lo encontrado: esta declaracion no cubria el tramo anterior de este mismo dia; la comprobacion P4 de `verificacion_previa.py` no se ejecutaba y el informe decia siempre que no habia marcas; y el README no listaba el paquete `array` que usa el ERS | La comprobacion P4 corregida se ejecuto sobre el historial: ningun trailer de coautoria, y un unico committer ajeno, el de la interfaz web de GitHub en `d0a3138`, con autor integrante |
 
-### Trabajo del 13 de septiembre de 2026
+### Trabajo del 12 y 13 de septiembre de 2026
 
 | Seccion o artefacto | Herramienta | Tipo de asistencia | Metodo de validacion aplicado |
 |---|---|---|---|
-| `07_Datos/scripts/etapa5_documento.py` y documentacion del paquete | Claude (Anthropic) | La etapa `documento` deposita las 18 salidas del documento dentro de `07_Datos/`, tras comprobarlas contra el manifiesto; descripcion de las columnas de los ocho CSV nuevos en `diccionario_datos.csv`, y actualizacion de `README_datos.md`, `README.md`, `CHANGELOG.md`, la portada del ERS y la caratula para la etiqueta `2B-final-v5.6`. **La confirmacion, el envio al remoto y la etiqueta `2B-final-v5.6` los ejecuto el asistente desde la maquina de Sanchez Cornejo, Gary Alberto, a peticion expresa suya y con su identidad** | Ejecutada la orden unica sobre un clon limpio: las 18 salidas depositadas son identicas byte a byte a las del manifiesto, la etapa `integridad` confirma que todas las columnas estan descritas y ninguna cifra cambia. **La observacion la hizo el docente; la decision de atenderla asi es del equipo** |
+| `07_Datos/scripts/etapa5_documento.py` y documentacion del paquete | Claude (Anthropic) | La etapa `documento` deposita las 18 salidas del documento dentro de `07_Datos/`, tras comprobarlas contra el manifiesto; descripcion de las columnas de los ocho CSV nuevos en `diccionario_datos.csv`, y actualizacion de `README_datos.md`, `README.md`, `CHANGELOG.md`, la portada del ERS y la caratula para la etiqueta `2B-final-v5.6`. **La confirmacion, el envio al remoto y la etiqueta `2B-final-v5.6` los ejecuto el asistente desde la maquina de Sanchez Cornejo, Gary Alberto, a peticion expresa suya y con su identidad** |
+| Revision de consistencia de todo el arbol sobre `2B-final-v5.6` | Claude (Anthropic) | Recorrido carpeta por carpeta sobre la etiqueta publicada: sumas, enlaces y rutas citadas, recompilacion del reporte, del ERS y del manuscrito, ejecucion de los verificadores de cada carpeta, arranque del prototipo y reconstruccion del contenedor cifrado. Correccion de los textos desactualizados que encontro, listados en `CHANGELOG.md` `[2B-1.17.1]`, y actualizacion de README, portada del ERS y caratula para `2B-final-v5.7` | Cada correccion se contrasto con la evidencia que la sostiene: la metrica de Correccion con `REINS-01` y la seccion 8 de la auditoria; la suma del contenedor, recalculada sobre la concatenacion de los 316 fragmentos; las cifras de codificacion, recontadas en `codificacion_tematica.csv`. **Ningun dato, cifra de resultados ni archivo de evidencia cambia.** Que corregir lo decidio Sanchez Cornejo, Gary Alberto | Ejecutada la orden unica sobre un clon limpio: las 18 salidas depositadas son identicas byte a byte a las del manifiesto, la etapa `integridad` confirma que todas las columnas estan descritas y ninguna cifra cambia. **La observacion la hizo el docente; la decision de atenderla asi es del equipo** |
 
 ---
 
@@ -191,7 +224,7 @@ Se enumeran para que la declaracion sea completa y no solo positiva.
 |---|---|
 | Las dieciseis entrevistas de campo y su conduccion | El equipo, en persona |
 | Las puntuaciones de los tres jueces del cuasi-experimento | Tres evaluadores externos, de forma independiente y ciega |
-| El diseno del cuasi-experimento y su protocolo registrado en OSF | El equipo |
+| La eleccion del enfoque, la decision de usar jueces externos a los entrevistados y el registro del protocolo en OSF | El equipo. **El texto del protocolo no**: se declara en el apartado «Trabajo del 1 y 2 de agosto de 2026» |
 | Las decisiones de priorizacion MoSCoW, Kano y WSJF | El equipo |
 | Los diagramas originales en Visual Paradigm (`.vpp`) y en draw.io | El equipo |
 | El analisis, la discusion y las conclusiones | El equipo. Las **amenazas a la validez** del manuscrito se redactaron con asistencia y se declaran en el apartado del 1 y 2 de septiembre |

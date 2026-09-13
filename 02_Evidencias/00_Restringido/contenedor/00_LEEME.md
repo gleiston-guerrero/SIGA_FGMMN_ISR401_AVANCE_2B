@@ -47,8 +47,8 @@ cambia, o si quien evalua no puede abrirlo, **la evidencia restringida deja de e
 efectos practicos**, aunque el archivo siga en alguna parte. Depositado aqui, viaja con el
 repositorio, se clona con el y se archiva con el en Software Heritage.
 
-**El enlace de OneDrive se conserva** como copia redundante, no como unica via. Las dos
-rutas llevan al mismo archivo y su suma lo demuestra.
+**La copia de OneDrive ya no se mantiene.** El contenedor esta unicamente en el repositorio,
+en estos fragmentos.
 
 ## 3. Como reconstruirlo y abrirlo
 
@@ -106,10 +106,14 @@ quien custodia la contrasena, no consta aqui como se hizo, y el resultado son **
 6,4 GB**: las grabaciones de video y audio de la ronda terminal y de las sesiones tecnicas,
 las fotografias de sesion y el acta firmada de `WT-08`.
 
-Las dos comprobaciones juntas cierran la cadena: los 272 fragmentos reconstruyen el archivo
-**byte a byte** --- misma suma SHA-256 --- y ese archivo **se abre**. Si la concatenacion es
-identica al original y el original descifra, la concatenacion descifra; no hay hueco entre
-las dos afirmaciones.
+Las dos comprobaciones juntas cerraron la cadena para aquel contenedor: sus 272 fragmentos
+reconstruian el archivo **byte a byte** --- misma suma SHA-256 --- y ese archivo **se abria**.
+Si la concatenacion es identica al original y el original descifra, la concatenacion
+descifra; no hay hueco entre las dos afirmaciones.
+
+**Sobre el contenedor vigente**, regenerado el 2026-09-08 con 316 fragmentos y 51 archivos:
+consta la reconstruccion byte a byte de la seccion anterior. La prueba de extraccion que se
+describe arriba, con su resultado de 49 archivos, es la del contenedor del 2026-09-07.
 
 > **Despues de extraerlo, borre la carpeta descomprimida.** Contiene 6,4 GB de material
 > identificable sin cifrar: nombres, caras y voces de participantes que consintieron

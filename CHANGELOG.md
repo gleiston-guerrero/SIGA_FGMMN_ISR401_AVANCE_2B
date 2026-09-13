@@ -8,10 +8,62 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
-## [2B-1.17.0] - 2026-09-13
+## [2B-1.17.1] - 2026-09-13
+
+Revision de consistencia de todo el arbol, carpeta por carpeta, sobre la etiqueta
+`2B-final-v5.6`. Corrige textos que se habian quedado atras respecto de la evidencia ya
+depositada. No cambia ningun dato, cifra de resultados, requisito ni archivo de evidencia.
+
+### Corregido
+
+- **Metrica de Correccion en `reporte.tex`.** La tabla de metricas de calidad y el parrafo
+  del anexo la daban como «no medible, Pendiente», y la auditoria la mide desde el
+  2026-09-05: **0,04** (1 defecto residual, `DEF-06`, sobre 25 RF), Cumple, tras `INS-01` y
+  `REINS-01`. El reporte sigue en 27 paginas.
+- **`01_ERS/Auditoria_Calidad/auditoria_calidad_especificacion.md`.** La cabecera decia
+  «Version 1.0» y la version vigente es la 3.0; la seccion 7 conservaba sin aviso la medicion
+  inicial. Lleva ahora una nota de estado que remite al resultado vigente de la seccion 8.
+- **`02_Evidencias/00_Restringido/README_Restringido.md` y `contenedor/00_LEEME.md`.**
+  Seguian anunciando el enlace de OneDrive como copia redundante, con la suma del contenedor
+  anterior a su regeneracion del 2026-09-08 (`d225b192…`). El contenedor esta unicamente en
+  el repositorio: se retira el enlace y se declara la suma del contenedor vigente
+  (`76a78d6b…`). Pasa de 272 a 316 fragmentos, igual que
+  `06_Experimento/clave_desciego_UBICACION.md` y la pregunta I9 del banco de la defensa, que
+  ademas decia treinta y cuatro piezas donde la ficha tecnica registra treinta y seis.
+  `contenedor/00_LEEME.md` precisa que la prueba de extraccion documentada es la del
+  contenedor del 2026-09-07.
+- **`02_Evidencias/2026-09-03_notas_entrevistas_docentes.md`.** Conservaba los avisos
+  «Anonimizacion pendiente» y «consentimiento: pendiente de completar». Se anade el estado:
+  el nombre esta censurado en la transcripcion publicada y en las dos de control de calidad, y
+  el consentimiento de DOC-05 esta depositado. El texto original se conserva.
+- **`08_Defensa/banco_preguntas.md` y `guion.md`.** Decian «diez codificadas, seis pendientes»;
+  las dieciseis estan codificadas desde el 2026-09-06 (136 fragmentos, 50 codigos). La
+  pregunta I5 se reescribe conforme a la amenaza T4 del manuscrito, y el guion cita la ruta
+  real del diagrama de contexto, `03_Modelado/01_Contexto/`.
+- `reporte.tex` citaba `09_Defensa/banco_preguntas.md`; la carpeta es `08_Defensa/`.
+- **`10_Autoria/declaracion_uso_ia.md` no cuadraba con el registro de la generacion del
+  Conjunto A**, depositado el mismo 2026-09-12. El apartado 1 seguia hablando de «la consigna
+  literal y sus parametros», que no existieron. El apartado 4 atribuia «el diseno del
+  cuasi-experimento y su protocolo» al equipo sin herramienta, y el registro muestra que el
+  asistente redacto el primer texto del protocolo, la rubrica, el paquete ciego y el script
+  de analisis el 2026-08-02. Se corrigen los dos apartados y se anade el trabajo del 1 y 2 de
+  agosto de 2026.
+- **La declaracion no nombraba el texto del ERS, `01_ERS/Componentes_IA/` ni el codigo del
+  MVP** en ningun apartado, ni con herramienta ni sin ella. Los tres se elaboraron con
+  asistencia de Claude y se declaran ahora, con el metodo de validacion que consta en el
+  repositorio.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.7`. `2B-final-v5.6` (`b082104`) y todas las anteriores son historicas.
+
+---
+
+## [2B-1.17.0] - 2026-09-12
 
 Las tablas y figuras del documento quedan dentro del paquete de datos. Atiende la unica
-observacion que mantuvo la revision del docente del 2026-09-13 sobre el item B1.
+observacion que mantuvo la ultima revision del docente, sobre el item B1.
 
 ### Cambiado
 

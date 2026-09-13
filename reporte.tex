@@ -912,7 +912,7 @@ Consistencia     & 1,0000 sin conflictos abiertos & $\geq 0{,}98$ y cero conflic
 Verificabilidad  & 100\,\% & $\geq 90$\,\%            & Cumple \\
 Trazabilidad     & 92,0\,\% y 92,0\,\% & 100\,\% y $\geq 90$\,\% & No cumple \\
 Modificabilidad  & 4,00 declarada y comprobable & $\leq 3{,}0$ & No cumple \\
-Correcci\'on     & no medible & $\leq 0{,}05$          & Pendiente \\
+Correcci\'on     & 0,04 (1 residual / 25 RF) & $\leq 0{,}05$ & Cumple \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -926,9 +926,12 @@ que exig\'ia recomendaciones «coherentes» sin definir c\'omo comprobarlo. Y la
 \textbf{consistencia} cerr\'o su \'unico conflicto abierto al delimitarse RF-13 y RF-16
 por causa, conforme a la solicitud de cambio SC-01.
 
-La \textbf{correcci\'on} sigue sin declararse con un valor porque se calcula sobre los
-defectos residuales tras una re-inspecci\'on que a\'un no se ha ejecutado. Publicar una
-cifra aqu\'i ser\'ia inventarla. La \textbf{trazabilidad} y la \textbf{modificabilidad}
+La \textbf{correcci\'on} se calcula sobre los defectos residuales tras una
+re-inspecci\'on, y por eso fue la \'ultima en medirse. La inspecci\'on \texttt{INS-01}
+registr\'o diecis\'eis defectos y la re-inspecci\'on \texttt{REINS-01}, del 5 de septiembre,
+cerr\'o quince: queda uno residual, \texttt{DEF-06}, diferido de forma expresa por el comit\'e
+en \texttt{SC-03}. De ah\'i sale $1/25 = 0{,}04$, por debajo del $0{,}05$ de referencia. El
+margen es de un solo defecto: con dos residuales no cumplir\'ia. La \textbf{trazabilidad} y la \textbf{modificabilidad}
 siguen sin cumplir, y sus acciones correctivas est\'an definidas en
 \texttt{01\_ERS/Auditoria\_Calidad/}.
 
@@ -936,7 +939,7 @@ siguen sin cumplir, y sus acciones correctivas est\'an definidas en
 \label{anx:banco}
 
 El banco completo, con una respuesta por pregunta del temario y el artefacto que
-respalda cada respuesta, est\'a en \texttt{09\_Defensa/banco\_preguntas.md}. Cubre ocho
+respalda cada respuesta, est\'a en \texttt{08\_Defensa/banco\_preguntas.md}. Cubre ocho
 bloques: sistema y partes interesadas, especificaci\'on, modelado y trazabilidad,
 componente emp\'irico, \'etica y datos, componentes de inteligencia artificial,
 gesti\'on del repositorio, y las limitaciones del propio estudio.

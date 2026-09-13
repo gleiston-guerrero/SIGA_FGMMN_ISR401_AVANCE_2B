@@ -18,10 +18,12 @@ aula y avise. SIGA monitorea, alerta y gestiona el ticket.
 → `02_Evidencias/Transcripciones/`, EV-01 (CONS-01); `02_Evidencias/Documentos_Organizacion/`
 
 **A2. ¿Como saben que el problema existe y no lo supusieron?**
-De **dieciseis entrevistas** con tres perfiles distintos. **Diez estan codificadas**, en
-36 fragmentos con su categoria y el requisito que derivan; las seis de la ronda terminal
-del 2026-09-03 estan transcritas y su codificacion queda pendiente. Si insisten con la
-cifra, la respuesta exacta es: dieciseis recogidas, diez analizadas.
+De **dieciseis entrevistas** con tres perfiles distintos, **las dieciseis codificadas**:
+136 fragmentos bajo 50 codigos, cada uno con su categoria y el requisito que deriva. Las
+diez primeras aportan 36 fragmentos; las seis de la ronda terminal del 2026-09-03 se
+codificaron el 2026-09-06 y aportan 100. Si insisten con la cifra, la respuesta exacta es:
+dieciseis recogidas, dieciseis codificadas, y los dos conjuntos del cuasi-experimento salen
+de las diez primeras (ver I5).
 → `02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv`
 
 **A3. ¿Quienes son los usuarios y como se eligieron?**
@@ -359,12 +361,12 @@ dar un mantenimiento». Operan y reportan; no administran. El criterio aplicado 
 cada persona declara que hace, no el nombre de su cargo ni la conveniencia del recuento.
 → `02_Evidencias/Transcripciones/`, EV-08 y EV-09
 
-**I5. Tienen dieciseis entrevistas y analizan diez. ¿Por que no codificaron las seis nuevas?**
-Porque la codificacion tematica es lectura interpretativa y se hace con el corpus completo
-delante, no a ultima hora. Las seis estan transcritas, anonimizadas y depositadas; su
-codificacion queda pendiente y **asi se declara en todos los documentos**, incluido el
-manuscrito. Decir dieciseis sin esa precision haria pasar por analizado lo que solo esta
-transcrito.
+**I5. Tienen dieciseis entrevistas, pero el cuasi-experimento usa diez. ¿Por que?**
+Porque los dos conjuntos comparados se generaron el 2026-08-02, cuando la elicitacion estaba
+cerrada en diez entrevistas validas. La ronda terminal del 2026-09-03 anadio seis, que se
+codificaron el 2026-09-06: el libro de codigos y la curva de saturacion cubren ya las
+dieciseis. **Los dos conjuntos comparados no**, y asi se declara en el manuscrito, como
+amenaza a la validez.
 → `07_Publicacion/manuscrito_final.pdf`, amenaza **T4**
 
 **I6. ¿Que es RQ2 y por que aparece si el estudio comparaba humano contra LLM?**
@@ -399,11 +401,11 @@ originales no se publican, de modo que a la zona publica va solo la transcripcio
 → `02_Evidencias/00_Restringido/README_Restringido.md`, apartados 1 y 4
 
 **I9. ¿Como sabemos que ese material restringido existe, si no lo podemos ver?**
-Por la ficha tecnica: registra las treinta y cuatro piezas con su duracion, su codec, su tamano
+Por la ficha tecnica: registra las treinta y seis piezas con su duracion, su codec, su tamano
 y su **SHA-256**, de modo que cualquiera puede contrastar un archivo contra su hash sin
-abrirlo. El contenedor esta cifrado con AES-256 y con los nombres de archivo ocultos, alojado
-en el OneDrive institucional, y la contrasena se entrega al docente por el Sistema de Gestion
-Academica y por ningun otro medio.
+abrirlo. El contenedor esta cifrado con AES-256 y con los nombres de archivo ocultos, dentro
+del propio repositorio en 316 fragmentos, y la contrasena se entrega al docente por el
+Sistema de Gestion Academica y por ningun otro medio.
 → `02_Evidencias/00_Restringido/fichas_tecnicas.csv`
 
 **I10. ¿Usaron inteligencia artificial? ¿En que exactamente?**

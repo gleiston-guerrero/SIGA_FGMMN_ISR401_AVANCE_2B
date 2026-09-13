@@ -11,6 +11,12 @@ Participantes: DOC-05 a DOC-10 (6 sesiones)
 
 > **Anonimización pendiente.** En EV05 el participante dice su nombre completo y su
 > facultad en grabación, contra el §0 del guion. Censurar antes de publicar.
+>
+> **Estado a 2026-09-12: resuelto.** EV05 es la sesión de DOC-05, depositada como `EV-20`.
+> Su nombre está sustituido por `[ENTREVISTADO]` en la transcripción publicada
+> (`Transcripciones/2026-09-03_Docente_DOC-05_EV-20_Transcripcion.md`) y en las dos de
+> control de calidad (`Transcripciones/control_calidad/`). Las grabaciones de esta ronda no
+> se publican: están en el contenedor cifrado de `00_Restringido/`.
 
 ---
 
@@ -19,7 +25,10 @@ Participantes: DOC-05 a DOC-10 (6 sesiones)
 **Datos de sesión**
 - Perfil / años: docente de inglés, Facultad de Ciencias de la Educación; ~7 años (desde 2017-2018), 5 periodos académicos en esta facultad.
 - Aulas: 5 en el periodo actual. Infraestructura nueva.
-- Lugar / consentimiento: pendiente de completar.
+- Lugar / consentimiento: pendiente de completar. *(Estado a 2026-09-12: el consentimiento firmado
+  el 2026-09-03 está depositado, censurado, en
+  `Consentimientos/2026-09-03_Docente_DOC-05_Consentimiento.pdf`. El lugar no se anotó en
+  estas notas y no se completa por inferencia.)*
 
 **Contexto y calentamiento** (guion §2)
 - Rutina: prioriza que la conexión a internet sea óptima; usa aplicaciones y páginas web para enseñar inglés.
@@ -261,7 +270,7 @@ justo cuando ocurre la incidencia.
 
 **Acciones**
 1. Confirmar qué archivo de video corresponde a cada código antes de citar marcas de tiempo.
-2. Censurar el nombre propio en la transcripción de EV05.
+2. Censurar el nombre propio en la transcripción de EV05. *(Hecho: ver la nota de estado al inicio.)*
 3. Verificar el proceso formal con coordinación (contradicción 1).
 4. Incorporar los requisitos candidatos a la matriz de trazabilidad y evaluar si obligan a rediseñar el panel del MVP.
 5. Evaluar la disponibilidad de SIGA ante la caída de la red institucional.

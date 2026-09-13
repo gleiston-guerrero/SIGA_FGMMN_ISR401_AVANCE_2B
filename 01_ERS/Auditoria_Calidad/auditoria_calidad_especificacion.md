@@ -1,7 +1,9 @@
 # Auditoria de calidad de la especificacion
 
 Proyecto SIGA · ISR-401 · Equipo FGMMN · Universidad Tecnica Estatal de Quevedo
-Version 1.0 · Medicion del 2026-08-29 sobre el ERS/SRS v2.0
+Version 3.0 · Medicion inicial del 2026-08-29 sobre el ERS/SRS v2.0, remedida el 2026-08-31
+y el 2026-09-05. Las secciones 1 a 7 conservan la medicion inicial; el estado vigente de las
+seis metricas es el de la seccion 8
 
 Las seis metricas de la seccion 5.6 de la guia, cada una con su formula aplicada, sus
 conteos base publicados **antes** de calcular, la aritmetica visible, el veredicto y la
@@ -262,6 +264,12 @@ cierre de la entrega. Los dos nodos que concentran el problema siguen siendo **R
 ---
 
 ## 7. Correccion
+
+> **Estado vigente, desde el 2026-09-05: medida, 0,04, Cumple.** Lo que sigue en esta seccion
+> es la medicion inicial del 2026-08-29, cuando la inspeccion aun no se habia celebrado. Se
+> conserva sin reescribir porque registra por que entonces no se declaro ningun valor. La
+> inspeccion `INS-01` y la re-inspeccion `REINS-01` se celebraron despues y estan en
+> `02_Evidencias/Validacion_Walkthrough/Inspeccion/`; el calculo esta en la seccion 8.
 
 **Formula.** Defectos residuales tras la re-inspeccion, dividido por el numero de
 requisitos.

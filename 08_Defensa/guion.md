@@ -56,11 +56,11 @@ una cadena de trazabilidad rota.
   alertas, análisis predictivo, mantenimiento, reportes).
 - Los tres perfiles de usuario reales entrevistados: docentes, coordinación
   académica, conserjería/infraestructura — con foto o diagrama de contexto en
-  pantalla (`03_Modelado/Diagramas_UML/01_Context/`).
+  pantalla (`03_Modelado/01_Contexto/`).
 - Mencionar brevemente el volumen real de campo: **16 entrevistas**, con tres perfiles
-  bien representados. **Diez de ellas estan codificadas**; las seis de la ronda terminal
-  del 2026-09-03 estan transcritas y su codificacion queda pendiente. Si preguntan, esa es
-  la respuesta exacta: dieciseis recogidas, diez analizadas.
+  bien representados, **las dieciseis codificadas**: 136 fragmentos bajo 50 codigos. Las
+  seis de la ronda terminal del 2026-09-03 se codificaron el 2026-09-06. Si preguntan por el
+  cuasi-experimento, sus dos conjuntos salen de las diez primeras: ver I5 del banco.
 
 ## Bloque 3 — Metodología del componente empírico (4 min)
 

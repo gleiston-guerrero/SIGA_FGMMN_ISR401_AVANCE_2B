@@ -9,7 +9,7 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 | | |
 |---|---|
 | Comprobado sobre | la copia de trabajo local |
-| Version | `d074c6b` |
+| Version | `b082104` |
 
 ---
 
@@ -22,7 +22,7 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 | 3 | No existe ningun archivo de cero o un byte cuyo nombre anuncie contenido de evidencia | **Si** | Cero archivos de 0 o 1 byte en todo el arbol |
 | 4 | La comprobacion de sumas termina sin error sobre el clon limpio | **Si** | 998 de 998 sumas correctas |
 | 5 | Todos los autores del historial son integrantes declarados con correo institucional | **Si** | 3 autor(es): gsanchezc6@uteq.edu.ec, wcedenoa2@uteq.edu.ec, ymunozq@uteq.edu.ec |
-| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 10 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5 |
+| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 11 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5, 2B-final-v5.6 |
 | 7 | La carpeta 07_Datos existe y la orden unica de analisis se ejecuta sin error | **Si** | python 07_Datos/scripts/ejecutar.py termino con codigo 0 |
 | 8 | La carpeta 10_Autoria contiene los elementos A1 a A12 | **Si** | Los doce elementos existen y tienen contenido |
 | 9 | Todo numero que aparece en los documentos procede de la salida de un script | Manual | La correspondencia salida-script esta declarada en 07_Publicacion/dataset_zenodo/correspondencia_salidas.csv. Requiere revision humana |
