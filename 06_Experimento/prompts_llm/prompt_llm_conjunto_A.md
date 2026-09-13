@@ -5,18 +5,27 @@ Guía y Rúbrica de la Entrega 3 (2A).
 
 ## Estado de este registro (actualizado el 2026-09-12)
 
+> **El registro íntegro de la generación existe y está depositado** en
+> [`registro_generacion_conjunto_A.md`](registro_generacion_conjunto_A.md), extraído de la
+> exportación oficial de claude.ai de la cuenta del analista líder: la instrucción que se dio
+> al modelo, cada acción que ejecutó y el Conjunto A que escribió, con su hora. Precisa cómo
+> se generó: **dentro de la conversación de trabajo del proyecto, a partir de la instrucción
+> «usa tu propio modelo»**, aplicando la tarea de la guía, y no enviando la consigna literal
+> en una sesión aparte. Lo que sigue en este archivo se conserva como se escribió el
+> 2026-08-02.
+
 Este archivo se redactó el 2026-08-02, el mismo día de la consulta, y se conserva tal cual
 a partir del apartado siguiente. Esta nota solo precisa **qué es íntegro y qué no**, porque
 la rúbrica de cierre pide el registro íntegro de las instrucciones dadas a la herramienta.
 
 | | Estado |
 |---|---|
-| Consigna literal que produjo el Conjunto A | **Íntegra**: apartado «Consigna exacta utilizada» |
+| Instrucción que produjo el Conjunto A | **Íntegra** en `registro_generacion_conjunto_A.md`: «Hagamos las 11 · Usa tu propio modelo». La consigna de la guía que se cita más abajo es la tarea que el modelo aplicó; no se le envió como mensaje |
 | Plantilla de ocho atributos indicada al modelo | **Íntegra**: apartado final |
 | Material fuente entregado | **Íntegro salvo EV-15**: `material_fuente_LLM.txt`. El texto de EV-15 se entregó al modelo el 2026-08-02 y se suprimió del archivo después, cuando el participante retiró su consentimiento (confirmado el 2026-08-13); en su lugar queda una nota. Por eso el archivo tiene hoy 23 934 palabras y no las 27 124 que se citan más abajo |
 | Modelo, interfaz y fecha | **Íntegros**: tabla siguiente |
 | Temperatura, top-p y semilla | **No disponibles**: la interfaz de chat no los expone |
-| Exportación completa de la conversación | **No existe.** La consulta se hizo en una sesión de chat de claude.ai que no se exportó, y no se puede reconstruir a posteriori sin inventarla. Lo que se registró el mismo día es lo que consta en este archivo |
+| Exportación completa de la conversación | **Existe.** Se localizó el 2026-09-12 en la exportación de datos de claude.ai de la cuenta del analista líder, que la conserva. La copia pública, con las omisiones que declara, es `registro_generacion_conjunto_A.md` |
 | Conjunto A resultante | `Conjunto_A_RF_LLM.md`, y en texto plano, tal como lo vieron los jueces, en `07_Datos/datos_procesados/conjunto_A_llm.txt` |
 | Conjunto B con el que se compara | En texto plano en `07_Datos/datos_procesados/conjunto_B_humano.txt` |
 
@@ -72,7 +81,10 @@ temperatura y top-p reales, para tener una versión metodológicamente más
 limpia. La versión actual sirve para completar el diseño y probar el
 pipeline de análisis dentro del plazo de esta entrega.
 
-## Consigna exacta utilizada (verbatim, Sección 5.1 de la guía)
+## Consigna exacta de la guía (Sección 5.1)
+
+> Nota del 2026-09-12: es la consigna que prescribe la guía y la tarea que el modelo aplicó.
+> El mensaje que efectivamente recibió está en `registro_generacion_conjunto_A.md`.
 
 ```
 A partir del siguiente material fuente, redacta requisitos funcionales

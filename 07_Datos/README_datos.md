@@ -68,9 +68,11 @@ python 07_Datos/scripts/ejecutar.py --listar
 Las dos primeras son copias identicas byte a byte de
 `06_Experimento/prompts_llm/material_fuente_LLM.txt` y
 `06_Experimento/instrumentos/Paquete_Evaluacion_Ciega_Jueces.md`; la etapa `integridad` lo
-comprueba. El registro de las instrucciones dadas al modelo —consigna literal, modelo,
-interfaz, fecha y parametros, y que parte de ese registro no existe— esta en
-[`06_Experimento/prompts_llm/prompt_llm_conjunto_A.md`](../06_Experimento/prompts_llm/prompt_llm_conjunto_A.md).
+comprueba. El registro integro de la generacion —la instruccion que recibio el modelo, cada accion que
+ejecuto y su hora— esta en
+[`06_Experimento/prompts_llm/registro_generacion_conjunto_A.md`](../06_Experimento/prompts_llm/registro_generacion_conjunto_A.md),
+y el modelo, la interfaz y los parametros en
+[`prompt_llm_conjunto_A.md`](../06_Experimento/prompts_llm/prompt_llm_conjunto_A.md).
 
 ### Las etapas
 

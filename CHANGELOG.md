@@ -8,6 +8,42 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.16.0] - 2026-09-12
+
+Registro integro de la generacion del Conjunto A.
+
+### Anadido
+
+- **`06_Experimento/prompts_llm/registro_generacion_conjunto_A.md`**: la instruccion que recibio
+  el modelo y cada accion que ejecuto al generar el Conjunto A, el 2026-08-02 entre las 19:44 y
+  las 19:51 UTC, extraidas de la exportacion oficial de datos de claude.ai de la cuenta de
+  Sanchez Cornejo, Gary Alberto. Los 26 requisitos que se generaron en esa respuesta son los
+  depositados. La copia publica omite, y dice por que, el razonamiento interno del modelo, el
+  texto de la entrevista EV-15, las busquedas en archivos del proyecto y el script que armo la
+  tabla de desciego; lleva el SHA-256 del extracto original.
+- **Desviacion 6** en `07_Datos/desviaciones.md`: la guia preveia ejecutar el modelo con una
+  consigna literal, y el Conjunto A se genero dentro de la conversacion de trabajo del
+  proyecto, a partir de la instruccion «usa tu propio modelo». No cambia ningun dato ni
+  resultado.
+
+### Corregido
+
+- `prompt_llm_conjunto_A.md` decia que la conversacion no existia y presentaba la consigna de
+  la guia como el mensaje enviado; ahora remite al registro integro y la presenta como la
+  tarea que el modelo aplico.
+- El manuscrito describia la intervencion como «single query, controlled temperature»: ni fue
+  una consulta aislada ni la temperatura se controlo. Se corrige, igual que la amenaza T5, que
+  remite ahora al registro. Sigue en 15 paginas.
+- El reporte citaba `06_Experimento/consignas/` y `08_Etica/declaracion_uso_ia.md`, rutas que
+  no existen; pasan a `06_Experimento/prompts_llm/` y `10_Autoria/declaracion_uso_ia.md`.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.5`. `2B-final-v5.4` (`107433f`) y todas las anteriores son historicas.
+
+---
+
 ## [2B-1.15.1] - 2026-09-12
 
 Declaracion uniforme de la composicion del equipo.

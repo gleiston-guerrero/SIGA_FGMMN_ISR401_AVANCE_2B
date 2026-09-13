@@ -165,7 +165,7 @@ three-judge panel.
 See RQ1 and RQ2 above. The PICOC below frames RQ1; RQ2 is answered on the same design,
 taking the panel itself as the object of measurement. \textbf{Population:} functional requirements of the SIGA system (26
 LLM-generated, 25 human-elicited). \textbf{Intervention:} LLM-assisted elicitation
-(single query, controlled temperature) from the full anonymized interview corpus.
+(one chat turn; sampling parameters not exposed) from the full anonymized corpus.
 \textbf{Comparison:} the human analyst team's own elicitation process (interviews plus
 manual analysis) over the same corpus. \textbf{Outcome:} blind quality score (1--5) on
 five dimensions. \textbf{Context:} an academic Requirements Engineering course project
@@ -475,9 +475,9 @@ role would have raised still cannot appear in either set, affecting both arms eq
 \subsection{Construct validity}
 
 \textbf{T5. Prior exposure of the model.} The LLM had partial prior exposure to
-Set~B within the same session used to generate Set~A, documented in
-\texttt{06\_Experimento/prompts\_llm/prompt\_llm\_conjunto\_A.md}.
-\emph{Mitigation:} the exposure is recorded verbatim in the prompt file and
+Set~B: Set~A was generated in the project's working chat, as recorded in
+\texttt{06\_Experimento/prompts\_llm/}.
+\emph{Mitigation:} the full generation turn is deposited from the platform export and
 declared as a deviation from the registered protocol rather than being described
 after the fact. \emph{Remaining limitation:} the contamination cannot be undone
 without regenerating Set~A in a clean session, which is listed as future work;
