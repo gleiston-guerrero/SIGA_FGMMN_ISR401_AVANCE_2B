@@ -1,0 +1,6 @@
+Dimension,Cohen_kappa_juez1_juez2,Cohen_kappa_juez1_juez3,Cohen_kappa_juez2_juez3,Fleiss_kappa_3jueces
+Completitud(1-5),0.474,0.646,0.42,0.338
+Ausencia_ambiguedad(1-5),0.654,0.549,0.494,0.34
+Verificabilidad(1-5),0.646,0.55,0.419,0.296
+Correccion_fuente(1-5),0.444,0.396,0.316,0.294
+Consistencia_interna(1-5),0.577,0.467,0.294,0.333

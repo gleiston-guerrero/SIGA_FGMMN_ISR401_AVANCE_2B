@@ -8,6 +8,44 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.17.0] - 2026-09-13
+
+Las tablas y figuras del documento quedan dentro del paquete de datos. Atiende la unica
+observacion que mantuvo la revision del docente del 2026-09-13 sobre el item B1.
+
+### Cambiado
+
+- **La orden unica `python 07_Datos/scripts/ejecutar.py` deposita dentro de `07_Datos/` las 18
+  salidas del documento.** Hasta ahora la etapa `documento` las regeneraba y las comparaba con
+  el manifiesto, pero las dejaba en `07_Publicacion/` y `06_Experimento/`, y
+  `07_Datos/resultados/` contenia un solo archivo. Ahora, si las 18 coinciden byte a byte con
+  el manifiesto, las copia a:
+  - `07_Datos/resultados/tablas/`: las siete tablas del documento, seis `.tex` y
+    `saturacion_por_entrevista.csv`;
+  - `07_Datos/resultados/figuras/`: las cuatro figuras;
+  - `07_Datos/resultados/estadisticos/`: acuerdo, supuestos, hipotesis, efectos, analisis por
+    item y potencia;
+  - `07_Datos/datos_procesados/puntuaciones_consolidadas.csv`.
+  
+  Antes de copiar vacia las tres carpetas de resultados, para que lo que quede en ellas sea
+  siempre lo que acaba de producir la orden. Si una sola salida difiere, no deposita nada.
+- `diccionario_datos.csv` describe las columnas de los ocho CSV nuevos del paquete, y
+  `checksums_datos.sha256` pasa de 23 a 41 entradas.
+- `README_datos.md` y el `README.md` de la raiz dicen donde queda cada tabla y figura.
+
+### Sin cambios
+
+Ninguna cifra, tabla ni figura cambia: las 18 salidas depositadas en `07_Datos/` son identicas
+byte a byte a las que ya constaban en `07_Publicacion/` y `06_Experimento/`, que se conservan
+donde estaban porque el reporte y el manuscrito las incluyen desde ahi.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.6`. `2B-final-v5.5` (`d074c6b`) y todas las anteriores son historicas.
+
+---
+
 ## [2B-1.16.0] - 2026-09-12
 
 Registro integro de la generacion del Conjunto A.

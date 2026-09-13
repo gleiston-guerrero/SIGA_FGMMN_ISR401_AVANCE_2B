@@ -1,0 +1,6 @@
+Dimension,n_humano,n_llm,Media_Humano,Media_LLM,Prueba,Estadistico,p_valor,Tipo_efecto,Tamano_efecto,IC95_inferior,IC95_superior,p_ajustado_holm,significativo_alpha_05
+Completitud(1-5),25,26,3.9067,4.1154,U de Mann-Whitney,287.0,0.4742,delta de Cliff,-0.1169,-0.4338,0.2,1.0,No
+Ausencia_ambiguedad(1-5),25,26,3.6133,3.859,t de Welch,-0.9315,0.3562,g de Hedges,-0.2573,-0.8242,0.298,1.0,No
+Verificabilidad(1-5),25,26,3.6533,3.8718,U de Mann-Whitney,278.5,0.3824,delta de Cliff,-0.1431,-0.4585,0.1769,1.0,No
+Correccion_fuente(1-5),25,26,4.2933,4.4872,U de Mann-Whitney,267.0,0.2671,delta de Cliff,-0.1785,-0.4769,0.1277,1.0,No
+Consistencia_interna(1-5),25,26,4.1467,4.3846,U de Mann-Whitney,265.0,0.2541,delta de Cliff,-0.1846,-0.4785,0.1262,1.0,No

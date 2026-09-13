@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Assumption checks: normality (Shapiro-Wilk) and homogeneity of variances (Levene)}
+\label{tab:supuestos}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllllll}
+\toprule
+Dimension & $n$ & SW $p$ (Human) & SW $p$ (LLM) & Normal (H) & Normal (L) & Levene $W$ & Levene $p$ & Equal var. \\
+\midrule
+Completitud & 3 & 0.780 & 0.537 & Sí & Sí & 0.122 & 0.745 & Sí \\
+Ausencia\_ambiguedad & 3 & 0.253 & 0.843 & Sí & Sí & 0.002 & 0.969 & Sí \\
+Verificabilidad & 3 & 0.780 & 0.637 & Sí & Sí & 0.458 & 0.536 & Sí \\
+Correccion\_fuente & 3 & 0.298 & 0.000 & Sí & No & 0.115 & 0.751 & Sí \\
+Consistencia\_interna & 3 & 0.843 & 0.537 & Sí & Sí & 0.002 & 0.964 & Sí \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

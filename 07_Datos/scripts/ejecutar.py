@@ -22,9 +22,11 @@ Etapas:
                       intervalo de confianza del 95 % por bootstrap.
     3. conjuntos      Los dos conjuntos de requisitos comparados, cada uno en
                       su archivo de texto plano.
-    4. documento      Ejecuta 06_Experimento/replicar.py y comprueba que las
+    4. documento      Ejecuta 06_Experimento/replicar.py, comprueba que las
                       tablas y figuras del documento salen identicas byte a
-                      byte a las del manifiesto.
+                      byte a las del manifiesto y las deposita en
+                      resultados/tablas/, resultados/figuras/ y
+                      resultados/estadisticos/.
     5. integridad     Correspondencia con 06_Experimento, cobertura del
                       diccionario de datos y manifiesto de sumas.
 

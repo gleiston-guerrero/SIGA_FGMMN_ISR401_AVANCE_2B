@@ -1,0 +1,6 @@
+Dimension,Tipo_efecto,Valor,IC95_inferior,IC95_superior,n_bootstrap,semilla
+Completitud(1-5),Cohen d (apareado),-1.0419,-2.117,0.0,10000,20260802
+Ausencia_ambiguedad(1-5),Cohen d (apareado),-2.3505,-18.384,0.0,10000,20260802
+Verificabilidad(1-5),Cohen d (apareado),-1.4628,-12.9583,0.0,10000,20260802
+Correccion_fuente(1-5),Cliff delta,-0.5556,-1.0,1.0,10000,20260802
+Consistencia_interna(1-5),Cohen d (apareado),-5.2669,-42.7239,0.0,10000,20260802

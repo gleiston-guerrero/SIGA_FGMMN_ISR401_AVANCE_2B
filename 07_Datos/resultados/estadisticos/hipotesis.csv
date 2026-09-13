@@ -1,0 +1,6 @@
+Dimension,Prueba,Estadistico_nombre,Estadistico_valor,p_valor,p_valor_ajustado_holm,significativo_alpha_05_ajustado
+Completitud(1-5),t apareada,t,-1.8045,0.2129,0.4258,False
+Ausencia_ambiguedad(1-5),t apareada,t,-4.0712,0.0554,0.2216,False
+Verificabilidad(1-5),t apareada,t,-2.5337,0.1268,0.3804,False
+Correccion_fuente(1-5),Wilcoxon de rangos con signo,W,1.0,0.5,0.5,False
+Consistencia_interna(1-5),t apareada,t,-9.1226,0.0118,0.059,False

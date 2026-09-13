@@ -1,0 +1,6 @@
+Dimension,n_jueces,Shapiro_p_Humano,Shapiro_p_LLM,Normal_Humano,Normal_LLM,Levene_estadistico,Levene_p,Varianzas_homogeneas
+Completitud(1-5),3,0.7804,0.5367,True,True,0.1219,0.7446,True
+Ausencia_ambiguedad(1-5),3,0.253,0.8428,True,True,0.0017,0.9692,True
+Verificabilidad(1-5),3,0.7804,0.6369,True,True,0.4578,0.5357,True
+Correccion_fuente(1-5),3,0.2983,0.0,True,False,0.1152,0.7514,True
+Consistencia_interna(1-5),3,0.8428,0.5367,True,True,0.0024,0.9635,True

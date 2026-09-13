@@ -100,7 +100,7 @@ solo en el repositorio de su entrega.
 | Version citada por el manuscrito | [`10.5281/zenodo.22663649`](https://doi.org/10.5281/zenodo.22663649) --- version `2B-1.12.0`, la que corresponde a este arbol |
 | Registro previo del protocolo en OSF | [`10.17605/OSF.IO/7PQ3H`](https://doi.org/10.17605/OSF.IO/7PQ3H) |
 | **Caratula de identificacion** | [`caratula_identificacion_SGA.pdf`](caratula_identificacion_SGA.pdf), con la URL del repositorio, el identificador del ultimo commit y la etiqueta de linea base. Se deposita aqui ademas de subirse al Sistema de Gestion Academica |
-| **Linea base vigente** | Etiqueta anotada **`2B-final-v5.5`**, la **unica vigente**: la version entregada a la rubrica de cierre del Proyecto Fin de Curso, con el aporte individual y la verificacion previa firmados el 2026-09-12. Esta sobre el ultimo commit de la rama `main`. **Quien revise este repositorio debe ir directamente a esa etiqueta** (`git checkout 2B-final-v5.5`). Sustituye a `2B-final-v5.4`. `2B-final`, `2B-final-v2.1`, `2B-final-v3.0`, `2B-final-v4.0` y `2B-final-v5.0` a `2B-final-v5.4` se conservan **solo como referencia historica** de lo que se califico o deposito en cada fecha; ninguna es linea base. La caratula nombra el commit anterior al que la deposita, porque un archivo no puede contener el identificador del commit que lo contiene |
+| **Linea base vigente** | Etiqueta anotada **`2B-final-v5.6`**, la **unica vigente**: la version entregada a la rubrica de cierre del Proyecto Fin de Curso, con el paquete `07_Datos` depositando dentro de si las tablas y figuras del documento, conforme a la revision del docente del 2026-09-13. Esta sobre el ultimo commit de la rama `main`. **Quien revise este repositorio debe ir directamente a esa etiqueta** (`git checkout 2B-final-v5.6`). Sustituye a `2B-final-v5.5`. `2B-final`, `2B-final-v2.1`, `2B-final-v3.0`, `2B-final-v4.0` y `2B-final-v5.0` a `2B-final-v5.5` se conservan **solo como referencia historica** de lo que se califico o deposito en cada fecha; ninguna es linea base. La caratula nombra el commit anterior al que la deposita, porque un archivo no puede contener el identificador del commit que lo contiene |
 | Desviaciones respecto del protocolo | `06_Experimento/registro_previo/bitacora_desviaciones.pdf` |
 | Codigo archivado en Software Heritage | `swh:1:snp:861295fead33417e3efc2753fd4a34897014a891` |
 | Autoevaluacion FAIR | [`fair_assessment.pdf`](fair_assessment.pdf) --- **22 de 26 indicadores, 84,62 %**, nivel *moderate*. Salida real de F-UJI 4.0.0; el volcado crudo esta en `fair_assessment.json` y el informe lo genera `generar_fair_assessment.py` |
@@ -208,7 +208,9 @@ SIGA_FGMMN_ISR401_AVANCE_2B/
 │   └── dataset_zenodo/           Paquete depositado en Zenodo con DOI
 │
 ├── 07_Datos/                     Paquete de datos: una sola orden desde los datos crudos
-│   ├── datos_crudos/  datos_procesados/  resultados/
+│   ├── datos_crudos/  datos_procesados/
+│   ├── resultados/               Acuerdo con IC, y las tablas/, figuras/ y estadisticos/
+│   │                             del documento, que deposita la orden unica
 │   ├── scripts/                  Orquestador ejecutar.py y sus cinco etapas
 │   └── diccionario_datos.csv · README_datos.md · LICENSE-DATA.txt ·
 │       checksums_datos.sha256 · desviaciones.md · registro_deposito.md
@@ -316,8 +318,10 @@ limpio sin instalar nada.
 ### Ejecucion completa
 
 Una sola orden, partiendo unicamente de los datos crudos, que reconstruye el paquete de
-datos, **regenera todas las tablas y figuras del documento y comprueba que salen identicas
-byte a byte a las depositadas**:
+datos, **regenera todas las tablas y figuras del documento, comprueba que salen identicas
+byte a byte a las depositadas y las deja dentro del paquete**, en
+`07_Datos/resultados/tablas/`, `07_Datos/resultados/figuras/` y
+`07_Datos/resultados/estadisticos/`:
 
 ```bash
 python 07_Datos/scripts/ejecutar.py
