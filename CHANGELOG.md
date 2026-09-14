@@ -8,6 +8,51 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.18.0] - 2026-09-14
+
+Atiende las dos observaciones de la evaluacion de la Entrega Final publicada el 2026-09-14
+que quedaban abiertas en los items B4 y B1. No cambia ningun dato crudo, ninguna puntuacion,
+ningun valor p ni ninguna conclusion.
+
+### Corregido
+
+- **Tamanos del efecto (B4).** Se calculaban como d de Cohen apareada sobre las tres medias
+  por juez, y el bootstrap de tres observaciones daba intervalos sin sentido, como
+  [−42,72 ; 0,00] en Consistencia interna. Ahora se calculan con el **requisito como unidad**,
+  25 del equipo frente a 26 del modelo: g de Hedges o delta de Cliff con IC 95 % por bootstrap
+  estratificado. Los efectos son pequenos, entre −0,117 y −0,257, y todos los intervalos
+  cruzan el cero. El contraste apareado preregistrado no cambia. Declarado como desviacion 7
+  en `07_Datos/desviaciones.md` y en
+  `06_Experimento/registro_previo/desviacion_tamano_efecto.md`.
+- `efectos.csv`, `tabla_hipotesis.tex` y `fig03_tamanos_efecto.png` regenerados; apartados de
+  magnitud del efecto del reporte y del manuscrito reescritos, con la cuarta desviacion en el
+  manuscrito, que sigue en 15 paginas; `AFI-04` y `AFI-05` de `verificar_afirmaciones.py` y
+  pregunta D5 del banco de la defensa al dia.
+- **`reporte.tex`** mostraba en el PDF «extbf» y «exttt» sueltos en dos parrafos, por un
+  tabulador donde debia ir `\t`, y un `**recalculan desde su fuente**` con los asteriscos de
+  Markdown; dos rutas se salian del margen.
+
+### Cambiado
+
+- **La cadena de analisis vive en `07_Datos` (B1).** Los seis scripts de analisis estan en
+  `07_Datos/scripts/analisis/` y la nueva etapa `analisis` (`etapa5_analisis.py`, que
+  sustituye a `etapa5_documento.py`) los ejecuta sobre `07_Datos/datos_crudos/`, sin llamar a
+  `06_Experimento`. Se anaden a los datos crudos `codificacion_tematica.csv` y
+  `transcripciones_anonimizadas.json`, entradas de la curva de saturacion.
+- **El reporte y el manuscrito incluyen sus tablas y figuras desde `07_Datos/resultados/`.**
+- `06_Experimento/replicar.py` y su `Makefile` siguen funcionando igual. La etapa
+  `integridad` comprueba ahora que los datos crudos, los seis scripts y las 18 salidas son
+  identicos byte a byte en los dos sitios.
+- `diccionario_datos.csv`, `README_datos.md`, `README.md`, portada del ERS y declaracion de uso
+  de IA al dia.
+
+### Linea base
+
+**Quien revise el repositorio debe ir directamente a la etiqueta vigente**:
+`git checkout 2B-final-v5.8`. `2B-final-v5.7` (`6be559a`) y todas las anteriores son historicas.
+
+---
+
 ## [2B-1.17.1] - 2026-09-13
 
 Revision de consistencia de todo el arbol, carpeta por carpeta, sobre la etiqueta
