@@ -4,8 +4,11 @@
 Hace tres cosas y todas son comprobaciones, no transformaciones.
 
 1. Correspondencia con el componente empirico. Los datos crudos de este paquete
-   son los mismos que usa 06_Experimento. Se comprueba que sean identicos byte a
-   byte, no parecidos: si alguien edita una copia y no la otra, esto lo detecta.
+   son los mismos que usa 06_Experimento, los scripts de scripts/analisis/ son
+   los mismos que 06_Experimento/scripts_analisis/, y las salidas de la cadena de
+   analisis son las mismas que produce 06_Experimento/replicar.py. Se comprueba
+   que sean identicos byte a byte, no parecidos: si alguien edita una copia y no
+   la otra, esto lo detecta.
 
 2. Cobertura del diccionario. Todo archivo de datos delimitado del paquete debe
    tener descritas sus columnas en diccionario_datos.csv, y el diccionario no
@@ -40,7 +43,26 @@ ESPEJO = {
         "06_Experimento/prompts_llm/material_fuente_LLM.txt",
     "datos_crudos/paquete_evaluacion_ciega.md":
         "06_Experimento/instrumentos/Paquete_Evaluacion_Ciega_Jueces.md",
+    "datos_crudos/codificacion_tematica.csv":
+        "02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv",
+    "datos_crudos/transcripciones_anonimizadas.json":
+        "06_Experimento/datos_crudos/transcripciones_anonimizadas.json",
 }
+
+# Cadena de analisis: la copia de este paquete y la de 06_Experimento.
+for _script in ("analizar_resultados.py", "analisis_por_item.py", "curva_saturacion.py",
+                "power_calculation.py", "generar_figuras.py", "generar_tablas.py"):
+    ESPEJO["scripts/analisis/" + _script] = "06_Experimento/scripts_analisis/" + _script
+
+# Salidas: las que produce la etapa analisis y las que produce replicar.py.
+ESPEJO["datos_procesados/puntuaciones_consolidadas.csv"] =     "06_Experimento/datos_procesados/puntuaciones_consolidadas.csv"
+for _carpeta, _origen in (("resultados/estadisticos/", "06_Experimento/resultados/"),
+                          ("resultados/tablas/", "07_Publicacion/tablas/"),
+                          ("resultados/figuras/", "07_Publicacion/figuras/")):
+    _absoluta = os.path.join(PAQUETE, _carpeta)
+    if os.path.isdir(_absoluta):
+        for _nombre in sorted(os.listdir(_absoluta)):
+            ESPEJO[_carpeta + _nombre] = _origen + _nombre
 
 
 def sha256(ruta):
@@ -80,7 +102,10 @@ def comprobar_espejo():
             print("    DIFIERE  %s" % rel)
             fallos += 1
     if not fallos:
-        print("    %d archivos crudos identicos byte a byte" % len(ESPEJO))
+        n_scripts = sum(1 for x in ESPEJO if x.startswith("scripts/"))
+        n_salidas = sum(1 for x in ESPEJO if x.startswith(("resultados/", "datos_procesados/")))
+        print("    %d archivos crudos, %d scripts de analisis y %d salidas identicos byte a byte"
+              % (len(ESPEJO) - n_scripts - n_salidas, n_scripts, n_salidas))
     return fallos
 
 
