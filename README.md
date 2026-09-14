@@ -5,7 +5,7 @@ Ingenieria de Requerimientos (ISR-401) · 4.º nivel · Carrera de Software
 Facultad de Ciencias de la Computacion · Universidad Tecnica Estatal de Quevedo (UTEQ)
 Periodo Academico Ordinario 2026–2027
 
-**URL del repositorio:** https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2B
+**URL del repositorio:** https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2B
 
 ---
 
@@ -74,8 +74,8 @@ sin depender de la memoria de nadie.
 
 | Entrega | Repositorio |
 |---|---|
-| Entrega 3 (2A) --- Especificacion y modelado | <https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2A> |
-| Entrega Final (2B) --- esta | <https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2B> |
+| Entrega 3 (2A) --- Especificacion y modelado | <https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2A> |
+| Entrega Final (2B) --- esta | <https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2B> |
 
 Los artefactos de las entregas anteriores que siguen vigentes se incorporaron a este
 repositorio y su evolucion consta en `CHANGELOG.md`. Los que quedaron superados permanecen

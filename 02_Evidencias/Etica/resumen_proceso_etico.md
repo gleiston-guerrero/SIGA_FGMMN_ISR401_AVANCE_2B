@@ -142,7 +142,7 @@ Si una persona retira su consentimiento:
 
 El expediente ético completo fue presentado en la Entrega 3 (2A) y se conserva en el
 repositorio histórico
-<https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2A> bajo `08_Etica/`:
+<https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2A> bajo `08_Etica/`:
 
 | Anexo | Contenido |
 |---|---|

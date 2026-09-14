@@ -29,7 +29,7 @@ import tempfile
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 SALIDA = os.path.join(AQUI, "verificacion_previa.md")
-REMOTO = "https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2B.git"
+REMOTO = "https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2B.git"
 
 CORREOS = {"gsanchezc6@uteq.edu.ec", "ymunozq@uteq.edu.ec", "wcedenoa2@uteq.edu.ec"}
 ELEMENTOS_A = {

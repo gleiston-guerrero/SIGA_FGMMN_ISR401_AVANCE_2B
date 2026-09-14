@@ -94,7 +94,7 @@ esta es la cronologia de ese dia, en UTC:
 Se reproduce con:
 
 ```bash
-git clone https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2A
+git clone https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2A
 cd SIGA_FGMMN_ISR401_AVANCE_2A
 TZ=UTC git log --diff-filter=A --date=iso-local \
   --format='%ad  %h  %s' -- "*CLAVE*" "*juez*" "*Paquete_Evaluacion*"
