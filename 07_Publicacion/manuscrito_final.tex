@@ -565,10 +565,11 @@ repository is permanently archived in Software Heritage under the identifier
 \section*{Use of AI-assisted technologies}
 % ======================================================================
 A Large Language Model was used in two clearly separated capacities. First, as the
-\emph{object of study}: Set~A of functional requirements was generated under
-controlled conditions, with the exact model, version, temperature, top-$p$, seed and
-query timestamp recorded in the replication package
-(\nolinkurl{06_Experimento/prompts_llm/}). Second, as \emph{writing support}: an AI
+\emph{object of study}: Set~A of functional requirements was generated within the
+project's working chat rather than in a controlled session; the chat interface exposes
+neither temperature, top-$p$ nor seed, so none is reported. The full generation turn is
+deposited in \nolinkurl{06_Experimento/prompts_llm/} and declared as a deviation (T5).
+Second, as \emph{writing support}: an AI
 coding assistant (Claude, Anthropic) was used to build and debug the reproducible
 analysis pipeline (\nolinkurl{06_Experimento/scripts_analisis/}) under the direct
 supervision of the authors, who verified every statistical method against the
