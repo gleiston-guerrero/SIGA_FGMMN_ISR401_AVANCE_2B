@@ -44,6 +44,7 @@ Quevedo, Quevedo, Los R\'ios, Ecuador\\
 
 % ----------------------------------------------------------------------
 \begin{abstract}
+\sloppy
 \textbf{Context.} Large Language Models (LLMs) are increasingly proposed as tools to
 support requirements elicitation, yet few studies compare their output against
 human-elicited requirements from the \emph{same} real-world source material.
@@ -131,12 +132,12 @@ ten most directly comparable studies found.
 \caption{Comparative summary of closely related work}
 \label{tab:relwork}
 \small
-\begin{tabular}{p{2.3cm}p{0.6cm}p{2.3cm}p{4.5cm}}
+\begin{tabular}{p{2.3cm}p{0.75cm}p{2.3cm}p{4.35cm}}
 \toprule
 Reference & Year & Design & Difference with our study \\
 \midrule
 Cheng et al.~\cite{cheng2026genai} & 2026 & Systematic review (238 studies) & Maps the field; does not itself run a paired human-vs-LLM comparison \\
-Arora et al.~\cite{arora2024advancing} & 2024 & Position/assessment paper & Discusses LLM roles in RE conceptually, no empirical panel evaluation \\
+Arora et al.~\cite{arora2024advancing} & 2024 & Position/\allowbreak assessment paper & Discusses LLM roles in RE conceptually, no empirical panel evaluation \\
 Vogelsang \& Fischbach~\cite{vogelsang2024using} & 2024 & Guideline paper & Methodological guidance for using LLMs in RE, not a comparative study \\
 Lubos et al.~\cite{lubos2024leveraging} & 2024 & Case study & LLM assists QA of existing requirements; does not compare elicitation origin \\
 Ronanki et al.~\cite{ronanki2023investigating} & 2023 & Exploratory case study & Explores ChatGPT assistance in elicitation; no blind judge panel \\
@@ -192,8 +193,8 @@ Sect.~\ref{sec:results} quantifies --- yields very low statistical power.
 
 \subsection{Instruments and reproducibility}
 The blind item package, scoring sheet, and judge instructions are included in the
-replication package (\texttt{06\_Experimento/instrumentos/}). The full analysis
-pipeline (\texttt{06\_Experimento/scripts\_analisis/}, invoked via \texttt{make all})
+replication package (\nolinkurl{06_Experimento/instrumentos/}). The full analysis
+pipeline (\nolinkurl{06_Experimento/scripts_analisis/}, invoked via \texttt{make all})
 regenerates every table and figure in Sect.~\ref{sec:results} directly from the raw
 judge score sheets; no figure was produced manually.
 
@@ -422,7 +423,7 @@ consistency, adding measurement noise on top of the small sample.
 the replication package, and the agreement statistic is reported rather than
 omitted. We further attempted to widen the panel from three to ten raters on two
 separate occasions, and both attempts are deposited in full
-(\texttt{06\_Experimento/panel\_ampliado/}). \emph{Remaining limitation:} neither
+(\nolinkurl{06_Experimento/panel_ampliado/}). \emph{Remaining limitation:} neither
 attempt produced usable agreement, and the failure is informative about the
 instrument rather than about the object of study. With ten raters, Fleiss'
 $\kappa$ fell to $-0.008$ in the first round and $-0.026$ in the second, despite
@@ -478,7 +479,7 @@ role would have raised still cannot appear in either set, affecting both arms eq
 
 \textbf{T5. Prior exposure of the model.} The LLM had partial prior exposure to
 Set~B: Set~A was generated in the project's working chat, as recorded in
-\texttt{06\_Experimento/prompts\_llm/}.
+\nolinkurl{06_Experimento/prompts_llm/}.
 \emph{Mitigation:} the full generation turn is deposited from the platform export and
 declared as a deviation from the registered protocol rather than being described
 after the fact. \emph{Remaining limitation:} the contamination cannot be undone
@@ -550,14 +551,15 @@ single role.
 % ======================================================================
 \section*{Data and materials availability}
 % ======================================================================
+{\sloppy
 The replication package supporting this study is openly available in Zenodo under the
 Creative Commons Attribution 4.0 International licence (CC BY 4.0):
 \url{https://doi.org/10.5281/zenodo.22663649}. The study
 protocol was pre-registered in the Open Science Framework:
 \url{https://doi.org/10.17605/OSF.IO/7PQ3H}, with deviations documented in
-\texttt{06\_Experimento/registro\_previo/}. The source
+\nolinkurl{06_Experimento/registro_previo/}. The source
 repository is permanently archived in Software Heritage under the identifier
-\texttt{swh:1:snp:861295fead33417e3efc2753fd4a34897014a891}. Analysis code is released under the Apache-2.0 licence.
+\texttt{swh:1:snp:861295fead33417e3efc2753fd4a34897014a891}. Analysis code is released under the Apache-2.0 licence.\par}
 
 % ======================================================================
 \section*{Use of AI-assisted technologies}
@@ -566,9 +568,9 @@ A Large Language Model was used in two clearly separated capacities. First, as t
 \emph{object of study}: Set~A of functional requirements was generated under
 controlled conditions, with the exact model, version, temperature, top-$p$, seed and
 query timestamp recorded in the replication package
-(\texttt{06\_Experimento/prompts\_llm/}). Second, as \emph{writing support}: an AI
+(\nolinkurl{06_Experimento/prompts_llm/}). Second, as \emph{writing support}: an AI
 coding assistant (Claude, Anthropic) was used to build and debug the reproducible
-analysis pipeline (\texttt{06\_Experimento/scripts\_analisis/}) under the direct
+analysis pipeline (\nolinkurl{06_Experimento/scripts_analisis/}) under the direct
 supervision of the authors, who verified every statistical method against the
 methodology declared in the pre-registered protocol; to polish the wording of
 paragraphs whose content and data interpretation were produced by the authors; and to
