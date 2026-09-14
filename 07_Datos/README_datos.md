@@ -17,23 +17,25 @@ python 07_Datos/scripts/ejecutar.py
 ```
 
 Eso reconstruye **todo** el contenido de `datos_procesados/` y de `resultados/` a partir
-unicamente de `datos_crudos/`, **regenera las tablas y figuras del documento**, comprueba
-que salen identicas byte a byte a las depositadas, **las deja dentro de este paquete**, en
-`resultados/tablas/`, `resultados/figuras/` y `resultados/estadisticos/`, y termina
-comprobando la integridad del paquete.
+unicamente de `datos_crudos/`. **La cadena de analisis estadistico se ejecuta aqui dentro**,
+con los scripts de `scripts/analisis/`, y escribe en `resultados/tablas/`,
+`resultados/figuras/` y `resultados/estadisticos/` las tablas y figuras del documento.
+Comprueba que salen identicas byte a byte a las del manifiesto y termina comprobando la
+integridad del paquete.
 
-Quien clone el repositorio y ejecute esa orden obtiene aqui dentro las mismas tablas y
-figuras que aparecen en el reporte y en el manuscrito, sin buscarlas en otra carpeta.
+**El reporte y el manuscrito incluyen sus tablas y figuras directamente desde
+`07_Datos/resultados/`.** Lo que produce esta orden no es una copia de lo que aparece en los
+documentos: es lo mismo que los documentos cargan al compilarse.
 
 **Una sola dependencia previa.** Las etapas propias del paquete usan solo la biblioteca
-estandar de Python. La etapa `documento` ejecuta la cadena de analisis estadistico, que
+estandar de Python. La etapa `analisis` ejecuta la cadena de analisis estadistico, que
 necesita seis bibliotecas con version fijada. Se instalan una vez, antes de la orden:
 
 ```
 pip install -r 06_Experimento/requirements.txt
 ```
 
-Si faltan, la etapa `documento` lo dice y se detiene sin tocar nada; no hay que editar
+Si faltan, la etapa `analisis` lo dice y se detiene sin tocar nada; no hay que editar
 ningun archivo ni ejecutar nada a mano.
 
 Para ver las etapas sin ejecutarlas:
@@ -51,9 +53,10 @@ python 07_Datos/scripts/ejecutar.py --listar
 | `datos_crudos/` | Los datos **tal como salieron del instrumento**, sin ninguna edicion manual |
 | `datos_procesados/` | Derivados, generados solo por los scripts. Se pueden borrar y regenerar |
 | `scripts/` | El orquestador y las cinco etapas |
+| `scripts/analisis/` | **La cadena de analisis estadistico**: consolidacion, acuerdo, supuestos, contrastes, tamanos del efecto, analisis por requisito, saturacion, potencia, tablas y figuras |
 | `resultados/` | Acuerdo entre evaluadores con su intervalo, generado por la etapa `acuerdo_ic`. Nunca escrito a mano |
-| `resultados/tablas/` | **Las siete tablas del documento**: seis `.tex` que el reporte y el manuscrito incluyen tal cual, y la tabla de saturacion en CSV |
-| `resultados/figuras/` | **Las cuatro figuras del documento**, en PNG |
+| `resultados/tablas/` | **Las siete tablas del documento**: seis `.tex` que el reporte y el manuscrito incluyen desde aqui, y la tabla de saturacion en CSV |
+| `resultados/figuras/` | **Las cuatro figuras del documento**, en PNG, incluidas desde aqui por el reporte y el manuscrito |
 | `resultados/estadisticos/` | Los seis resultados estadisticos de los que salen esas tablas y figuras: acuerdo, supuestos, hipotesis, tamanos del efecto, analisis por item y potencia |
 | `diccionario_datos.csv` | Cada columna de cada CSV: tipo, unidad, rango, faltantes y procedencia |
 | `desviaciones.md` | Toda diferencia respecto de lo previsto en el protocolo, con fecha y motivo |
@@ -88,8 +91,8 @@ y el modelo, la interfaz y los parametros en
 | `formato_largo` | `evaluacion_ciega_formato_largo.csv` — evaluador, requisito, orden de presentacion, brazo, criterio y puntuacion. 765 filas |
 | `acuerdo_ic` | `acuerdo_interevaluador_ic.csv` — kappa de Cohen ponderado y de Fleiss, cada uno con su intervalo de confianza del 95 % |
 | `conjuntos` | `conjunto_A_llm.txt` (26 requisitos) y `conjunto_B_humano.txt` (25), en texto plano y con el enunciado literal que vieron los jueces. No contienen la tabla de desciego |
-| `documento` | Ejecuta `06_Experimento/replicar.py`, compara con `checksums.sha256` las 18 salidas del documento y, si coinciden todas, las deposita en este paquete: 7 tablas en `resultados/tablas/`, 4 figuras en `resultados/figuras/`, 6 resultados en `resultados/estadisticos/` y `puntuaciones_consolidadas.csv` en `datos_procesados/`. Antes vacia esas tres carpetas de resultados, para que lo que quede sea lo que acaba de producir la orden. Falla, y no deposita nada, si una sola salida difiere |
-| `integridad` | Comprueba la correspondencia con `06_Experimento`, la cobertura del diccionario, y regenera el manifiesto de sumas |
+| `analisis` | Ejecuta la cadena de `scripts/analisis/` sobre `datos_crudos/` y escribe 7 tablas en `resultados/tablas/`, 4 figuras en `resultados/figuras/`, 6 resultados en `resultados/estadisticos/` y `puntuaciones_consolidadas.csv` en `datos_procesados/`. Antes vacia esas tres carpetas de resultados, para que lo que quede sea lo que acaba de producir la orden. No llama a nada de `06_Experimento` ni de `07_Publicacion`. Falla si una sola de las 18 salidas difiere del manifiesto `checksums.sha256` |
+| `integridad` | Comprueba que los datos crudos, los seis scripts de analisis y las 18 salidas son identicos byte a byte a sus equivalentes de `06_Experimento` y `07_Publicacion`, la cobertura del diccionario, y regenera el manifiesto de sumas |
 
 ---
 
@@ -130,11 +133,16 @@ Las dos carpetas no se solapan por descuido, y conviene entender el reparto:
   los instrumentos, las consignas dadas al modelo de lenguaje, los scripts de analisis
   estadistico y sus salidas. Es la cadena del estudio.
 - **`07_Datos/`** es el paquete de datos: la unidad depositable, autocontenida y verificable
-  por un tercero sin conocer el resto del repositorio.
+  por un tercero sin conocer el resto del repositorio. **La cadena que genera las tablas y
+  figuras del documento vive aqui**, en `scripts/analisis/`, y el reporte y el manuscrito
+  las toman de `resultados/`.
 
-Los datos crudos son **los mismos**, no una version parecida. La etapa `integridad` lo
-comprueba comparando las sumas SHA-256 de las cinco copias, y falla si alguien edita una
-sola de las dos. Esa comprobacion es la razon por la que la duplicacion es segura.
+`06_Experimento/replicar.py` y su `Makefile` siguen funcionando igual que antes, con los
+mismos scripts en `06_Experimento/scripts_analisis/`, porque forman parte del componente
+empirico ya verificado. Los datos crudos, los seis scripts de analisis y las 18 salidas son
+**los mismos** en los dos sitios, no una version parecida: la etapa `integridad` lo comprueba
+con sumas SHA-256 y falla si alguien edita una sola de las copias. Esa comprobacion es la
+razon por la que la duplicacion es segura.
 
 ---
 
@@ -149,19 +157,18 @@ paquete son:
 | Intervalos de confianza del acuerdo | Reporte del estudio | `acuerdo_ic` |
 | 765 valoraciones, 51 items, 3 jueces | Reporte, manuscrito y ERS | `formato_largo` |
 
-Los tamanos del efecto, los contrastes de hipotesis y el calculo de potencia los calcula
-`06_Experimento/replicar.py`, que es la cadena del estudio. La etapa `documento` la ejecuta
-desde aqui, comprueba sus salidas y las deposita en este paquete, de modo que tambien esos
-numeros, y las tablas y figuras que los muestran, salen de la misma orden unica y quedan
-dentro de `07_Datos/`.
+Los tamanos del efecto, los contrastes de hipotesis y el calculo de potencia los calcula la
+etapa `analisis`, con los scripts de `scripts/analisis/`, de modo que tambien esos numeros,
+y las tablas y figuras que los muestran, salen de la misma orden unica y quedan dentro de
+`07_Datos/`.
 
 | Numero | Donde aparece | Se regenera con |
 |---|---|---|
-| Tamano del efecto por dimension con IC del 95 %, analisis primario (n = 3 jueces) | Manuscrito | `documento` → `resultados/estadisticos/efectos.csv` y `resultados/figuras/fig03_tamanos_efecto.png` |
-| Tamano del efecto por dimension con IC del 95 %, requisito como unidad (25 frente a 26) | Manuscrito, tabla por item | `documento` → `resultados/estadisticos/analisis_por_item.csv` y `resultados/tablas/tabla_por_item.tex` |
-| Contrastes de hipotesis y supuestos | Reporte y manuscrito | `documento` → `resultados/estadisticos/hipotesis.csv`, `supuestos.csv` y sus tablas `.tex` |
-| Potencia alcanzada | Manuscrito y reporte | `documento` → `resultados/estadisticos/power_calculation.csv` y `resultados/tablas/tabla_power_calculation.tex`, con el numero de jueces **contado** en `datos_crudos/`, no escrito a mano |
-| Curva de saturacion tematica | Reporte y manuscrito | `documento` → `resultados/tablas/saturacion_por_entrevista.csv` y `resultados/figuras/curva_saturacion.png` |
+| Tamano del efecto por dimension con IC del 95 %, con el requisito como unidad (25 frente a 26; desviacion 7) | Reporte y manuscrito | `analisis` → `resultados/estadisticos/efectos.csv`, `resultados/tablas/tabla_hipotesis.tex` y `resultados/figuras/fig03_tamanos_efecto.png` |
+| Analisis de sensibilidad con el requisito como unidad: contrastes independientes | Manuscrito, tabla por item | `analisis` → `resultados/estadisticos/analisis_por_item.csv` y `resultados/tablas/tabla_por_item.tex` |
+| Contrastes de hipotesis y supuestos | Reporte y manuscrito | `analisis` → `resultados/estadisticos/hipotesis.csv`, `supuestos.csv` y sus tablas `.tex` |
+| Potencia alcanzada | Manuscrito y reporte | `analisis` → `resultados/estadisticos/power_calculation.csv` y `resultados/tablas/tabla_power_calculation.tex`, con el numero de jueces **contado** en `datos_crudos/`, no escrito a mano |
+| Curva de saturacion tematica | Reporte y manuscrito | `analisis` → `resultados/tablas/saturacion_por_entrevista.csv` y `resultados/figuras/curva_saturacion.png` |
 
 ---
 

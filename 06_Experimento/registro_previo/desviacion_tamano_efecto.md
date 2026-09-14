@@ -94,8 +94,8 @@ un intervalo sobre tres observaciones, no el valor que resulta.
 
 | Elemento | Ruta |
 |---|---|
-| Script | `06_Experimento/scripts_analisis/analizar_resultados.py`, etapa `efectos` |
-| Salida | `06_Experimento/resultados/efectos.csv` |
-| Tabla de contrastes y efectos | `07_Publicacion/tablas/tabla_hipotesis.tex` |
-| Figura | `07_Publicacion/figuras/fig03_tamanos_efecto.png` |
-| Paquete de datos | `07_Datos/desviaciones.md`, desviacion 7 |
+| Script | `07_Datos/scripts/analisis/analizar_resultados.py`, etapa `efectos` (copia identica en `06_Experimento/scripts_analisis/`) |
+| Salida | `07_Datos/resultados/estadisticos/efectos.csv` (y `06_Experimento/resultados/efectos.csv`) |
+| Tabla de contrastes y efectos | `07_Datos/resultados/tablas/tabla_hipotesis.tex` |
+| Figura | `07_Datos/resultados/figuras/fig03_tamanos_efecto.png` |
+| Registro en el paquete de datos | `07_Datos/desviaciones.md`, desviacion 7 |

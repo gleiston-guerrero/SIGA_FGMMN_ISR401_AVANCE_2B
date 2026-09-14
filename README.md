@@ -201,7 +201,7 @@ SIGA_FGMMN_ISR401_AVANCE_2B/
 │
 ├── 07_Publicacion/               Manuscrito y deposito de datos
 │   ├── manuscrito_final.tex      Manuscrito en plantilla Springer LNCS
-│   ├── manuscrito_final.pdf      Compilado, 15 paginas
+│   ├── manuscrito_final.pdf      Compilado, 16 paginas
 │   ├── referencias.bib           40 entradas, 35 con DOI verificado
 │   ├── analisis_revistas.md      Eleccion de la conferencia objetivo
 │   ├── figuras/  tablas/         Producidas por los scripts, no a mano
@@ -210,8 +210,9 @@ SIGA_FGMMN_ISR401_AVANCE_2B/
 ├── 07_Datos/                     Paquete de datos: una sola orden desde los datos crudos
 │   ├── datos_crudos/  datos_procesados/
 │   ├── resultados/               Acuerdo con IC, y las tablas/, figuras/ y estadisticos/
-│   │                             del documento, que deposita la orden unica
-│   ├── scripts/                  Orquestador ejecutar.py y sus cinco etapas
+│   │                             que el reporte y el manuscrito incluyen desde aqui
+│   ├── scripts/                  Orquestador ejecutar.py, sus cinco etapas y analisis/,
+│   │                             la cadena que genera las tablas y figuras del documento
 │   └── diccionario_datos.csv · README_datos.md · LICENSE-DATA.txt ·
 │       checksums_datos.sha256 · desviaciones.md · registro_deposito.md
 │
@@ -318,17 +319,20 @@ limpio sin instalar nada.
 ### Ejecucion completa
 
 Una sola orden, partiendo unicamente de los datos crudos, que reconstruye el paquete de
-datos, **regenera todas las tablas y figuras del documento, comprueba que salen identicas
-byte a byte a las depositadas y las deja dentro del paquete**, en
+datos y **ejecuta dentro de el la cadena de analisis que genera todas las tablas y figuras
+del documento**, con los scripts de `07_Datos/scripts/analisis/`. Las escribe en
 `07_Datos/resultados/tablas/`, `07_Datos/resultados/figuras/` y
-`07_Datos/resultados/estadisticos/`:
+`07_Datos/resultados/estadisticos/`, que es de donde **el reporte y el manuscrito las
+incluyen al compilarse**, y comprueba que salen identicas byte a byte al manifiesto:
 
 ```bash
 python 07_Datos/scripts/ejecutar.py
 ```
 
-Por dentro, esa orden ejecuta la cadena de analisis del componente empirico, que tambien se
-puede lanzar sola por cualquiera de estas dos rutas equivalentes:
+La misma cadena, con copias identicas de los scripts, sigue disponible en el componente
+empirico, que conserva sus salidas en `06_Experimento/resultados/` y `07_Publicacion/`. La
+etapa `integridad` del paquete comprueba que scripts y salidas coinciden byte a byte en los
+dos sitios. Se lanza por cualquiera de estas dos rutas equivalentes:
 
 ```bash
 python 06_Experimento/replicar.py
@@ -341,8 +345,9 @@ cd 06_Experimento && make all
 El pipeline consolida las hojas de puntuacion de los tres jueces, calcula el acuerdo
 inter-evaluador (kappa de Cohen ponderado por par y kappa de Fleiss), ejecuta las
 pruebas de supuestos (Shapiro-Wilk y Levene), aplica la prueba de hipotesis por
-dimension con correccion de Holm-Bonferroni, calcula el tamano del efecto con intervalo
-de confianza al 95 % por bootstrap de 10 000 replicas con semilla `20260802`, genera la
+dimension con correccion de Holm-Bonferroni, calcula el tamano del efecto con el requisito
+como unidad (25 frente a 26, desviacion 7) e intervalo de confianza al 95 % por bootstrap
+de 10 000 replicas con semilla `20260802`, genera la
 curva de saturacion tematica y el calculo de potencia, y escribe todas las tablas y
 todas las figuras del reporte en `tablas/` y `figuras/`.
 
