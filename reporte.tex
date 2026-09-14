@@ -322,7 +322,9 @@ ejecut\'o sin desviaciones en su secuencia:
         correcci\'on de Holm-Bonferroni sobre las cinco comparaciones.
   \item Tama\~no del efecto: $d$ de Cohen o $\delta$ de Cliff, con intervalo de
         confianza al 95\,\% por remuestreo bootstrap de 10\,000 r\'eplicas y semilla
-        fija.
+        fija. En la ejecuci\'on se calcul\'o con el requisito como unidad y no con el
+        juez, porque sobre tres observaciones el intervalo no es estimable; es la
+        desviaci\'on~7, explicada en la Secci\'on~\ref{sec:magnitud-efecto}.
 \end{enumerate}
 
 % ===========================================================================
@@ -437,21 +439,33 @@ ausencia de ambig\"uedad, pasa de $p = 0{,}0554$ a $p = 0{,}2216$.
 No se rechaza H0 en ninguna de las cinco dimensiones.
 
 \subsection{Magnitud del efecto}
+\label{sec:magnitud-efecto}
 
-Los tama\~nos del efecto se reportan con intervalo de confianza al 95\,\% por bootstrap
-de 10\,000 r\'eplicas y semilla \texttt{20260802}. Los valores puntuales son grandes en
-la escala convencional --- entre $d = -1{,}04$ y $d = -5{,}27$, con signo negativo
-porque el conjunto humano punt\'ua por debajo del generado --- pero
-\textbf{todos los intervalos incluyen el cero}, y en el caso de $\delta$ de Cliff el
-intervalo cubre el rango completo posible, de $-1$ a $+1$.
+El contraste anterior se hace sobre las medias de los tres jueces, como fija el
+protocolo. \textbf{El tama\~no del efecto no se calcula sobre esas tres
+observaciones}: con $n = 3$ el remuestreo bootstrap solo puede formar unas pocas muestras
+distintas, varias con desviaci\'on nula, y el intervalo que produce no estima nada. Por
+eso se calcula con el \textbf{requisito} como unidad: se promedian los tres jueces en
+cada requisito y se comparan los 25 del equipo con los 26 del modelo, que son muestras
+independientes. Se usa $g$ de Hedges cuando Shapiro-Wilk no rechaza la normalidad en
+ninguno de los dos grupos y $\delta$ de Cliff en caso contrario, con intervalo de
+confianza al 95\,\% por bootstrap estratificado de 10\,000 r\'eplicas y semilla
+\texttt{20260802}. El cambio est\'a declarado como desviaci\'on~7 en
+\texttt{07\_Datos/desviaciones.md}.
 
-Un valor puntual grande con un intervalo que cruza el cero no sostiene una afirmaci\'on
-sobre la direcci\'on del efecto. Se reporta como lo que es: una estimaci\'on sin
-precisi\'on suficiente.
+Los efectos son \textbf{peque\~nos}: $\delta$ de Cliff entre $-0{,}117$ y $-0{,}185$ en
+cuatro dimensiones y $g = -0{,}257$ en ausencia de ambig\"uedad, con signo negativo
+porque el conjunto humano punt\'ua por debajo del generado. \textbf{Todos los intervalos
+incluyen el cero}; el m\'as amplio va de $-0{,}824$ a $0{,}298$. La Tabla~\ref{tab:hipotesis}
+recoge cada valor con su intervalo junto al contraste de su dimensi\'on.
+
+Un efecto peque\~no con un intervalo que cruza el cero no sostiene una afirmaci\'on sobre
+la direcci\'on de la diferencia, y as\'i se reporta.
 
 \begin{figure}[H]\centering
   \includegraphics[width=.82\textwidth]{07_Publicacion/figuras/fig03_tamanos_efecto}
-  \caption{Tama\~nos del efecto con intervalo de confianza al 95\,\%.}
+  \caption{Tama\~nos del efecto con el requisito como unidad (25 frente a 26), con
+    intervalo de confianza al 95\,\%.}
   \label{fig:efectos}
 \end{figure}
 
@@ -531,7 +545,8 @@ evidencia de ausencia.
 
 La \'unica dimensi\'on que se aproxim\'o a la significaci\'on fue consistencia interna,
 que pas\'o de $p = 0{,}0118$ a $p = 0{,}059$ tras la correcci\'on. Es tambi\'en la
-dimensi\'on con el tama\~no del efecto puntual mayor.
+dimensi\'on con el $\delta$ de Cliff mayor en valor absoluto, $-0{,}185$, aunque su
+intervalo incluye el cero.
 
 Una explicaci\'on plausible, coherente con la literatura
 revisada~\cite{ronanki2023investigating,gorer2023generating}, es que un modelo que
