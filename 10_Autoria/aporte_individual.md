@@ -14,8 +14,8 @@ desde el propio historial. El detalle confirmacion por confirmacion esta en [`..
 
 | Integrante | Correo institucional | Commits | Primera | Ultima |
 |---|---|---|---|---|
-| Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **164** | 2026-08-30 | 2026-09-12 |
-| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **83** | 2026-08-30 | 2026-09-07 |
+| Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **173** | 2026-08-30 | 2026-09-13 |
+| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **109** | 2026-08-30 | 2026-09-14 |
 | Winston Damian Cedeno Avila | wcedenoa2@uteq.edu.ec | **12** | 2026-09-04 | 2026-09-09 |
 
 Comprobable con `git shortlog -sne main`. El total de esta tabla es una confirmacion
@@ -27,23 +27,23 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Analista lider; especificacion, componente empirico e integracion
 
-**Confirmaciones: 164**, de 2026-08-30 a 2026-09-12.
+**Confirmaciones: 173**, de 2026-08-30 a 2026-09-13.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
-| Evidencia de campo y etica | 676 |
-| Documentos de raiz | 173 |
+| Evidencia de campo y etica | 679 |
+| Documentos de raiz | 218 |
 | Modelado UML e i* | 136 |
-| Manuscrito y deposito | 126 |
-| Componente empirico | 104 |
-| Paquete de datos | 72 |
-| Defensa | 61 |
-| Especificacion de requisitos | 57 |
+| Manuscrito y deposito | 129 |
+| Componente empirico | 108 |
+| Paquete de datos | 98 |
+| Especificacion de requisitos | 70 |
+| Evidencia de autoria | 68 |
+| Defensa | 66 |
 | Producto minimo viable | 53 |
-| Evidencia de autoria | 51 |
-| Trazabilidad | 42 |
+| Trazabilidad | 48 |
 | Otros | 8 |
 
 ### Confirmaciones
@@ -214,6 +214,15 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `e13df21` | 2026-09-12 | fix(autoria): la declaracion de uso de IA cuadra con el repositorio |
 | `3080481` | 2026-09-12 | docs: declara la linea base 2B-final-v5.0 y pone al dia README y CHANGELOG |
 | `0578810` | 2026-09-12 | chore(autoria): regenera la bitacora, el aporte individual y el manifiesto sobre el historial al dia |
+| `3530bb2` | 2026-09-12 | docs(autoria): verificacion previa sobre el clon limpio de 0578810 y caratula de la linea base v5.0 |
+| `6ae4e9e` | 2026-09-12 | feat(autoria): deposita el aporte individual y la verificacion previa firmados el 2026-09-12 |
+| `09edc04` | 2026-09-12 | chore(caratula): regenera la caratula sobre la linea base 2B-final-v5.1 |
+| `1f05c14` | 2026-09-12 | fix(autoria): la comprobacion P4 se ejecuta, la declaracion de IA cubre todo el 12 de septiembre y el README lista todos los paquetes |
+| `13dd0af` | 2026-09-12 | feat(trazabilidad): cierra 18 filas de la matriz con las historias HU-22 a HU-38 |
+| `107433f` | 2026-09-12 | docs(composicion): declara retirados a Mendoza Palma y Gilces Carranza en todo el repositorio |
+| `d074c6b` | 2026-09-12 | feat(experimento): deposita el registro integro de la generacion del Conjunto A |
+| `b082104` | 2026-09-12 | fix(datos): la orden unica deposita las tablas y figuras del documento dentro de 07_Datos |
+| `6be559a` | 2026-09-13 | fix(consistencia): textos al dia en reporte, zona restringida, defensa y declaracion de IA |
 
 ---
 
@@ -221,24 +230,24 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias
 
-**Confirmaciones: 83**, de 2026-08-30 a 2026-09-07.
+**Confirmaciones: 109**, de 2026-08-30 a 2026-09-14.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
-| Evidencia de campo y etica | 201 |
-| Documentos de raiz | 61 |
-| Evidencia de autoria | 58 |
+| Evidencia de campo y etica | 202 |
+| Documentos de raiz | 88 |
+| Evidencia de autoria | 76 |
 | Producto minimo viable | 43 |
+| Componente empirico | 38 |
+| Manuscrito y deposito | 36 |
+| Paquete de datos | 30 |
 | Otros | 25 |
-| Componente empirico | 25 |
 | Trazabilidad | 21 |
-| Manuscrito y deposito | 20 |
-| Especificacion de requisitos | 13 |
+| Especificacion de requisitos | 18 |
 | Modelado UML e i* | 7 |
-| Defensa | 4 |
-| Paquete de datos | 1 |
+| Defensa | 5 |
 
 ### Confirmaciones
 
@@ -327,6 +336,32 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `0f8338f` | 2026-09-06 | fix(datos): traduce las rutas de correspondencia_salidas.csv a la estructura del paquete |
 | `1bb3761` | 2026-09-06 | docs(trazabilidad): declara las siete restricciones de diseno que no estan en la matriz |
 | `4650019` | 2026-09-07 | docs(trazabilidad): regenera el aporte individual y ata el anexo de correspondencia a su verificador |
+| `fdf0eb8` | 2026-09-14 | fix(analisis): el tamano del efecto se calcula con el requisito como unidad y deja de remuestrear tres jueces |
+| `71c0725` | 2026-09-14 | docs(desviaciones): declara la desviacion 7, el tamano del efecto con el requisito como unidad |
+| `0ea6784` | 2026-09-14 | docs(reporte): la magnitud del efecto se presenta con el requisito como unidad y retira los intervalos sobre tres jueces |
+| `159446d` | 2026-09-14 | docs(manuscrito): efectos con el requisito como unidad y cuarta desviacion declarada |
+| `2136f2c` | 2026-09-14 | fix(afirmaciones): las cifras del tamano del efecto se comprueban contra el nuevo calculo |
+| `3f3c4da` | 2026-09-14 | feat(datos): la cadena de analisis y sus entradas crudas se depositan dentro de 07_Datos |
+| `05f4c56` | 2026-09-14 | refactor(datos): la etapa analisis ejecuta la cadena desde 07_Datos sin pasar por 06_Experimento |
+| `d1429d8` | 2026-09-14 | docs(reporte): incluye tablas y figuras desde 07_Datos/resultados y corrige negritas y rutas que se veian rotas en el PDF |
+| `d68cc27` | 2026-09-14 | docs(manuscrito): incluye tablas y figuras desde 07_Datos/resultados |
+| `6aa6a44` | 2026-09-14 | docs(datos): README y README_datos describen la cadena de analisis dentro de 07_Datos |
+| `cecdd45` | 2026-09-14 | docs(manuscrito): condensa la redaccion de los efectos para mantener el limite de 15 paginas de REFSQ |
+| `402fab3` | 2026-09-14 | docs(autoria): declara la asistencia recibida en las correcciones del 14 de septiembre |
+| `e72cb48` | 2026-09-14 | chore(cierre): CHANGELOG 2B-1.18.0, README y portada del ERS para 2B-final-v5.8, y manifiestos de sumas al dia |
+| `119d5c2` | 2026-09-14 | docs(autoria): declara que el asistente ejecuto las confirmaciones de este tramo |
+| `8b9e4e5` | 2026-09-14 | feat(efectos): efectos.csv declara n_pares e interpretable y la orden unica responde tambien como run_all.py |
+| `8edb271` | 2026-09-14 | docs(identificacion): la URL del repositorio y la de la entrega 2A apuntan al nuevo propietario |
+| `c508399` | 2026-09-14 | docs(documentos): reporte, ERS y manuscrito recogen la tabla de efectos con pares e interpretabilidad y se recompilan |
+| `b67c38d` | 2026-09-14 | feat(autoria): notas de campo con el nombre de la guia y sesiones de elicitacion en la bitacora con su nota o su motivo |
+| `44cc1f0` | 2026-09-14 | docs(autoria): declara la asistencia y las confirmaciones del trabajo de cierre |
+| `f429a85` | 2026-09-14 | feat(autoria): la bitacora declara que TIC-01 a TIC-03 no tienen nota de campo y remite a su acta firmada |
+| `fc93821` | 2026-09-14 | docs(reporte): la retrospectiva recoge las observaciones del docente de los informes del 5 y el 14 de septiembre y su resolucion |
+| `0e36817` | 2026-09-14 | chore(cierre): CHANGELOG 2B-1.19.0 y README con la linea base 2B-final-v5.8 de la guia de cierre |
+| `3d0f2b6` | 2026-09-14 | chore(cierre): caratula para 2B-final-v5.8, bitacora regenerada y manifiesto de sumas al dia |
+| `5ec910f` | 2026-09-14 | fix(manuscrito): elimina los desbordes de linea en rutas, en la tabla de trabajos relacionados y en el resumen, sin cambiar el texto |
+| `b9fd4db` | 2026-09-14 | fix(manuscrito): el apartado de uso de IA deja de afirmar parametros de generacion que el registro declara no disponibles |
+| `18bb4eb` | 2026-09-14 | chore(cierre): caratula, bitacora y manifiesto de sumas sobre el manuscrito corregido |
 
 ---
 
@@ -388,4 +423,4 @@ Firma: ______________________________    Fecha: ______________
 
 ---
 
-Generado el 2026-09-12 desde el historial del repositorio.
+Generado el 2026-09-14 desde el historial del repositorio.
