@@ -201,7 +201,7 @@ SIGA_FGMMN_ISR401_AVANCE_2B/
 │
 ├── 07_Publicacion/               Manuscrito y deposito de datos
 │   ├── manuscrito_final.tex      Manuscrito en plantilla Springer LNCS
-│   ├── manuscrito_final.pdf      Compilado, 16 paginas
+│   ├── manuscrito_final.pdf      Compilado, 15 paginas
 │   ├── referencias.bib           40 entradas, 35 con DOI verificado
 │   ├── analisis_revistas.md      Eleccion de la conferencia objetivo
 │   ├── figuras/  tablas/         Producidas por los scripts, no a mano
