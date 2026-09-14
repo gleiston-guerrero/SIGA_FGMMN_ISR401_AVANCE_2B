@@ -65,17 +65,23 @@ datos_crudos/respuestas_cuestionario.csv,"26.  Si el aire acondicionado se ajust
 datos_crudos/respuestas_cuestionario.csv,"27.  Si el aire acondicionado NO se ajusta automáticamente según la ocupación, ¿cómo te sentirías?",categorico,n/a,Lo doy por hecho | Lo toleraría | Me es indiferente | No me gustaría,celda vacia,"Respuesta del cuestionario digital v2.0 (EV-17), 31 respondientes anonimos"
 datos_crudos/respuestas_cuestionario.csv,28.  ¿Usarías este sistema si estuviera disponible hoy?,categorico,n/a,"No estoy seguro | Probablemente no | Probablemente sí | Sí, seguro",celda vacia,"Respuesta del cuestionario digital v2.0 (EV-17), 31 respondientes anonimos"
 datos_crudos/respuestas_cuestionario.csv,29.  ¿Qué problema con las aulas no cubrimos en este cuestionario?,categorico,n/a,13 valores distintos,celda vacia,"Respuesta del cuestionario digital v2.0 (EV-17), 31 respondientes anonimos"
-datos_procesados/puntuaciones_consolidadas.csv,juez,categorico,n/a,juez1 | juez2 | juez3,no se admiten,"Hoja de puntuacion de origen; generado por 06_Experimento/scripts_analisis/analizar_resultados.py, ejecutado por la etapa documento"
+datos_crudos/codificacion_tematica.csv,Fragmento,texto,n/a,libre,no se admiten,"Fragmento literal de la transcripcion anonimizada; Copia identica de 02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv, comprobada por la etapa integridad"
+datos_crudos/codificacion_tematica.csv,Codigo,categorico,n/a,50 codigos tematicos,no se admiten,Codigo asignado al fragmento en la codificacion tematica
+datos_crudos/codificacion_tematica.csv,Categoria,categorico,n/a,12 categorias,no se admiten,Categoria que agrupa el codigo
+datos_crudos/codificacion_tematica.csv,Requisito_derivado,texto,n/a,identificadores RF- separados por punto y coma,no se admiten,Requisitos del ERS que se derivan del fragmento
+datos_crudos/codificacion_tematica.csv,ID_evidencia,categorico,n/a,EV-01 a EV-25,no se admiten,"Entrevista de la que procede el fragmento; es la unidad de la curva de saturacion"
+datos_crudos/codificacion_tematica.csv,Analista_codificador,categorico,n/a,Cedeno A. | Munoz Q. | Sanchez G.,no se admiten,Integrante del equipo que codifico el fragmento
+datos_procesados/puntuaciones_consolidadas.csv,juez,categorico,n/a,juez1 | juez2 | juez3,no se admiten,"Hoja de puntuacion de origen; generado por scripts/analisis/analizar_resultados.py, ejecutado por la etapa analisis"
 datos_procesados/puntuaciones_consolidadas.csv,item_ciego,texto,n/a,Item-01 a Item-51,no se admiten,Identificador ciego del requisito evaluado
 datos_procesados/puntuaciones_consolidadas.csv,origen,categorico,n/a,Humano | LLM,no se admiten,Union con datos_crudos/asignacion_brazo_items.csv
 datos_procesados/puntuaciones_consolidadas.csv,dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,Dimension de la rubrica de evaluacion
 datos_procesados/puntuaciones_consolidadas.csv,puntuacion,decimal,puntos de rubrica,"1.0 a 5.0, valores enteros",no se admiten,Hoja de puntuacion devuelta por la persona evaluadora
-resultados/estadisticos/acuerdo_interevaluador.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por 06_Experimento/scripts_analisis/analizar_resultados.py, ejecutado por la etapa documento"
+resultados/estadisticos/acuerdo_interevaluador.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, ejecutado por la etapa analisis"
 resultados/estadisticos/acuerdo_interevaluador.csv,Cohen_kappa_juez1_juez2,decimal,coeficiente kappa,-1 a 1,no se admiten,Kappa de Cohen con ponderacion lineal entre juez1 y juez2
 resultados/estadisticos/acuerdo_interevaluador.csv,Cohen_kappa_juez1_juez3,decimal,coeficiente kappa,-1 a 1,no se admiten,Kappa de Cohen con ponderacion lineal entre juez1 y juez3
 resultados/estadisticos/acuerdo_interevaluador.csv,Cohen_kappa_juez2_juez3,decimal,coeficiente kappa,-1 a 1,no se admiten,Kappa de Cohen con ponderacion lineal entre juez2 y juez3
 resultados/estadisticos/acuerdo_interevaluador.csv,Fleiss_kappa_3jueces,decimal,coeficiente kappa,-1 a 1,no se admiten,Kappa de Fleiss de los tres jueces a la vez
-resultados/estadisticos/analisis_por_item.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por 06_Experimento/scripts_analisis/analisis_por_item.py, ejecutado por la etapa documento"
+resultados/estadisticos/analisis_por_item.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analisis_por_item.py, ejecutado por la etapa analisis"
 resultados/estadisticos/analisis_por_item.csv,n_humano,entero,requisitos,25,no se admiten,Requisitos del brazo humano; el requisito es la unidad de analisis
 resultados/estadisticos/analisis_por_item.csv,n_llm,entero,requisitos,26,no se admiten,Requisitos del brazo del modelo de lenguaje
 resultados/estadisticos/analisis_por_item.csv,Media_Humano,decimal,puntos de rubrica,1 a 5,no se admiten,"Media por requisito del brazo humano, promediando los tres jueces"
@@ -89,28 +95,32 @@ resultados/estadisticos/analisis_por_item.csv,IC95_inferior,decimal,n/a,libre,no
 resultados/estadisticos/analisis_por_item.csv,IC95_superior,decimal,n/a,libre,no se admiten,Limite superior del intervalo de confianza del 95 %
 resultados/estadisticos/analisis_por_item.csv,p_ajustado_holm,decimal,probabilidad,0 a 1,no se admiten,Valor p tras el ajuste de Holm-Bonferroni
 resultados/estadisticos/analisis_por_item.csv,significativo_alpha_05,categorico,n/a,Si | No,no se admiten,Si el contraste es significativo al 5 % tras el ajuste
-resultados/estadisticos/efectos.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por 06_Experimento/scripts_analisis/analizar_resultados.py, ejecutado por la etapa documento"
-resultados/estadisticos/efectos.csv,Tipo_efecto,categorico,n/a,Cohen d (apareado) | Cliff delta,no se admiten,"Medida del tamano del efecto, analisis primario con los jueces como unidad"
-resultados/estadisticos/efectos.csv,Valor,decimal,n/a,libre,no se admiten,Valor puntual del tamano del efecto
-resultados/estadisticos/efectos.csv,IC95_inferior,decimal,n/a,libre,no se admiten,Limite inferior del intervalo de confianza del 95 % por bootstrap
-resultados/estadisticos/efectos.csv,IC95_superior,decimal,n/a,libre,no se admiten,Limite superior del intervalo de confianza del 95 % por bootstrap
+resultados/estadisticos/efectos.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, etapa efectos, ejecutado por la etapa analisis"
+resultados/estadisticos/efectos.csv,Unidad_analisis,categorico,n/a,requisito,no se admiten,"Unidad sobre la que se calcula el efecto: el requisito, promediando los tres jueces (desviacion 7)"
+resultados/estadisticos/efectos.csv,n_humano,entero,requisitos,25,no se admiten,Requisitos del brazo humano
+resultados/estadisticos/efectos.csv,n_llm,entero,requisitos,26,no se admiten,Requisitos del brazo del modelo de lenguaje
+resultados/estadisticos/efectos.csv,Diferencia_medias,decimal,puntos de rubrica,-4 a 4,no se admiten,"Media del brazo humano menos media del brazo del modelo, sobre las medias por requisito"
+resultados/estadisticos/efectos.csv,Tipo_efecto,categorico,n/a,g de Hedges | delta de Cliff,no se admiten,"g de Hedges si Shapiro-Wilk no rechaza la normalidad en ningun grupo; delta de Cliff en caso contrario"
+resultados/estadisticos/efectos.csv,Valor,decimal,n/a,-1 a 1 para delta de Cliff; libre para g de Hedges,no se admiten,Valor puntual del tamano del efecto
+resultados/estadisticos/efectos.csv,IC95_inferior,decimal,n/a,libre,no se admiten,"Limite inferior del intervalo de confianza del 95 % por bootstrap estratificado"
+resultados/estadisticos/efectos.csv,IC95_superior,decimal,n/a,libre,no se admiten,"Limite superior del intervalo de confianza del 95 % por bootstrap estratificado"
 resultados/estadisticos/efectos.csv,n_bootstrap,entero,replicas,10000,no se admiten,Numero de remuestreos
 resultados/estadisticos/efectos.csv,semilla,entero,n/a,20260802,no se admiten,Semilla fijada para que el intervalo sea reproducible
-resultados/estadisticos/hipotesis.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por 06_Experimento/scripts_analisis/analizar_resultados.py, ejecutado por la etapa documento"
+resultados/estadisticos/hipotesis.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, ejecutado por la etapa analisis"
 resultados/estadisticos/hipotesis.csv,Prueba,categorico,n/a,t apareada | Wilcoxon de rangos con signo,no se admiten,Prueba aplicada segun los supuestos de la dimension
 resultados/estadisticos/hipotesis.csv,Estadistico_nombre,categorico,n/a,t | W,no se admiten,Nombre del estadistico que reporta la prueba
 resultados/estadisticos/hipotesis.csv,Estadistico_valor,decimal,n/a,libre,no se admiten,Valor del estadistico
 resultados/estadisticos/hipotesis.csv,p_valor,decimal,probabilidad,0 a 1,no se admiten,Valor p sin ajustar
 resultados/estadisticos/hipotesis.csv,p_valor_ajustado_holm,decimal,probabilidad,0 a 1,no se admiten,Valor p tras el ajuste de Holm-Bonferroni por las 5 comparaciones
 resultados/estadisticos/hipotesis.csv,significativo_alpha_05_ajustado,booleano,n/a,True | False,no se admiten,Si el contraste es significativo al 5 % tras el ajuste
-resultados/estadisticos/power_calculation.csv,Cohen_d_objetivo,decimal,n/a,mayor que 0,no se admiten,"Tamano del efecto que el calculo busca poder detectar; generado por 06_Experimento/scripts_analisis/power_calculation.py, ejecutado por la etapa documento"
+resultados/estadisticos/power_calculation.csv,Cohen_d_objetivo,decimal,n/a,mayor que 0,no se admiten,"Tamano del efecto que el calculo busca poder detectar; generado por scripts/analisis/power_calculation.py, ejecutado por la etapa analisis"
 resultados/estadisticos/power_calculation.csv,alpha,decimal,probabilidad,0 a 1,no se admiten,Nivel de significacion
 resultados/estadisticos/power_calculation.csv,potencia_deseada,decimal,probabilidad,0 a 1,no se admiten,Potencia convencional de referencia
 resultados/estadisticos/power_calculation.csv,n_necesario,decimal,observaciones apareadas,mayor que 0,no se admiten,"Observaciones necesarias, sin redondear"
 resultados/estadisticos/power_calculation.csv,n_necesario_redondeado,entero,observaciones apareadas,mayor que 0,no se admiten,"Observaciones necesarias, redondeadas al entero superior"
 resultados/estadisticos/power_calculation.csv,n_actual,entero,jueces,mayor que 0,no se admiten,"Numero de hojas de jueces contado en datos_crudos, no escrito a mano"
 resultados/estadisticos/power_calculation.csv,potencia_alcanzada_con_n_actual,decimal,probabilidad,0 a 1,no se admiten,Potencia que alcanza el diseno con las observaciones disponibles
-resultados/estadisticos/supuestos.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por 06_Experimento/scripts_analisis/analizar_resultados.py, ejecutado por la etapa documento"
+resultados/estadisticos/supuestos.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, ejecutado por la etapa analisis"
 resultados/estadisticos/supuestos.csv,n_jueces,entero,jueces,3,no se admiten,Evaluadores sobre los que se comprueba el supuesto
 resultados/estadisticos/supuestos.csv,Shapiro_p_Humano,decimal,probabilidad,0 a 1,no se admiten,Valor p de Shapiro-Wilk en el brazo humano
 resultados/estadisticos/supuestos.csv,Shapiro_p_LLM,decimal,probabilidad,0 a 1,no se admiten,Valor p de Shapiro-Wilk en el brazo del modelo
@@ -119,7 +129,7 @@ resultados/estadisticos/supuestos.csv,Normal_LLM,booleano,n/a,True | False,no se
 resultados/estadisticos/supuestos.csv,Levene_estadistico,decimal,n/a,0 o mas,no se admiten,Estadistico de Levene para igualdad de varianzas
 resultados/estadisticos/supuestos.csv,Levene_p,decimal,probabilidad,0 a 1,no se admiten,Valor p de la prueba de Levene
 resultados/estadisticos/supuestos.csv,Varianzas_homogeneas,booleano,n/a,True | False,no se admiten,Si no se rechaza la igualdad de varianzas al 5 %
-resultados/tablas/saturacion_por_entrevista.csv,orden,entero,posicion,1 a 16,no se admiten,"Posicion cronologica de la entrevista; generado por 06_Experimento/scripts_analisis/curva_saturacion.py sobre 02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv, ejecutado por la etapa documento"
+resultados/tablas/saturacion_por_entrevista.csv,orden,entero,posicion,1 a 16,no se admiten,"Posicion cronologica de la entrevista; generado por scripts/analisis/curva_saturacion.py sobre datos_crudos/codificacion_tematica.csv, ejecutado por la etapa analisis"
 resultados/tablas/saturacion_por_entrevista.csv,id_evidencia,texto,n/a,EV-nn,no se admiten,Identificador de la entrevista
 resultados/tablas/saturacion_por_entrevista.csv,fecha,fecha,AAAA-MM-DD,2026-05-14 a 2026-09-03,no se admiten,Fecha de la entrevista
 resultados/tablas/saturacion_por_entrevista.csv,codigos_en_entrevista,entero,codigos,0 o mas,no se admiten,Codigos distintos usados en esa entrevista
