@@ -152,8 +152,11 @@ debajo de 0,05 sin corregir, consistencia interna, sube a 0,059 al corregir.
 → `06_Experimento/resultados/hipotesis.csv`
 
 **D5. ¿Y el tamano del efecto?**
-Reportado con intervalo de confianza al 95 % por bootstrap de 10 000 replicas y semilla
-fija. Los intervalos son muy anchos y cruzan el cero, que es lo esperable con esta potencia.
+Se calcula con el **requisito** como unidad, 25 del equipo frente a 26 del modelo, no sobre
+los tres jueces: con tres observaciones el intervalo por bootstrap no estima nada (llegaba a
+[−42,72 ; 0,00]) y por eso esos valores se retiraron el 14-09, desviacion 7. Ahora es g de
+Hedges o delta de Cliff con IC 95 % por bootstrap de 10 000 replicas y semilla fija. Los
+efectos son pequenos, entre −0,12 y −0,26, y todos los intervalos cruzan el cero.
 → `06_Experimento/resultados/efectos.csv`
 
 **D6. ¿Por que la muestra es tan pequena?**

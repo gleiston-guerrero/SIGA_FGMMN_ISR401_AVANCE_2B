@@ -2,8 +2,8 @@ ID_afirmacion,Afirmacion,Valor_publicado,Valor_recalculado,Coincide,Archivo_fuen
 AFI-01,"La potencia del panel de tres jueces es del 8,4 % frente al 80 % convencional",0.0841,0.0841,Si,06_Experimento/resultados/power_calculation.csv,manuscrito_final.tex; reporte.tex; presentacion.pptx; libreto_grabacion.md
 AFI-02,Detectar un efecto medio exigiria 34 observaciones apareadas; se dispone de 3,34,34,Si,06_Experimento/resultados/power_calculation.csv,manuscrito_final.tex; reporte.tex; libreto_grabacion.md
 AFI-03,Ninguna de las cinco dimensiones es significativa tras el ajuste de Holm,0,0,Si,06_Experimento/resultados/hipotesis.csv,manuscrito_final.tex; reporte.tex; presentacion.pptx
-AFI-04,"El tamano del efecto en Completitud es d = -1,0419",-1.0419,-1.0419,Si,06_Experimento/resultados/efectos.csv,manuscrito_final.tex; reporte.tex
-AFI-05,"El efecto mas extremo es Consistencia interna, d = -5,2669",-5.2669,-5.2669,Si,06_Experimento/resultados/efectos.csv,manuscrito_final.tex; reporte.tex; libreto_grabacion.md
+AFI-04,"El tamano del efecto en Completitud, con el requisito como unidad, es delta de Cliff = -0,1169",-0.1169,-0.1169,Si,06_Experimento/resultados/efectos.csv,manuscrito_final.tex; reporte.tex
+AFI-05,"El delta de Cliff mayor en valor absoluto es el de Consistencia interna, -0,1846",-0.1846,-0.1846,Si,06_Experimento/resultados/efectos.csv,manuscrito_final.tex; reporte.tex
 AFI-06,"El acuerdo entre los tres jueces del registro previo es Fleiss 0,296 a 0,340",0.296 y 0.34,0.296 y 0.34,Si,06_Experimento/resultados/acuerdo_interevaluador.csv,manuscrito_final.tex; reporte.tex; panel_ampliado/00_LEEME.md
 AFI-07,El corpus tiene 16 entrevistas codificadas,16,16,Si,02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv,reporte.tex; manuscrito_final.tex; presentacion.pptx; libreto_grabacion.md
 AFI-08,La codificacion tematica tiene 136 fragmentos bajo 50 codigos,136 y 50,136 y 50,Si,02_Evidencias/Codificacion_Tematica/codificacion_tematica.csv,reporte.tex; manuscrito_final.tex; presentacion.pptx
