@@ -67,6 +67,11 @@ Esa coincidencia es el motivo de hacer un analisis de sensibilidad: **muestra qu
 conclusion no depende de la eleccion analitica**. Un resultado nulo obtenido de un panel de
 tres jueces merece esa comprobacion antes de que nadie se lo crea.
 
+> **Actualizacion 2026-09-14.** Los efectos apareados de la columna izquierda ya no se
+> publican como tamano del efecto. Desde esa fecha el tamano del efecto se calcula con el
+> requisito como unidad, que es el de la columna derecha. El contraste apareado de n = 3 se
+> mantiene. Motivo y detalle en [`desviacion_tamano_efecto.md`](desviacion_tamano_efecto.md).
+
 ## 5. Lo que sigue sin resolverse
 
 La potencia sube de 0,084 a 0,417, y **0,417 sigue estando por debajo del 0,80 convencional**.
