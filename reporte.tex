@@ -803,7 +803,9 @@ Personales del Ecuador~\cite{asamblea2021lopdp}.
 \section{Retrospectiva}
 
 El detalle por categor\'ia, con responsable y acci\'on, est\'a en el
-Anexo~\ref{anx:retrospectiva}. Tres aprendizajes resumen el proyecto.
+Anexo~\ref{anx:retrospectiva}, junto con las observaciones que el docente hizo durante
+el proyecto y c\'omo se resolvi\'o cada una (Tabla~\ref{tab:observaciones}). Tres
+aprendizajes resumen el proyecto.
 
 \textbf{El registro previo no admite improvisaci\'on.} La desviaci\'on m\'as costosa de
 este trabajo no fue metodol\'ogica sino de calendario: registrar el protocolo despu\'es
@@ -1000,6 +1002,36 @@ Lo que mejorar & Ejecutar la inspecci\'on formal para poder medir la correcci\'o
 \bottomrule
 \end{tabular}
 \end{table}
+
+
+\subsection*{Observaciones del docente y su resoluci\'on}
+\label{anx:observaciones}
+
+Las observaciones recibidas durante el proyecto forman parte de su proceso. La
+Tabla~\ref{tab:observaciones} recoge las del informe de evaluaci\'on del 2026-09-05, las de la
+evaluaci\'on de la Entrega Final del 2026-09-14 y las de la gu\'ia de cierre de esa misma fecha,
+con lo que se hizo y d\'onde se comprueba en el repositorio.
+
+{\footnotesize
+\begin{longtable}{p{2.1cm}p{3.9cm}p{4.9cm}p{3.3cm}}
+\caption{Observaciones del docente, resoluci\'on y evidencia.}\label{tab:observaciones}\\
+\toprule
+\textbf{Fuente} & \textbf{Observaci\'on} & \textbf{Resoluci\'on} & \textbf{Evidencia} \\
+\midrule
+\endhead
+Informe 2026-09-05, G3 & La composici\'on del equipo cambi\'o sin autorizaci\'on previa por escrito. & Se redact\'o, firm\'o y deposit\'o la solicitud de cambio de composici\'on (2026-09-08). & \nolinkurl{04_Trazabilidad/2026-09-08_Solicitud_Cambio_Composicion.pdf} \\
+Informe 2026-09-05, G8 & Se contaron ocho v\'ideos y diez audios de entrevista. & Eran los de la zona p\'ublica. Desde el 2026-09-07 las grabaciones identificables est\'an en el repositorio, en el contenedor cifrado, y el inventario t\'ecnico recoge 36: 19 de v\'ideo y 17 de audio. & \nolinkurl{02_Evidencias/00_Restringido/fichas_tecnicas.csv} \\
+Informe 2026-09-05, C1 & La portada del ERS no reflejaba a los integrantes acreditados. & Portada corregida con los tres integrantes. & \nolinkurl{01_ERS/ERS_SRS_2B_v2.0.tex} \\
+Informe 2026-09-05, C5 & El registro de Zenodo declaraba un solo autor. & Los tres integrantes constan como autores, con ORCID. & \nolinkurl{CITATION.cff} \\
+Informe 2026-09-05 & El \texttt{fair\_assessment} no proced\'ia de F-UJI. & Evaluaci\'on ejecutada con F-UJI 4.0.0 y depositada tal como la devuelve (2026-09-07). & \nolinkurl{fair_assessment.json} \\
+Informe 2026-09-05 & Faltaba la retrospectiva con acciones y responsables. & Tabla~\ref{tab:retrospectiva}, con responsable y acci\'on por entrada. & Este anexo \\
+Informe 2026-09-05, C8 & El historial empezaba el 30/08 y la evidencia de campo era anterior. & Migraci\'on documentada con origen, fecha y motivo. & \nolinkurl{CHANGELOG.md} \\
+Evaluaci\'on 2026-09-14, B4 & Tama\~nos del efecto con intervalos sin sentido sobre tres jueces. & Efecto con el requisito como unidad (desviaci\'on~7), y columnas de pares efectivos e interpretabilidad calculadas por script. & \nolinkurl{07_Datos/resultados/estadisticos/efectos.csv} \\
+Evaluaci\'on 2026-09-14, B1 & La cadena de las tablas segu\'ia en \texttt{06\_Experimento}. & La orden \'unica ejecuta la cadena desde \texttt{07\_Datos}; \texttt{06\_Experimento} conserva la suya, protegida por la regla de no retroceso. & \nolinkurl{07_Datos/scripts/run_all.py} \\
+Gu\'ia de cierre 2026-09-14, \S15 & Faltaban notas de campo frente a las sesiones de elicitaci\'on. & Las seis notas existentes, con el nombre pedido; la bit\'acora declara por qu\'e las otras catorce sesiones no tienen nota. No se elaboraron notas a posteriori. & \nolinkurl{10_Autoria/bitacora_sesiones.csv} \\
+Gu\'ia de cierre 2026-09-14, \S1 & La URL dej\'o de ser can\'onica tras el cambio de propietario. & Car\'atula, \texttt{CITATION.cff}, \texttt{README.md} y enlaces a la entrega 2A actualizados. & \nolinkurl{CITATION.cff} \\
+\bottomrule
+\end{longtable}}
 
 \section{Declaraci\'on de uso de inteligencia artificial}
 \label{anx:ia}
