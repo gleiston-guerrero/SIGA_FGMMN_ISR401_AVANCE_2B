@@ -8,6 +8,57 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.0] - 2026-09-14
+
+Atiende la guia de cierre del Proyecto Fin de Curso emitida por el docente el 2026-09-14:
+apartados 1, 3, 12, 13, 15 y 16. No cambia ningun dato crudo, ninguna puntuacion, ningun
+valor p ni ninguna conclusion.
+
+### Anadido
+
+- **`efectos.csv` declara `n_pares` e `interpretable` (apartado 13).** `n_pares` vale `NA`
+  porque el efecto compara 25 requisitos con 26, grupos independientes; `interpretable` lo
+  calcula la etapa `efectos` con una regla escrita en el propio script. Las cinco dimensiones
+  dan `si`. Las dos columnas constan en el diccionario de datos y en la tabla de contrastes del
+  reporte, del manuscrito y, por primera vez, del ERS.
+- **`07_Datos/scripts/run_all.py` (apartado 12)**, alias de la orden unica con el nombre que usa
+  la lista de verificacion de la guia.
+- **Sesiones de elicitacion en la bitacora (apartado 15).** `generar_bitacora.py` anade una fila
+  por sesion, derivada de su transcripcion, con la nota de campo que le corresponde o el motivo
+  por el que no la tiene, declarado por el equipo en `10_Autoria/notas_campo/sesiones_sin_nota.csv`.
+  De veinte sesiones, seis tienen nota y catorce declaran motivo. No se elaboro ninguna nota a
+  posteriori.
+- **Observaciones del docente y su resolucion (apartado 16)**, en el anexo de retrospectiva del
+  reporte, con la evidencia de cada una en el repositorio.
+
+### Cambiado
+
+- **URL del repositorio (apartado 1).** Tras el cambio de propietario, la caratula,
+  `CITATION.cff`, `LICENSE`, `README.md`, el reporte, el ERS y los enlaces a la entrega 2A apuntan
+  a `github.com/gleiston-guerrero/`. El repositorio del MVP, que no cambio de propietario, y las
+  referencias historicas se conservan.
+- **Notas de campo de `10_Autoria/notas_campo/`** con el nombre que fija la guia,
+  `AAAA-MM-DD_TECNICA_CODIGO_Notas.jpg`. Cada JPG es, byte a byte, la imagen escaneada del PDF
+  correspondiente de `02_Evidencias/Notas_Campo/`, que se conserva.
+- `desviacion_tamano_efecto.md` declara las dos columnas nuevas y que el deposito de Zenodo,
+  anterior a la desviacion 7, conserva los efectos retirados. `panel_ampliado/00_LEEME.md` advierte
+  que su d apareada ya no es un resultado vigente.
+
+### Sin cambios, a proposito
+
+- **`06_Experimento` conserva su cadena completa.** La guia de cierre pide dejar alli solo el
+  protocolo, los instrumentos y las salidas originales, pero la guia de desarrollo del 2026-09-02 y
+  la rubrica de cierre protegen esa cadena, y la regla de no retroceso sanciona retirarla. La orden
+  unica de `07_Datos` no llama a nada de `06_Experimento`. Razonado en `07_Datos/README_datos.md`.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.8`**, anunciada en `[2B-1.18.0]` pero no creada entonces, se
+crea sobre el commit final de este cierre y recoge las dos versiones. `2B-final-v5.7` y todas las
+anteriores son historicas.
+
+---
+
 ## [2B-1.18.0] - 2026-09-14
 
 Atiende las dos observaciones de la evaluacion de la Entrega Final publicada el 2026-09-14
