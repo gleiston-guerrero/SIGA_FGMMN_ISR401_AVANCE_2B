@@ -72,7 +72,7 @@ CABECERAS = {
     "IC95_superior": "CI high",
     # tabla_hipotesis
     "p_valor_ajustado_holm": "$p_{\\mathrm{holm}}$",
-    "Tipo_efecto": "Effect size",
+    "Tipo_efecto": "Effect size (per requirement)",
     "Valor": "Value",
     "IC 95%": "95\\% CI",
     # tabla_descriptivos
@@ -194,11 +194,15 @@ def tabla_hipotesis(resultados_dir, salida_dir):
     fusion["IC 95%"] = fusion.apply(
         lambda r: f"[{r['IC95_inferior']:.3f}, {r['IC95_superior']:.3f}]"
         if pd.notna(r["IC95_inferior"]) else "--", axis=1)
+    # El contraste es el apareado sobre los tres jueces, preregistrado. El
+    # tamano del efecto se calcula con el requisito como unidad (25 frente a
+    # 26): con n = 3 un efecto estandarizado no tiene intervalo interpretable.
     columnas = ["Dimension", "Prueba", "Estadistico_nombre", "Estadistico_valor",
                 "p_valor", "p_valor_ajustado_holm", "Tipo_efecto", "Valor", "IC 95%"]
     resultado = fusion[columnas]
     _escribir_tex(resultado, os.path.join(salida_dir, "tabla_hipotesis.tex"),
-                  "Paired hypothesis tests by dimension, with Holm-Bonferroni correction and effect sizes",
+                  "Paired hypothesis tests by dimension (n = 3 judges) with Holm-Bonferroni correction, "
+                  "and effect sizes with the requirement as the unit (25 human vs. 26 LLM)",
                   "tab:hipotesis")
 
 

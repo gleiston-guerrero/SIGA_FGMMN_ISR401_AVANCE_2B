@@ -14,7 +14,8 @@ Etapas:
     acuerdo     -> resultados/acuerdo_interevaluador.csv
     supuestos   -> resultados/supuestos.csv
     hipotesis   -> resultados/hipotesis.csv (con correccion Holm-Bonferroni)
-    efectos     -> resultados/efectos.csv (Cohen d / Cliff delta + IC 95% bootstrap)
+    efectos     -> resultados/efectos.csv (g de Hedges / delta de Cliff con el requisito
+                   como unidad, 25 frente a 26, + IC 95% bootstrap)
 
 Uso (ver Makefile para el orden y las carpetas exactas):
     python analizar_resultados.py --etapa consolidar --entrada datos_crudos --salida datos_procesados
@@ -293,55 +294,77 @@ def etapa_hipotesis(entrada, salida, correccion):
 # --------------------------------------------------------------------------
 # Etapa 5: tamanos de efecto con IC 95% por bootstrap
 # --------------------------------------------------------------------------
+#
+# Unidad de analisis: el REQUISITO, no el juez.
+#
+# Hasta el 2026-09-14 esta etapa calculaba una d de Cohen apareada sobre las
+# medias de cada juez, es decir, sobre n = 3 observaciones, y remuestreaba esas
+# tres para el intervalo. Con tres observaciones el bootstrap solo puede
+# producir unas pocas combinaciones distintas, varias con desviacion nula, y el
+# intervalo resultante ([-42,72; 0,00] en Consistencia interna) no estima nada.
+# El contraste apareado sobre los tres jueces se mantiene en la etapa
+# `hipotesis`, tal como se preregistro; lo que no se reporta es un tamano del
+# efecto estandarizado sobre esas tres observaciones.
+#
+# El tamano del efecto se calcula ahora promediando los tres jueces en cada
+# requisito y comparando los 25 requisitos del equipo con los 26 del modelo,
+# que son muestras independientes. g de Hedges si Shapiro-Wilk no rechaza la
+# normalidad en ninguno de los dos grupos; delta de Cliff en caso contrario.
+# Intervalo por bootstrap estratificado (cada grupo se remuestrea por separado),
+# 10000 replicas y semilla 20260802. Es el mismo calculo que
+# analisis_por_item.py, y por eso ambos archivos dan los mismos valores.
+# Desviacion declarada en registro_previo/desviacion_tamano_efecto.md.
+
+def _medias_por_requisito(consolidado, dim, origen):
+    sub = consolidado[(consolidado["dimension"] == dim) & (consolidado["origen"] == origen)]
+    return sub.groupby("item_ciego")["puntuacion"].mean().sort_index().values
+
+
+def _hedges_g(a, b):
+    a, b = np.asarray(a, dtype=float), np.asarray(b, dtype=float)
+    na, nb = len(a), len(b)
+    s = np.sqrt(((na - 1) * a.var(ddof=1) + (nb - 1) * b.var(ddof=1)) / (na + nb - 2))
+    if s == 0:
+        return 0.0
+    return (a.mean() - b.mean()) / s * (1 - 3.0 / (4 * (na + nb) - 9))
+
 
 def _bootstrap_ic(humano, llm, estadistico_fn, n_bootstrap, rng):
-    n = len(humano)
+    humano, llm = np.asarray(humano), np.asarray(llm)
     replicas = np.empty(n_bootstrap)
     for b in range(n_bootstrap):
-        idx = rng.integers(0, n, size=n)
-        replicas[b] = estadistico_fn(humano[idx], llm[idx])
+        replicas[b] = estadistico_fn(rng.choice(humano, len(humano), replace=True),
+                                     rng.choice(llm, len(llm), replace=True))
     inf, sup = np.percentile(replicas, [2.5, 97.5])
-    return inf, sup
+    return float(inf), float(sup)
 
 
 def etapa_efectos(entrada, salida, n_bootstrap, semilla):
     consolidado = pd.read_csv(os.path.join(entrada, CONSOLIDADO_NOMBRE), encoding="utf-8-sig")
-    ruta_hipotesis = os.path.join(salida, "hipotesis.csv")
-    hipotesis = pd.read_csv(ruta_hipotesis, encoding="utf-8-sig").set_index("Dimension") if os.path.exists(ruta_hipotesis) else None
     rng = np.random.default_rng(semilla)
 
     filas = []
     for dim in DIMENSIONES:
-        humano = _medias_por_juez(consolidado, dim, "Humano").values
-        llm = _medias_por_juez(consolidado, dim, "LLM").values
+        humano = _medias_por_requisito(consolidado, dim, "Humano")
+        llm = _medias_por_requisito(consolidado, dim, "LLM")
 
-        es_parametrico = False
-        if hipotesis is not None and dim in hipotesis.index:
-            es_parametrico = hipotesis.loc[dim, "Prueba"] == "t apareada"
-
-        if es_parametrico:
-            diff = humano - llm
-            desv = diff.std(ddof=1)
-            valor = diff.mean() / desv if desv > 0 else float("nan")
-            tipo = "Cohen d (apareado)"
-            fn = lambda h, l: (h - l).mean() / (h - l).std(ddof=1) if (h - l).std(ddof=1) > 0 else 0.0
+        normal = stats.shapiro(humano).pvalue > 0.05 and stats.shapiro(llm).pvalue > 0.05
+        if normal:
+            valor, tipo, fn = _hedges_g(humano, llm), "g de Hedges", _hedges_g
         else:
-            valor = cliffs_delta(humano, llm)
-            tipo = "Cliff delta"
-            fn = cliffs_delta
-
-        try:
-            ic_inf, ic_sup = _bootstrap_ic(humano, llm, fn, n_bootstrap, rng)
-        except Exception as e:
-            print(f"AVISO ({dim}): bootstrap fallo ({e}); IC no calculado.")
-            ic_inf, ic_sup = float("nan"), float("nan")
+            valor, tipo, fn = cliffs_delta(humano, llm), "delta de Cliff", cliffs_delta
+        ic_inf, ic_sup = _bootstrap_ic(humano, llm, fn, n_bootstrap, rng)
 
         filas.append({
             "Dimension": dim,
+            "Unidad_analisis": "requisito",
+            "n_humano": len(humano),
+            "n_llm": len(llm),
+            "Diferencia_medias": round(float(humano.mean() - llm.mean()), 4),
             "Tipo_efecto": tipo,
-            "Valor": round(valor, 4) if valor == valor else valor,
-            "IC95_inferior": round(ic_inf, 4) if ic_inf == ic_inf else ic_inf,
-            "IC95_superior": round(ic_sup, 4) if ic_sup == ic_sup else ic_sup,
+            "Valor": round(float(valor), 4),
+            "IC95_inferior": round(ic_inf, 4),
+            "IC95_superior": round(ic_sup, 4),
             "n_bootstrap": n_bootstrap,
             "semilla": semilla,
         })
@@ -350,7 +373,7 @@ def etapa_efectos(entrada, salida, n_bootstrap, semilla):
     os.makedirs(salida, exist_ok=True)
     ruta_salida = os.path.join(salida, "efectos.csv")
     resultado.to_csv(ruta_salida, index=False, encoding="utf-8")
-    print(f"Tamanos de efecto (bootstrap n={n_bootstrap}) escritos en: {ruta_salida}")
+    print(f"Tamanos de efecto (requisito como unidad, bootstrap n={n_bootstrap}) escritos en: {ruta_salida}")
 
 
 # --------------------------------------------------------------------------

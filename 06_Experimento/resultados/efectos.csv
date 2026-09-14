@@ -1,6 +1,6 @@
-Dimension,Tipo_efecto,Valor,IC95_inferior,IC95_superior,n_bootstrap,semilla
-Completitud(1-5),Cohen d (apareado),-1.0419,-2.117,0.0,10000,20260802
-Ausencia_ambiguedad(1-5),Cohen d (apareado),-2.3505,-18.384,0.0,10000,20260802
-Verificabilidad(1-5),Cohen d (apareado),-1.4628,-12.9583,0.0,10000,20260802
-Correccion_fuente(1-5),Cliff delta,-0.5556,-1.0,1.0,10000,20260802
-Consistencia_interna(1-5),Cohen d (apareado),-5.2669,-42.7239,0.0,10000,20260802
+Dimension,Unidad_analisis,n_humano,n_llm,Diferencia_medias,Tipo_efecto,Valor,IC95_inferior,IC95_superior,n_bootstrap,semilla
+Completitud(1-5),requisito,25,26,-0.2087,delta de Cliff,-0.1169,-0.4338,0.2,10000,20260802
+Ausencia_ambiguedad(1-5),requisito,25,26,-0.2456,g de Hedges,-0.2573,-0.8242,0.298,10000,20260802
+Verificabilidad(1-5),requisito,25,26,-0.2185,delta de Cliff,-0.1431,-0.4585,0.1769,10000,20260802
+Correccion_fuente(1-5),requisito,25,26,-0.1938,delta de Cliff,-0.1785,-0.4769,0.1277,10000,20260802
+Consistencia_interna(1-5),requisito,25,26,-0.2379,delta de Cliff,-0.1846,-0.4785,0.1262,10000,20260802
