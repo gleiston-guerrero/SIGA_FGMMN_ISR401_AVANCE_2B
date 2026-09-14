@@ -44,6 +44,15 @@ valor p ni ninguna conclusion.
   anterior a la desviacion 7, conserva los efectos retirados. `panel_ampliado/00_LEEME.md` advierte
   que su d apareada ya no es un resultado vigente.
 
+### Corregido
+
+- **Manuscrito, apartado *Use of AI-assisted technologies*.** Afirmaba que el Conjunto A se genero en
+  condiciones controladas, con temperatura, top-p y semilla registrados. No es asi y el propio
+  repositorio lo declaraba: se genero en el chat de trabajo, cuya interfaz no expone esos parametros
+  (registro de generacion, declaracion de uso de IA y desviacion 6). El parrafo lo dice ahora.
+- **Manuscrito, maquetacion.** Diecisiete desbordes de linea, en rutas, en la tabla de trabajos
+  relacionados y en el resumen, eliminados sin cambiar el texto. Sigue en 15 paginas.
+
 ### Sin cambios, a proposito
 
 - **`06_Experimento` conserva su cadena completa.** La guia de cierre pide dejar alli solo el
