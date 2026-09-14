@@ -1,7 +1,7 @@
 # Declaracion de uso de inteligencia artificial
 
 Proyecto SIGA — Entrega Final (2B) — ISR-401 — Equipo FGMMN
-Ultima actualizacion: 2026-09-13
+Ultima actualizacion: 2026-09-14
 
 Elemento **A9** de la evidencia de autoria. Cubre, seccion por seccion, la herramienta
 empleada, el tipo de asistencia recibida y el metodo concreto con el que el equipo valido
@@ -213,6 +213,20 @@ correccion de lo que encontro.
 |---|---|---|---|
 | `07_Datos/scripts/etapa5_documento.py` y documentacion del paquete | Claude (Anthropic) | La etapa `documento` deposita las 18 salidas del documento dentro de `07_Datos/`, tras comprobarlas contra el manifiesto; descripcion de las columnas de los ocho CSV nuevos en `diccionario_datos.csv`, y actualizacion de `README_datos.md`, `README.md`, `CHANGELOG.md`, la portada del ERS y la caratula para la etiqueta `2B-final-v5.6`. **La confirmacion, el envio al remoto y la etiqueta `2B-final-v5.6` los ejecuto el asistente desde la maquina de Sanchez Cornejo, Gary Alberto, a peticion expresa suya y con su identidad** |
 | Revision de consistencia de todo el arbol sobre `2B-final-v5.6` | Claude (Anthropic) | Recorrido carpeta por carpeta sobre la etiqueta publicada: sumas, enlaces y rutas citadas, recompilacion del reporte, del ERS y del manuscrito, ejecucion de los verificadores de cada carpeta, arranque del prototipo y reconstruccion del contenedor cifrado. Correccion de los textos desactualizados que encontro, listados en `CHANGELOG.md` `[2B-1.17.1]`, y actualizacion de README, portada del ERS y caratula para `2B-final-v5.7` | Cada correccion se contrasto con la evidencia que la sostiene: la metrica de Correccion con `REINS-01` y la seccion 8 de la auditoria; la suma del contenedor, recalculada sobre la concatenacion de los 316 fragmentos; las cifras de codificacion, recontadas en `codificacion_tematica.csv`. **Ningun dato, cifra de resultados ni archivo de evidencia cambia.** Que corregir lo decidio Sanchez Cornejo, Gary Alberto | Ejecutada la orden unica sobre un clon limpio: las 18 salidas depositadas son identicas byte a byte a las del manifiesto, la etapa `integridad` confirma que todas las columnas estan descritas y ninguna cifra cambia. **La observacion la hizo el docente; la decision de atenderla asi es del equipo** |
+
+### Trabajo del 14 de septiembre de 2026
+
+Correcciones que pidio el docente en la evaluacion de la Entrega Final publicada ese dia:
+los tamanos del efecto con intervalos sin sentido (B4) y la cadena de analisis que seguia
+viviendo en `06_Experimento` (B1).
+
+| Seccion o artefacto | Herramienta | Tipo de asistencia | Metodo de validacion aplicado |
+|---|---|---|---|
+| Etapa `efectos` de `analizar_resultados.py`, `generar_tablas.py`, `generar_figuras.py` y `desviacion_tamano_efecto.md` | Claude (Anthropic) | Propuesta y codigo del cambio de unidad del tamano del efecto, del juez (n = 3) al requisito (25 frente a 26), y redaccion de la desviacion 7 | Se comprobo que `efectos.csv` da exactamente los mismos valores que `analisis_por_item.csv`, ya publicado desde el 2026-09-01, y que ningun valor p cambia. **Revisaron el cambio y decidieron adoptarlo Munoz Quinonez, Yeranick Esther y Sanchez Cornejo, Gary Alberto** |
+| Apartados de magnitud del efecto de `reporte.tex` y `manuscrito_final.tex`, `verificar_afirmaciones.py` y pregunta D5 del banco de la defensa | Claude (Anthropic) | Redaccion de los parrafos que sustituyen a los efectos apareados, de la cuarta desviacion del manuscrito y de las afirmaciones `AFI-04` y `AFI-05` | Cada cifra se contrasto con `efectos.csv`; `verificar_afirmaciones.py` confirma las quince afirmaciones. El manuscrito se recompilo y se mantiene en 15 paginas |
+| `07_Datos/scripts/analisis/`, `etapa5_analisis.py`, `etapa3_integridad.py`, `ejecutar.py`, `diccionario_datos.csv`, `README_datos.md` y `README.md` | Claude (Anthropic) | La cadena de analisis se ejecuta dentro de `07_Datos` desde sus datos crudos, y el reporte y el manuscrito incluyen las tablas y figuras desde `07_Datos/resultados/` | Orden unica ejecutada tras borrar los resultados: las 18 salidas son identicas byte a byte al manifiesto y a las de `06_Experimento/replicar.py`, que sigue funcionando sin cambios en su forma de uso |
+| Correcciones de `reporte.tex` | Claude (Anthropic) | Localizacion de dos negritas y una ruta que se veian rotas en el PDF por un tabulador en lugar de `\t`, de unos asteriscos de Markdown impresos tal cual y de dos rutas que se salian del margen | PDF recompilado y revisado: sin marcas de LaTeX sueltas y sin desbordes visibles |
+| **Operaciones de Git de este tramo** | Ninguna | **Las confirmaciones y el envio al remoto los ejecuto Munoz Quinonez, Yeranick Esther, desde su propio equipo y su cuenta**, aplicando los cambios preparados en una carpeta por confirmacion. El asistente no ejecuto ninguna confirmacion con su identidad | Cada confirmacion se reviso con `git status` y `git diff` antes de hacerla |
 
 ---
 
