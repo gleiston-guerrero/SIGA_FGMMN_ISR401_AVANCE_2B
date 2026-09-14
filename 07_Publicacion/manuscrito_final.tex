@@ -55,9 +55,9 @@ a real smart-classroom management system (SIGA) deployed at a university in Ecua
 requirements on five quality dimensions (completeness, absence of ambiguity,
 verifiability, source correctness, internal consistency) using a 1--5 Likert scale.
 Paired tests (t-test or Wilcoxon, chosen per dimension by Shapiro-Wilk normality) were
-applied with Holm-Bonferroni correction for the five comparisons; effect sizes (Cohen's
-$d$ or Cliff's $\delta$) were estimated with 95\% bootstrap confidence intervals
-(10{,}000 replicates).
+applied with Holm-Bonferroni correction for the five comparisons; effect sizes (Hedges'
+$g$ or Cliff's $\delta$) were estimated with the requirement as the unit (25 vs.\ 26), with
+95\% bootstrap confidence intervals (10{,}000 replicates).
 \textbf{Results.} LLM-generated requirements scored numerically higher than
 human-elicited ones on all five dimensions, but no difference survived the Holm-Bonferroni
 correction ($p_{\text{holm}} > 0.05$ for all dimensions). A post-hoc power calculation
@@ -203,8 +203,9 @@ judge score sheets; no figure was produced manually.
 Per dimension: Shapiro-Wilk normality test on each arm's per-judge means; paired
 $t$-test if both arms are normal, Wilcoxon signed-rank test otherwise; Holm-Bonferroni
 correction across the five dimensions; effect size (Cohen's $d$ or Cliff's $\delta$)
-with a 95\% bootstrap confidence interval (10{,}000 resamples, seed 20260802). The
-study protocol was pre-registered on OSF (\url{https://osf.io/7pq3h}). Three deviations
+with a 95\% bootstrap confidence interval (10{,}000 resamples, seed 20260802), computed
+with the requirement rather than the judge as the unit (see deviation~(4) below). The
+study protocol was pre-registered on OSF (\url{https://osf.io/7pq3h}). Four deviations
 from that pre-registration are declared explicitly, in line with open-science
 reporting norms~\cite{nosek2018preregistration}: (1) the Holm-Bonferroni correction,
 the bootstrap confidence intervals, and the Levene homogeneity-of-variance test were
@@ -222,7 +223,11 @@ introduced as the alternative adequacy criterion, following standard practice fo
 underpowered small-$N$ designs~\cite{molleri2020empirically}; completing the coding of all
 sixteen interviews later satisfied the saturation criterion directly
 (Sect.~\ref{sec:results}), and the power calculation is retained because it answers RQ2
-rather than because it is needed as a substitute.
+rather than because it is needed as a substitute; (4) the pre-registered plan computed the
+effect size on the same unit as the paired test, the judge ($n=3$), and asked for confidence
+intervals ``whenever applicable''; on three observations the bootstrap interval is not
+applicable (it reached $[-42.72, 0.00]$), so effect sizes are computed with the requirement as
+the unit, while the pre-registered paired tests and every $p$ value are unchanged.
 
 % ======================================================================
 \section{Results}
@@ -244,7 +249,8 @@ per dimension.
 \input{tablas/tabla_supuestos.tex}
 
 Table~\ref{tab:hipotesis} reports the paired hypothesis tests with Holm-Bonferroni
-correction and the corresponding effect sizes with 95\% bootstrap confidence intervals.
+correction and, for each dimension, the effect size with its 95\% bootstrap confidence
+interval.
 Before correction, \emph{Consistencia\_interna} showed a nominally significant
 difference ($t=-9.123$, $p=0.012$); after Holm-Bonferroni correction across the five
 dimensions, this rises to $p_{\text{holm}}=0.059$ and is \textbf{no longer significant}
@@ -252,17 +258,23 @@ at $\alpha=0.05$. \textbf{No dimension survives correction.}
 
 \input{tablas/tabla_hipotesis.tex}
 
-Effect sizes are large in magnitude (Cohen's $d$ up to $-5.267$ for
-\emph{Consistencia\_interna}, all favoring the LLM arm) but their 95\% bootstrap
-confidence intervals are extremely wide (e.g.\ $[-42.72, 0.00]$), a direct consequence
-of bootstrapping from only three paired observations. Figure~\ref{fig:efectos}
-visualizes this.
+Effect sizes are \emph{not} computed on the three paired judge means: with $n=3$ a
+bootstrap can only form a handful of distinct resamples, several with zero variance, and
+the resulting interval does not estimate anything (deviation~(4)). They are computed with
+\emph{the requirement} as the unit --- judges' scores averaged per item, 25 human-elicited
+vs.\ 26 LLM-generated requirements, independent samples --- as Hedges' $g$ when Shapiro-Wilk
+does not reject normality in either group and Cliff's $\delta$ otherwise, with stratified
+bootstrap intervals. All effects are \textbf{small} (Cliff's $\delta$ from $-0.117$ to
+$-0.185$; Hedges' $g = -0.257$ for non-ambiguity), all favor the LLM arm numerically, and
+\textbf{every 95\% confidence interval crosses zero} (widest: $[-0.824, 0.298]$).
+Figure~\ref{fig:efectos} visualizes this.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{figuras/fig03_tamanos_efecto.png}
-\caption{Effect sizes by dimension with 95\% bootstrap confidence intervals ($n=3$
-judges). All point estimates favor the LLM arm, but every interval crosses zero.}
+\caption{Effect sizes by dimension with the requirement as the unit (25 human vs.\ 26
+LLM), with 95\% bootstrap confidence intervals. All point estimates favor the LLM arm, but
+every interval crosses zero.}
 \label{fig:efectos}
 \end{figure}
 
@@ -324,8 +336,9 @@ present $n=3$ achieves only \textbf{8.4\%} power.
 The pre-registered plan treats \emph{the judge} as the unit of analysis, averaging each
 judge's scores across items within each origin and applying a paired test over $n=3$. That
 choice controls for judge severity, but it discards most of the information collected --- 765
-individual ratings reduced to three paired means --- and yields effect-size confidence
-intervals too wide to interpret.
+individual ratings reduced to three paired means --- and would yield effect-size confidence
+intervals too wide to interpret, which is why effect sizes are reported on this unit
+(deviation~(4)).
 
 We therefore report an \textbf{exploratory, post-registration} sensitivity analysis that takes
 \emph{the requirement} as the unit: the three judges' scores are averaged within each item,
@@ -363,8 +376,9 @@ Every point estimate in this study favors the LLM arm, echoing Hymel and Johnson
 finding that LLM-generated requirements can be rated at least as favorably as
 human-expert output~\cite{hymel2025analysis}. However, our study demonstrates
 concretely \emph{how misleading} such a favorable trend can be without an accompanying
-power analysis: a $d=-5.267$ point estimate coexists with a 95\% CI of
-$[-42.72, 0.00]$ and a corrected $p$ of $0.059$. We recommend that future paired blind
+power analysis: on internal consistency the uncorrected paired test gives $p=0.012$,
+yet the corrected $p$ is $0.059$ and the effect size, estimated on the 51 requirements, is a
+small Cliff's $\delta=-0.185$ whose 95\% CI $[-0.478, 0.126]$ crosses zero. We recommend that future paired blind
 LLM-vs-human RE studies report power calculations alongside effect sizes as standard
 practice, not as an afterthought.
 
@@ -376,7 +390,7 @@ of LLMs for requirements QA rather than autonomous generation~\cite{lubos2024lev
 We do not have statistical grounds to recommend replacing human elicitation.
 
 \subsection{Surprising or counterintuitive findings}
-The dimension with the strongest raw effect (\emph{Consistencia\_interna}) is also the
+The dimension with the largest Cliff's $\delta$ (\emph{Consistencia\_interna}) is also the
 one where the correction changes the substantive conclusion most (from ``significant''
 to ``not significant''). This is a useful illustration, for students and practitioners
 new to empirical SE research, of why multiple-comparison correction is not merely a
