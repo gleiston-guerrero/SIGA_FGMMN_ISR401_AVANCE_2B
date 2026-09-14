@@ -2396,6 +2396,10 @@ H0: No hay diferencia significativa en la calidad media entre RF humanos y RF de
 
 Prueba de normalidad Shapiro-Wilk; prueba t para muestras apareadas (o Wilcoxon si no son normales); tamaño del efecto Cohen d; acuerdo inter-evaluador mediante $\kappa$ de Fleiss ($\geq$3 evaluadores ciegos); potencia estadística fijada en $\alpha$=0,05 y 1-$\beta$=0,80.
 
+\paragraph{Desviación 7 y resultado.} Con tres jueces, una $d$ apareada no tiene intervalo interpretable. Desde el 2026-09-14 el tamaño del efecto se estima con el requisito como unidad ---$g$ de Hedges o $\delta$ de Cliff, 25 requisitos del equipo frente a 26 del modelo, con IC 95\,\% por bootstrap estratificado---, y \texttt{efectos.csv} declara los pares efectivos (\texttt{n\_pares}) y si el intervalo es interpretable (\texttt{interpretable}). El contraste apareado del plan no cambia. La Tabla~\ref{tab:hipotesis} es la que produce la orden única \texttt{python 07\_Datos/scripts/ejecutar.py}; el detalle está en \texttt{06\_Experimento/registro\_previo/desviacion\_tamano\_efecto.md}.
+
+\input{../07_Datos/resultados/tablas/tabla_hipotesis}
+
 
 \subsection*{7.4 Registro OSF}
 
@@ -2567,7 +2571,7 @@ Ver Sección 5.5 de este documento y el archivo 04\_Trazabilidad/matriz\_trazabi
 
 \addcontentsline{toc}{subsection}{E. Repositorio GitHub}
 
-https://github.com/gsanchezc6-beep/SIGA\_FGMMN\_ISR401\_AVANCE\_2A.git
+https://github.com/gleiston-guerrero/SIGA\_FGMMN\_ISR401\_AVANCE\_2A.git
 
 
 El repositorio sigue la jerarquía de carpetas establecida desde la Entrega 3 (2A) y vigente en esta Entrega Final (2B): 01\_ERS/ a 08\_Etica/, con los archivos raíz obligatorios (README.md, LICENSE, CITATION.cff, CHANGELOG.md, .gitignore, checksums.sha256).
