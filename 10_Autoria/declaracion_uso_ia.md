@@ -228,6 +228,20 @@ viviendo en `06_Experimento` (B1).
 | Correcciones de `reporte.tex` | Claude (Anthropic) | Localizacion de dos negritas y una ruta que se veian rotas en el PDF por un tabulador en lugar de `\t`, de unos asteriscos de Markdown impresos tal cual y de dos rutas que se salian del margen | PDF recompilado y revisado: sin marcas de LaTeX sueltas y sin desbordes visibles |
 | **Operaciones de Git de este tramo** | Claude (Anthropic) | **Las confirmaciones y el envio al remoto los ejecuto el asistente desde el equipo de Munoz Quinonez, Yeranick Esther, a peticion expresa suya y con su identidad**, aplicando los cambios preparados en una carpeta por confirmacion. El contenido lo preparo Sanchez Cornejo, Gary Alberto; la revision y la decision de subirlo son de Munoz Quinonez, Yeranick Esther | Cada confirmacion se comprobo contra el arbol preparado con `verificar.ps1`: las trece coinciden byte a byte con lo revisado |
 
+
+### Trabajo de cierre segun la guia del docente del 14 de septiembre de 2026
+
+Atiende la guia de cierre del Proyecto Fin de Curso, con corte el 2026-09-18: apartados 1, 3, 12,
+13, 15 y 16.
+
+| Seccion o artefacto | Herramienta | Tipo de asistencia | Metodo de validacion aplicado |
+|---|---|---|---|
+| Columnas `n_pares` e `interpretable` de `efectos.csv` (apartado 13), su diccionario, la tabla de contrastes y los parrafos del reporte, del ERS, de `desviacion_tamano_efecto.md` y de `panel_ampliado/00_LEEME.md` | Claude (Anthropic) | Propuesta de la regla de interpretabilidad, codigo en `analizar_resultados.py` y `generar_tablas.py`, y redaccion | La regla se aplica por codigo, no a mano. Ningun valor, intervalo ni valor p cambia: se comprobo sobre las dos cadenas, `07_Datos` y `06_Experimento/replicar.py`, con la etapa `integridad` en verde. Reporte, manuscrito y ERS se recompilaron sin errores ni desbordes |
+| `07_Datos/scripts/run_all.py` y nota sobre `06_Experimento` en `README_datos.md` (apartado 12) | Claude (Anthropic) | Alias de la orden unica con el nombre que usa la lista de verificacion de la guia; redaccion de la nota | El alias importa el orquestador; `--listar` devuelve las cinco etapas. **Conservar intacta la cadena de `06_Experimento` lo decidio el equipo**, por la regla de no retroceso de la rubrica de cierre |
+| URL del repositorio tras el cambio de propietario (apartado 1) | Claude (Anthropic) | Localizacion y sustitucion de las referencias vigentes al repositorio de esta entrega y al de la 2A | Se comprobo sin autenticar que ambos repositorios responden en la URL nueva. Se dejaron sin cambiar las referencias historicas del CHANGELOG, los usuarios de GitHub, el repositorio del MVP, que no cambio de propietario, y la copia del deposito de Zenodo |
+| Notas de campo en JPG y filas de sesiones de elicitacion en la bitacora (apartado 15) | Claude (Anthropic) | Extraccion de la imagen escaneada de cada PDF sin recomprimir; extension de `generar_bitacora.py` para derivar las sesiones de las transcripciones | Cada JPG coincide byte a byte con la imagen contenida en su PDF. **Los motivos de las sesiones sin nota los declaro el equipo**; el asistente no elaboro ninguna nota ni propuso hacerlas a posteriori |
+| **Operaciones de Git de este tramo** | Claude (Anthropic) | **Las confirmaciones las ejecuto el asistente desde el equipo de Munoz Quinonez, Yeranick Esther, a peticion expresa suya y con su identidad** | Cada confirmacion se reviso con `git diff --stat` antes de hacerla. El envio al remoto y la etiqueta, solo con su autorizacion expresa |
+
 ---
 
 ## 4. Secciones en las que no se empleo ninguna herramienta
