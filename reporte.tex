@@ -768,9 +768,13 @@ correctiva pendiente. Se declara el hueco en lugar de presentar la matriz como c
 
 \subsection{L\'inea base congelada}
 
-La versi\'on entregada corresponde a la etiqueta anotada \texttt{2B-final} del
-repositorio, alcanzable desde la rama por defecto. El manifiesto
-\texttt{checksums.sha256} cubre 248 archivos y comprueba sin error sobre un clon limpio.
+{\sloppy
+La versi\'on entregada corresponde a la etiqueta anotada \texttt{2B-final-v5.8}, la
+\'unica vigente, publicada en el remoto y alcanzable desde la rama por defecto. Las
+anteriores, de \texttt{2B-final} a \texttt{2B-final-v5.7}, se conservan solo como referencia
+hist\'orica, tal como declaran \texttt{README.md} y \texttt{CHANGELOG.md}. El manifiesto
+\texttt{checksums.sha256} se genera con \nolinkurl{10_Autoria/generar_manifiesto.py} sobre todos
+los archivos versionados, salvo el propio manifiesto, y comprueba sin error sobre un clon limpio.\par}
 
 % ===========================================================================
 \section{Requisitos de los componentes de inteligencia artificial}
@@ -1058,7 +1062,7 @@ verificable, seg\'un el trazado de la Tabla~\ref{tab:correspondencia}.
 
 Esa tabla se lee, pero no se comprueba sola. Para que tampoco dependa de que alguien la
 revise a mano, las afirmaciones que llevan cifra se \textbf{recalculan desde su fuente} con
-\texttt{07\_Publicacion/\allowbreak verificar\_afirmaciones.py}, que avisa si alguna dejo de coincidir y
+\nolinkurl{07_Publicacion/verificar_afirmaciones.py}, que avisa si alguna dejo de coincidir y
 nombra los documentos que habria que corregir. Cubre un fallo que ninguna otra verificacion
 del repositorio detecta: que un numero escrito en prosa se quede atras cuando el analisis se
 vuelve a ejecutar.
