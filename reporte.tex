@@ -9,7 +9,8 @@
 %     pdflatex -interaction=nonstopmode reporte.tex
 %
 %  REGLA: ninguna cifra de este documento se escribe a mano. Toda tabla y
-%  toda figura se insertan desde 07_Publicacion/, regeneradas por `make all`.
+%  toda figura se insertan desde 07_Datos/resultados/, que regenera la orden
+%  unica del paquete de datos: python 07_Datos/scripts/ejecutar.py
 %  El orden de las secciones es el que fija la seccion 10 de la guia.
 % ============================================================================
 \documentclass[11pt,a4paper]{article}
@@ -183,7 +184,7 @@ sobre su uso en contextos \'agiles~\cite{ray2023agile,ronanki2023chatgpt}.
 La brecha que este trabajo aborda es de dise\~no comparativo. La mayor parte de los
 estudios revisados compara conjuntos de requisitos producidos a partir de material
 fuente distinto, de modo que la diferencia observada confunde el efecto del origen con
-el efecto del material. 	extbf{este estudio usa el mismo corpus de entrevistas para ambos
+el efecto del material. \textbf{Este estudio usa el mismo corpus de entrevistas para ambos
 brazos}, lo que aisla el origen como \'unica variable que cambia.
 
 \subsection{Pregunta de investigaci\'on}
@@ -289,8 +290,8 @@ ninguno sea una de las personas entrevistadas, para preservar la ceguera del dis
 Se aplicaron cuatro instrumentos, todos en su versi\'on final y todos depositados en el
 repositorio.
 
-El \textbf{guion de entrevista} se conserva con su historial de versiones en
-\texttt{02\_Evidencias/Guiones\_Entrevista/}. Su versi\'on 2.0 incorpora el recorrido
+El \textbf{guion de entrevista} est\'a en \texttt{02\_Evidencias/Guiones\_Entrevista/},
+con su historial de versiones. Su versi\'on 2.0 incorpora el recorrido
 guiado por el prototipo y dos preguntas dise\~nadas para producir umbrales
 cuantitativos en lugar de opiniones.
 
@@ -380,7 +381,7 @@ salida y el script que la produce est\'a en
 
 \subsection{Acuerdo entre evaluadores}
 
-\input{07_Publicacion/tablas/tabla_acuerdo}
+\input{07_Datos/resultados/tablas/tabla_acuerdo}
 
 La Tabla~\ref{tab:acuerdo} recoge los coeficientes de acuerdo por dimensi\'on. El $\kappa$ de Fleiss se sit\'ua entre 0,294 y 0,340 seg\'un la dimensi\'on. En la
 escala de Landis y Koch~\cite{landis1977measurement} ese rango corresponde a acuerdo
@@ -392,14 +393,14 @@ La Figura~\ref{fig:acuerdo} muestra el reparto del acuerdo entre las cinco dimen
 interpretaci\'on se trata en la Secci\'on~\ref{sec:amenazas}.
 
 \begin{figure}[H]\centering
-  \includegraphics[width=.78\textwidth]{07_Publicacion/figuras/fig04_acuerdo_interevaluador}
+  \includegraphics[width=.78\textwidth]{07_Datos/resultados/figuras/fig04_acuerdo_interevaluador}
   \caption{Acuerdo entre evaluadores por dimensi\'on.}
   \label{fig:acuerdo}
 \end{figure}
 
 \subsection{Estad\'isticos descriptivos}
 
-\input{07_Publicacion/tablas/tabla_descriptivos}
+\input{07_Datos/resultados/tablas/tabla_descriptivos}
 
 La Tabla~\ref{tab:descriptivos} re\'une medias y desviaciones por dimensi\'on y origen. El conjunto generado por el modelo obtiene una media superior en \textbf{las cinco
 dimensiones}. La diferencia oscila entre 0,20 y 0,25 puntos sobre la escala de 1 a 5.
@@ -408,14 +409,14 @@ respecto de la fuente y consistencia interna; la m\'as baja en ambos es ausencia
 ambig\"uedad. La Figura~\ref{fig:distribucion} deja ver que las distribuciones de ambos brazos se solapan ampliamente en todas las dimensiones.
 
 \begin{figure}[H]\centering
-  \includegraphics[width=.85\textwidth]{07_Publicacion/figuras/fig02_distribucion_por_dimension}
+  \includegraphics[width=.85\textwidth]{07_Datos/resultados/figuras/fig02_distribucion_por_dimension}
   \caption{Distribuci\'on de las puntuaciones por dimensi\'on y origen.}
   \label{fig:distribucion}
 \end{figure}
 
 \subsection{Pruebas de supuestos}
 
-\input{07_Publicacion/tablas/tabla_supuestos}
+\input{07_Datos/resultados/tablas/tabla_supuestos}
 
 La Tabla~\ref{tab:supuestos} resume ambos contrastes. Shapiro-Wilk no rechaza la normalidad en nueve de las diez combinaciones de dimensi\'on
 y origen. La excepci\'on es correcci\'on respecto de la fuente en el conjunto del
@@ -428,7 +429,7 @@ protocolo, no tras observar los resultados.
 
 \subsection{Contraste de hip\'otesis}
 
-\input{07_Publicacion/tablas/tabla_hipotesis}
+\input{07_Datos/resultados/tablas/tabla_hipotesis}
 
 La Tabla~\ref{tab:hipotesis} recoge el estad\'istico, el valor $p$ sin ajustar y el ajustado de cada dimensi\'on. Antes de corregir por comparaciones m\'ultiples, una dimensi\'on queda por debajo de
 $\alpha = 0{,}05$: consistencia interna, con $p = 0{,}0118$. Tras aplicar
@@ -463,7 +464,7 @@ Un efecto peque\~no con un intervalo que cruza el cero no sostiene una afirmaci\
 la direcci\'on de la diferencia, y as\'i se reporta.
 
 \begin{figure}[H]\centering
-  \includegraphics[width=.82\textwidth]{07_Publicacion/figuras/fig03_tamanos_efecto}
+  \includegraphics[width=.82\textwidth]{07_Datos/resultados/figuras/fig03_tamanos_efecto}
   \caption{Tama\~nos del efecto con el requisito como unidad (25 frente a 26), con
     intervalo de confianza al 95\,\%.}
   \label{fig:efectos}
@@ -473,7 +474,7 @@ la direcci\'on de la diferencia, y as\'i se reporta.
 \label{sec:saturacion}
 
 \begin{figure}[H]\centering
-  \includegraphics[width=.78\textwidth]{07_Publicacion/figuras/curva_saturacion}
+  \includegraphics[width=.78\textwidth]{07_Datos/resultados/figuras/curva_saturacion}
   \caption{C\'odigos tem\'aticos nuevos por entrevista, en orden cronol\'ogico.}
   \label{fig:saturacion}
 \end{figure}
@@ -512,7 +513,7 @@ Las tres constan en
 
 \subsection{Potencia estad\'istica}
 
-\input{07_Publicacion/tablas/tabla_power_calculation}
+\input{07_Datos/resultados/tablas/tabla_power_calculation}
 
 El c\'alculo completo est\'a en la Tabla~\ref{tab:power_calculation}. Para detectar un efecto de tama\~no $d = 0{,}50$ con $\alpha = 0{,}05$ y potencia
 $0{,}80$ se requieren 34 unidades de an\'alisis. El estudio dispone de tres. La potencia
@@ -621,7 +622,7 @@ un\'ivoca. El $\kappa$ justo indica que las dimensiones no se interpretan igual 
 jueces.
 
 \textbf{Mitigaci\'on aplicada.} Las cinco dimensiones se tomaron de atributos
-reconocidos en ISO/IEC/IEEE 29148:2018~\cite{iso29148_2018} y no se redefinieron tras
+reconocidos en ISO/\allowbreak IEC/\allowbreak IEEE 29148:2018~\cite{iso29148_2018} y no se redefinieron tras
 ver los datos. El acuerdo se midi\'o y se report\'o con una escala publicada.
 
 \textbf{Limitaci\'on remanente.} Sin calibraci\'on previa de los jueces, parte de la
@@ -734,7 +735,7 @@ asociada, su criterio de aceptaci\'on, el componente de dise\~no que lo implemen
 el prototipo de interfaz que lo soporta.
 
 El caso de prueba que verifica cada requisito dejo de ser un identificador sin
-respaldo: 	exttt{04\_Trazabilidad/casos\_prueba.csv} define los 	extbf{49}
+respaldo: \texttt{04\_Trazabilidad/casos\_prueba.csv} define los \textbf{49}
 que la matriz cita, con objetivo, precondicion, procedimiento, resultado
 esperado y criterio de aceptacion. El catalogo se genera por script y la
 generacion falla si la correspondencia con la matriz se rompe en cualquiera de
@@ -1017,8 +1018,8 @@ Cada afirmaci\'on de la discusi\'on remite a un resultado concreto o a una refer
 verificable, seg\'un el trazado de la Tabla~\ref{tab:correspondencia}.
 
 Esa tabla se lee, pero no se comprueba sola. Para que tampoco dependa de que alguien la
-revise a mano, las afirmaciones que llevan cifra se **recalculan desde su fuente** con
-\texttt{07\_Publicacion/verificar\_afirmaciones.py}, que avisa si alguna dejo de coincidir y
+revise a mano, las afirmaciones que llevan cifra se \textbf{recalculan desde su fuente} con
+\texttt{07\_Publicacion/\allowbreak verificar\_afirmaciones.py}, que avisa si alguna dejo de coincidir y
 nombra los documentos que habria que corregir. Cubre un fallo que ninguna otra verificacion
 del repositorio detecta: que un numero escrito en prosa se quede atras cuando el analisis se
 vuelve a ejecutar.
