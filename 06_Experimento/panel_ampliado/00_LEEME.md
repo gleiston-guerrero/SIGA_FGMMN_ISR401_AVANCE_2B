@@ -47,6 +47,12 @@ Con los diez jueces juntos, los cinco tamanos de efecto caian de d = --1,04…--
 en torno a cero y ninguna hipotesis quedaba significativa. **Nada de eso se deposito** como
 analisis: se reviro el repositorio al estado publicado y se diagnostico el fallo.
 
+> **Nota del 2026-09-14.** Esa d apareada sobre tres jueces se retiro como tamano del efecto
+> porque su intervalo no es interpretable con n = 3 (desviacion 7,
+> [`desviacion_tamano_efecto.md`](../registro_previo/desviacion_tamano_efecto.md)). Las cifras
+> de este parrafo se conservan porque describen lo que se observo entonces; no son un
+> resultado vigente. El efecto vigente se calcula con el requisito como unidad y es pequeno.
+
 Tres causas, todas del procedimiento y ninguna del objeto de estudio:
 
 1. **255 juicios en 45 minutos** son 10,6 segundos por juicio.

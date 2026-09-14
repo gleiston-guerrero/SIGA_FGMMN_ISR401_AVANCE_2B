@@ -90,7 +90,30 @@ esta desviacion. Aqui no se ejecuta ningun analisis nuevo: se cambia cual de los
 ya publicados se presenta como tamano del efecto, y el motivo es la imposibilidad de estimar
 un intervalo sobre tres observaciones, no el valor que resulta.
 
-## 6. Trazabilidad
+## 6. Columnas `n_pares` e `interpretable`
+
+La guia de cierre del docente, del 2026-09-14, pide anadir a `efectos.csv` el numero de pares
+efectivos y si el intervalo es interpretable, y reflejarlo en la tabla del reporte y del ERS.
+
+- **`n_pares`** vale `NA`: el efecto compara 25 requisitos con 26, que son grupos independientes
+  y no pares. Las unidades efectivas constan en `n_humano` y `n_llm`.
+- **`interpretable`** lo calcula la etapa `efectos`, no se escribe a mano. Vale `si` cuando el
+  efecto descansa en al menos 10 unidades (pares si el calculo es apareado; si no, las del grupo
+  menor), el intervalo es finito y no degenerado y, para el delta de Cliff, no cubre el
+  recorrido entero [-1, 1]. Las cinco dimensiones dan `si`. Con la misma regla, la d apareada
+  sobre tres jueces del apartado 2 habria dado `no` en las cinco.
+
+Ningun valor, intervalo ni valor p cambia: solo se anaden las dos columnas, que tambien recogen
+la tabla de contrastes del reporte, del manuscrito y del ERS.
+
+## 7. El deposito de Zenodo es anterior a esta desviacion
+
+`07_Publicacion/dataset_zenodo/` es copia de lo que se deposito en Zenodo y no se reescribe. Su
+`resultados_jueces/efectos.csv` y su `scripts_analisis/analizar_resultados.py` conservan por
+tanto la d apareada sobre tres jueces que esta desviacion retira. **Quien replique desde el
+deposito obtendra esos intervalos; los vigentes son los de `07_Datos/resultados/estadisticos/efectos.csv`.**
+
+## 8. Trazabilidad
 
 | Elemento | Ruta |
 |---|---|

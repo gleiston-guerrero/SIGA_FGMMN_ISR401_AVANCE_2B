@@ -1,18 +1,18 @@
 \begin{table}[htbp]
 \centering
 \footnotesize
-\caption{Paired hypothesis tests by dimension (n = 3 judges) with Holm-Bonferroni correction, and effect sizes with the requirement as the unit (25 human vs. 26 LLM)}
+\caption{Paired hypothesis tests by dimension (n = 3 judges) with Holm-Bonferroni correction, and effect sizes with the requirement as the unit (25 human vs. 26 LLM; independent groups, so no pairs)}
 \label{tab:hipotesis}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lllllllll}
+\begin{tabular}{lllllllllll}
 \toprule
-Dimension & Test & Stat. & Value & $p$ & $p_{\mathrm{holm}}$ & Effect size (per requirement) & Value & 95\% CI \\
+Dimension & Test & Stat. & Value & $p$ & $p_{\mathrm{holm}}$ & Effect size (per requirement) & Value & 95\% CI & Pairs & Interpretable \\
 \midrule
-Completitud & t apareada & t & -1.804 & 0.213 & 0.426 & delta de Cliff & -0.117 & [-0.434, 0.200] \\
-Ausencia\_ambiguedad & t apareada & t & -4.071 & 0.055 & 0.222 & g de Hedges & -0.257 & [-0.824, 0.298] \\
-Verificabilidad & t apareada & t & -2.534 & 0.127 & 0.380 & delta de Cliff & -0.143 & [-0.459, 0.177] \\
-Correccion\_fuente & Wilcoxon de rangos con signo & W & 1.000 & 0.500 & 0.500 & delta de Cliff & -0.178 & [-0.477, 0.128] \\
-Consistencia\_interna & t apareada & t & -9.123 & 0.012 & 0.059 & delta de Cliff & -0.185 & [-0.478, 0.126] \\
+Completitud & t apareada & t & -1.804 & 0.213 & 0.426 & delta de Cliff & -0.117 & [-0.434, 0.200] & -- & yes \\
+Ausencia\_ambiguedad & t apareada & t & -4.071 & 0.055 & 0.222 & g de Hedges & -0.257 & [-0.824, 0.298] & -- & yes \\
+Verificabilidad & t apareada & t & -2.534 & 0.127 & 0.380 & delta de Cliff & -0.143 & [-0.459, 0.177] & -- & yes \\
+Correccion\_fuente & Wilcoxon de rangos con signo & W & 1.000 & 0.500 & 0.500 & delta de Cliff & -0.178 & [-0.477, 0.128] & -- & yes \\
+Consistencia\_interna & t apareada & t & -9.123 & 0.012 & 0.059 & delta de Cliff & -0.185 & [-0.478, 0.126] & -- & yes \\
 \bottomrule
 \end{tabular}%
 }

@@ -15,7 +15,7 @@ Etapas:
     supuestos   -> resultados/supuestos.csv
     hipotesis   -> resultados/hipotesis.csv (con correccion Holm-Bonferroni)
     efectos     -> resultados/efectos.csv (g de Hedges / delta de Cliff con el requisito
-                   como unidad, 25 frente a 26, + IC 95% bootstrap)
+                   como unidad, 25 frente a 26, + IC 95% bootstrap, n_pares e interpretable)
 
 Uso (ver Makefile para el orden y las carpetas exactas):
     python analizar_resultados.py --etapa consolidar --entrada datos_crudos --salida datos_procesados
@@ -339,6 +339,34 @@ def _bootstrap_ic(humano, llm, estadistico_fn, n_bootstrap, rng):
     return float(inf), float(sup)
 
 
+# Columnas n_pares e interpretable (evaluacion del 2026-09-14, apartado 13).
+#
+# n_pares: numero de pares efectivos sobre los que se estima el efecto. Aqui el
+# efecto compara 25 requisitos del equipo con 26 del modelo, que son muestras
+# independientes y no pares, asi que no hay pares y la columna vale NA. Las
+# unidades efectivas constan en n_humano y n_llm.
+#
+# interpretable: se calcula, no se escribe a mano. Vale "si" cuando
+#   - el efecto descansa en al menos UNIDADES_MINIMAS unidades (pares, si el
+#     calculo es apareado; si no, las del grupo mas pequeno), y
+#   - el intervalo bootstrap es finito y no degenerado (inferior < superior), y
+#   - para el delta de Cliff, el intervalo no cubre el recorrido entero [-1, 1].
+# En otro caso vale "no". Con esta regla, la d apareada sobre tres jueces que se
+# publico hasta 2B-final-v5.7 habria dado "no" en las cinco dimensiones.
+UNIDADES_MINIMAS = 10
+
+
+def _interpretable(tipo, n_a, n_b, n_pares, ic_inf, ic_sup):
+    unidades = n_pares if n_pares is not None else min(n_a, n_b)
+    if unidades < UNIDADES_MINIMAS:
+        return "no"
+    if not (np.isfinite(ic_inf) and np.isfinite(ic_sup) and ic_inf < ic_sup):
+        return "no"
+    if tipo == "delta de Cliff" and ic_inf <= -1 and ic_sup >= 1:
+        return "no"
+    return "si"
+
+
 def etapa_efectos(entrada, salida, n_bootstrap, semilla):
     consolidado = pd.read_csv(os.path.join(entrada, CONSOLIDADO_NOMBRE), encoding="utf-8-sig")
     rng = np.random.default_rng(semilla)
@@ -360,11 +388,13 @@ def etapa_efectos(entrada, salida, n_bootstrap, semilla):
             "Unidad_analisis": "requisito",
             "n_humano": len(humano),
             "n_llm": len(llm),
+            "n_pares": "NA",
             "Diferencia_medias": round(float(humano.mean() - llm.mean()), 4),
             "Tipo_efecto": tipo,
             "Valor": round(float(valor), 4),
             "IC95_inferior": round(ic_inf, 4),
             "IC95_superior": round(ic_sup, 4),
+            "interpretable": _interpretable(tipo, len(humano), len(llm), None, ic_inf, ic_sup),
             "n_bootstrap": n_bootstrap,
             "semilla": semilla,
         })

@@ -99,11 +99,13 @@ resultados/estadisticos/efectos.csv,Dimension,categorico,n/a,Completitud(1-5) | 
 resultados/estadisticos/efectos.csv,Unidad_analisis,categorico,n/a,requisito,no se admiten,"Unidad sobre la que se calcula el efecto: el requisito, promediando los tres jueces (desviacion 7)"
 resultados/estadisticos/efectos.csv,n_humano,entero,requisitos,25,no se admiten,Requisitos del brazo humano
 resultados/estadisticos/efectos.csv,n_llm,entero,requisitos,26,no se admiten,Requisitos del brazo del modelo de lenguaje
+resultados/estadisticos/efectos.csv,n_pares,texto,pares,NA,no se admiten,"Pares efectivos sobre los que se estima el efecto. Vale NA porque el efecto compara 25 requisitos del equipo con 26 del modelo, muestras independientes y no pares; las unidades efectivas constan en n_humano y n_llm"
 resultados/estadisticos/efectos.csv,Diferencia_medias,decimal,puntos de rubrica,-4 a 4,no se admiten,"Media del brazo humano menos media del brazo del modelo, sobre las medias por requisito"
 resultados/estadisticos/efectos.csv,Tipo_efecto,categorico,n/a,g de Hedges | delta de Cliff,no se admiten,"g de Hedges si Shapiro-Wilk no rechaza la normalidad en ningun grupo; delta de Cliff en caso contrario"
 resultados/estadisticos/efectos.csv,Valor,decimal,n/a,-1 a 1 para delta de Cliff; libre para g de Hedges,no se admiten,Valor puntual del tamano del efecto
 resultados/estadisticos/efectos.csv,IC95_inferior,decimal,n/a,libre,no se admiten,"Limite inferior del intervalo de confianza del 95 % por bootstrap estratificado"
 resultados/estadisticos/efectos.csv,IC95_superior,decimal,n/a,libre,no se admiten,"Limite superior del intervalo de confianza del 95 % por bootstrap estratificado"
+resultados/estadisticos/efectos.csv,interpretable,categorico,n/a,si | no,no se admiten,"Calculado por la etapa efectos, no escrito a mano: si cuando el efecto descansa en al menos 10 unidades (pares si el calculo es apareado; si no, las del grupo menor), el intervalo es finito y no degenerado y, para el delta de Cliff, no cubre el recorrido entero [-1, 1]"
 resultados/estadisticos/efectos.csv,n_bootstrap,entero,replicas,10000,no se admiten,Numero de remuestreos
 resultados/estadisticos/efectos.csv,semilla,entero,n/a,20260802,no se admiten,Semilla fijada para que el intervalo sea reproducible
 resultados/estadisticos/hipotesis.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, ejecutado por la etapa analisis"

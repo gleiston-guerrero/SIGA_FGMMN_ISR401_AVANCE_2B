@@ -16,6 +16,10 @@ Desde la raiz del repositorio recien clonado:
 python 07_Datos/scripts/ejecutar.py
 ```
 
+`python 07_Datos/scripts/run_all.py` es un alias de la misma orden, con las mismas
+opciones: importa el orquestador y lo ejecuta, sin duplicar ninguna etapa. Existe
+porque la lista de verificacion de la guia de cierre la invoca con ese nombre.
+
 Eso reconstruye **todo** el contenido de `datos_procesados/` y de `resultados/` a partir
 unicamente de `datos_crudos/`. **La cadena de analisis estadistico se ejecuta aqui dentro**,
 con los scripts de `scripts/analisis/`, y escribe en `resultados/tablas/`,
@@ -143,6 +147,16 @@ empirico ya verificado. Los datos crudos, los seis scripts de analisis y las 18 
 **los mismos** en los dos sitios, no una version parecida: la etapa `integridad` lo comprueba
 con sumas SHA-256 y falla si alguien edita una sola de las copias. Esa comprobacion es la
 razon por la que la duplicacion es segura.
+
+La guia de cierre del 2026-09-14 pide dejar en `06_Experimento` solo el protocolo, los
+instrumentos y las salidas de la ejecucion original. No se retira su cadena por una razon
+escrita: la guia de desarrollo del 2026-09-02 (seccion 3) y la rubrica de cierre declaran ya
+correcto que el componente empirico este completo "en su cadena: protocolo, registro, datos
+crudos, datos procesados, scripts, Makefile y replicar.py", y la regla de no retroceso de la
+rubrica sanciona retirar evidencia que ya era valida. Lo que la guia de cierre persigue si se
+cumple: **la orden unica de este paquete no llama a nada de `06_Experimento`**, y lo que alli se
+conserva queda como registro de la ejecucion original, atado a esta copia por la etapa
+`integridad`.
 
 ---
 

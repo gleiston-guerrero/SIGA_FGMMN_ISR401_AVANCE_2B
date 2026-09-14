@@ -75,6 +75,8 @@ CABECERAS = {
     "Tipo_efecto": "Effect size (per requirement)",
     "Valor": "Value",
     "IC 95%": "95\\% CI",
+    "n_pares": "Pairs",
+    "interpretable": "Interpretable",
     # tabla_descriptivos
     "Dimensión": "Dimension",
     "Origen": "Source",
@@ -194,15 +196,22 @@ def tabla_hipotesis(resultados_dir, salida_dir):
     fusion["IC 95%"] = fusion.apply(
         lambda r: f"[{r['IC95_inferior']:.3f}, {r['IC95_superior']:.3f}]"
         if pd.notna(r["IC95_inferior"]) else "--", axis=1)
+    # n_pares vale NA porque el efecto compara muestras independientes (25 frente
+    # a 26), no pares; interpretable es el que calcula la etapa efectos.
+    fusion["n_pares"] = fusion["n_pares"].apply(
+        lambda v: "--" if pd.isna(v) or str(v) == "NA" else str(int(v)))
+    fusion["interpretable"] = fusion["interpretable"].map({"si": "yes", "no": "no"})
     # El contraste es el apareado sobre los tres jueces, preregistrado. El
     # tamano del efecto se calcula con el requisito como unidad (25 frente a
     # 26): con n = 3 un efecto estandarizado no tiene intervalo interpretable.
     columnas = ["Dimension", "Prueba", "Estadistico_nombre", "Estadistico_valor",
-                "p_valor", "p_valor_ajustado_holm", "Tipo_efecto", "Valor", "IC 95%"]
+                "p_valor", "p_valor_ajustado_holm", "Tipo_efecto", "Valor", "IC 95%",
+                "n_pares", "interpretable"]
     resultado = fusion[columnas]
     _escribir_tex(resultado, os.path.join(salida_dir, "tabla_hipotesis.tex"),
                   "Paired hypothesis tests by dimension (n = 3 judges) with Holm-Bonferroni correction, "
-                  "and effect sizes with the requirement as the unit (25 human vs. 26 LLM)",
+                  "and effect sizes with the requirement as the unit (25 human vs. 26 LLM; "
+                  "independent groups, so no pairs)",
                   "tab:hipotesis")
 
 
