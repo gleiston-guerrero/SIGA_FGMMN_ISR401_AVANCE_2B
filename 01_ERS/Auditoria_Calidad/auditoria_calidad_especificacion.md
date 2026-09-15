@@ -138,10 +138,14 @@ requisitos con la cadena adelante completa sobre el total. La cadena adelante se
 completa cuando el requisito enlaza a caso de uso, historia de usuario y criterio de
 aceptacion.
 
+Medicion vigente, recalculada el 2026-09-15 sobre `04_Trazabilidad/matriz_trazabilidad.csv`:
+
 | Submetrica | Aritmetica | Resultado | Referencia | Veredicto |
 |---|---|---|---|---|
-| Requisitos con fuente identificada | 23 / 25 | **92,0 %** | 100 % | **No cumple** |
-| Requisitos con cadena adelante completa | 23 / 25 | **92,0 %** | ≥ 90 % | **Cumple** |
+| Requisitos con fuente identificada | 24 / 25 | **96,0 %** | 100 % | **No cumple** |
+| Requisitos con cadena adelante completa | 25 / 25 | **100,0 %** | ≥ 90 % | **Cumple** |
+
+La medicion del 2026-08-31, tras las correcciones que se describen a continuacion, daba 92,0 % en las dos.
 
 **Corregido el 2026-08-31.** La medicion del 29 de agosto daba 48,0 % en la cadena
 adelante y contaba 308 celdas vacias. Al completar la matriz aparecio que el problema no
@@ -161,15 +165,17 @@ era solo de huecos:
 - **Cero celdas vacias.** Toda celda declara ahora si el eslabon existe o por que no
   aplica, porque una celda en blanco no distingue «no procede» de «falta por hacer».
 
-**Lo que sigue sin cumplir, y no se fuerza.** La submetrica de fuente se queda en 92,0 %:
-**RF-24 y RF-25 no proceden de campo**, sino del analisis normativo de los articulos 13 y
-14 de la LOPDP. Inventarles una entrevista de origen seria falsear la traza. Se declaran
-como derivados normativos en
+**Lo que sigue sin cumplir, y no se fuerza.** La submetrica de fuente se queda en 96,0 %:
+**RF-25 no procede de campo**, sino del analisis normativo del articulo 14 de la LOPDP.
+`RF-24`, que tambien figuraba aqui, tiene fuente de campo desde el 2026-09-04 (`EV-21`).
+Inventarle una entrevista de origen a RF-25 seria falsear la traza. Se declara como
+derivado normativo en
 [`04_Trazabilidad/huerfanos_y_cadenas_rotas.md`](../../04_Trazabilidad/huerfanos_y_cadenas_rotas.md),
 con su causa y su accion, que es lo que la guia pide para los huerfanos.
 
-Los dos requisitos que siguen sin cadena completa, **RF-09 y RF-18**, son de prioridad
-Should: el ERS escribe una historia por requisito obligatorio, y estos no lo son.
+La cadena adelante esta completa en los 25 requisitos desde el 2026-09-12, cuando se
+escribieron las historias `HU-22` a `HU-26` y sus criterios para los requisitos Should que
+no las tenian, entre ellos **RF-09 y RF-18**, que hasta entonces quedaban fuera.
 
 ---
 
@@ -311,8 +317,9 @@ al 100 % al descartarse el falso positivo de RF-01, y verificabilidad al reescri
 criterio de RF-14.
 
 **Dos siguen sin cumplir, y ninguna de las dos se maquilla.** Trazabilidad se queda en el
-92 % de la submetrica de fuente porque dos requisitos —RF-24 y RF-25— derivan del analisis
-normativo y no de evidencia de campo; inventarles una fuente seria peor que declararlo.
+96 % de la submetrica de fuente porque RF-25 deriva del analisis normativo y no de evidencia
+de campo; inventarle una fuente seria peor que declararlo. Medida de nuevo el 2026-09-15,
+la cadena adelante llega al 100 % y la fuente al 96,0 %.
 Modificabilidad queda en 4,00 medida sobre la poblacion completa, y la explicacion
 es que el acoplamiento dejo de estar oculto: hoy el valor automatico y el manual coinciden.
 
@@ -334,3 +341,4 @@ despues. La tabla de arriba publica ese par para las seis metricas.
 | 1.0 | 2026-08-29 | Medicion inicial sobre el ERS/SRS v2.0, antes de correcciones |
 | 2.0 | 2026-08-31 | Medicion posterior a las correcciones y a las decisiones de CCB-01. Recalculadas consistencia y modificabilidad; el resumen publica el par antes/despues |
 | 3.0 | 2026-09-05 | Se cierra **Correccion** tras celebrarse INS-01 y REINS-01: 0,04 con un unico defecto residual. Es la ultima de las seis metricas que quedaba sin medir |
+| 4.0 | 2026-09-15 | Se vuelve a medir **Trazabilidad** sobre la matriz vigente: 96,0 % de fuente identificada (RF-25 sigue sin fuente de campo) y 100,0 % de cadena adelante completa. Sigue sin cumplir por la primera submetrica |

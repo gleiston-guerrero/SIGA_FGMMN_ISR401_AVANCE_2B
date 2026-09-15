@@ -749,22 +749,23 @@ generacion falla si la correspondencia con la matriz se rompe en cualquiera de
 los dos sentidos. Dieciocho son ejecutables sobre el prototipo actual; los
 demas exigen un sistema desplegado, y ninguno se presenta como ejecutado.
 
-El \textbf{92,0\,\%} de los requisitos funcionales tiene su fuente de campo
-identificada: 23 de los 25 enlazan a una evidencia \texttt{EV-nn} concreta. Los dos
-restantes proceden de restricciones normativas y no de una entrevista, y se declaran
-as\'i en lugar de asignarles una fuente que no tienen.
+El \textbf{96,0\,\%} de los requisitos funcionales tiene su fuente de campo
+identificada: 24 de los 25 enlazan a una evidencia \texttt{EV-nn} concreta. El restante,
+RF-25, procede del an\'alisis normativo de la LOPDP y no de una entrevista, y se declara
+as\'i en lugar de asignarle una fuente que no tiene.
 
-La matriz \textbf{no est\'a cerrada}. Le faltan cuatro eslabones de la cadena que
-exige la gu\'ia --- clase, proceso, caso de prueba y estado de la traza --- y presenta
-celdas sin completar en las columnas de historia y criterio. Ese hueco se cuantifica
-en la subsecci\'on siguiente y tiene su acci\'on correctiva definida.
+Las cuatro columnas que la gu\'ia a\~nade a la cadena ---clase, proceso, caso de prueba y
+estado de la traza--- est\'an en la matriz, que pas\'o de 13 a 18 columnas, y ninguna celda
+queda en blanco: cada una declara si el eslab\'on existe o por qu\'e no aplica.
 
 \subsection{Hu\'erfanos y cadenas rotas}
 
-El 48,0\,\% de los requisitos tiene la cadena adelante completa hasta criterio de
-aceptaci\'on. Trece requisitos no la tienen y quedan declarados como cadenas
-incompletas, con su causa --- ausencia de enlace a historia o a criterio --- y su acci\'on
-correctiva pendiente. Se declara el hueco en lugar de presentar la matriz como cerrada.
+Los \textbf{25 requisitos funcionales} tienen la cadena adelante completa hasta criterio
+de aceptaci\'on (100,0\,\%). Los cinco de prioridad Should que no la ten\'ian ---RF-06, RF-09,
+RF-14, RF-17 y RF-18--- la cerraron el 2026-09-12 con las historias HU-22 a HU-26 y sus
+criterios. Lo que no cierra de extremo a extremo son las 16 filas descritas arriba, cada
+una con su causa y su acci\'on en \texttt{04\_Trazabilidad/huerfanos\_y\_cadenas\_rotas.md}.
+Las cifras de esta secci\'on se recalculan desde \texttt{04\_Trazabilidad/matriz\_trazabilidad.csv}.
 
 \subsection{L\'inea base congelada}
 
@@ -939,7 +940,7 @@ m\'etrica est\'a en \texttt{01\_ERS/Auditoria\_Calidad/}.
 Completitud      & 100\,\% & $\geq 95$\,\%            & Cumple \\
 Consistencia     & 1,0000 sin conflictos abiertos & $\geq 0{,}98$ y cero conflictos & Cumple \\
 Verificabilidad  & 100\,\% & $\geq 90$\,\%            & Cumple \\
-Trazabilidad     & 92,0\,\% y 92,0\,\% & 100\,\% y $\geq 90$\,\% & No cumple \\
+Trazabilidad     & 96,0\,\% y 100\,\% & 100\,\% y $\geq 90$\,\% & No cumple \\
 Modificabilidad  & 4,00 declarada y comprobable & $\leq 3{,}0$ & No cumple \\
 Correcci\'on     & 0,04 (1 residual / 25 RF) & $\leq 0{,}05$ & Cumple \\
 \bottomrule
@@ -954,6 +955,9 @@ encabezado. La \textbf{verificabilidad} sub\'io al reescribirse el criterio de R
 que exig\'ia recomendaciones «coherentes» sin definir c\'omo comprobarlo. Y la
 \textbf{consistencia} cerr\'o su \'unico conflicto abierto al delimitarse RF-13 y RF-16
 por causa, conforme a la solicitud de cambio SC-01.
+La \textbf{trazabilidad} se volvi\'o a medir el 2026-09-15 sobre la matriz vigente: la
+cadena adelante llega al 100\,\% y la fuente de campo al 96,0\,\%, que sigue sin cumplir la
+referencia porque RF-25 no procede de una entrevista.
 
 La \textbf{correcci\'on} se calcula sobre los defectos residuales tras una
 re-inspecci\'on, y por eso fue la \'ultima en medirse. La inspecci\'on \texttt{INS-01}
@@ -1001,7 +1005,7 @@ Lo que fall\'o & El protocolo se registr\'o despu\'es de recolectar; la desviaci
 Lo que fall\'o & La unidad de an\'alisis se fij\'o en el juez y no en el \'item, con p\'erdida grave de potencia. & Analista l\'ider & Rehacer el an\'alisis por \'item \\
 Lo que fall\'o & Las dependencias entre requisitos no se declararon, y la m\'etrica de modificabilidad enga\~n\'o. & Especificaci\'on & Declararlas y volver a medir \\
 Lo que mejorar & Calibrar a los jueces antes de evaluar, para elevar el acuerdo por encima de justo. & Componente emp\'irico & \'Items de entrenamiento previos \\
-Lo que mejorar & Cerrar la cadena de trazabilidad de los trece requisitos incompletos. & Trazabilidad & Completar la matriz \\
+Lo que mejorar & Obtener fuente de campo para RF-25, el \'unico requisito sin entrevista de origen; la cadena de los trece incompletos se cerr\'o el 2026-09-12. & Trazabilidad & Consultarlo con un participante \\
 Lo que mejorar & Ejecutar la inspecci\'on formal para poder medir la correcci\'on de la especificaci\'on. & Verificaci\'on & Sesi\'on con roles y tiempos \\
 \bottomrule
 \end{tabular}
