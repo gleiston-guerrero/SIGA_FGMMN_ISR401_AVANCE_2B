@@ -28,6 +28,9 @@ valor p ni ninguna conclusion.
   por el que no la tiene, declarado por el equipo en `10_Autoria/notas_campo/sesiones_sin_nota.csv`.
   De veinte sesiones, seis tienen nota y catorce declaran motivo. No se elaboro ninguna nota a
   posteriori.
+- **Verificacion previa y aporte individual firmados** por los tres integrantes el 2026-09-14,
+  en `10_Autoria/`. La verificacion se ejecuto sobre un clon limpio de `8d0a321`, el commit
+  anterior al que los deposita, y el aporte cuenta todos los commits existentes al firmarlo.
 - **Observaciones del docente y su resolucion (apartado 16)**, en el anexo de retrospectiva del
   reporte, con la evidencia de cada una en el repositorio.
 

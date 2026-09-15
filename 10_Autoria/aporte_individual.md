@@ -15,7 +15,7 @@ desde el propio historial. El detalle confirmacion por confirmacion esta en [`..
 | Integrante | Correo institucional | Commits | Primera | Ultima |
 |---|---|---|---|---|
 | Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **173** | 2026-08-30 | 2026-09-13 |
-| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **109** | 2026-08-30 | 2026-09-14 |
+| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **114** | 2026-08-30 | 2026-09-14 |
 | Winston Damian Cedeno Avila | wcedenoa2@uteq.edu.ec | **12** | 2026-09-04 | 2026-09-09 |
 
 Comprobable con `git shortlog -sne main`. El total de esta tabla es una confirmacion
@@ -230,21 +230,21 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias
 
-**Confirmaciones: 109**, de 2026-08-30 a 2026-09-14.
+**Confirmaciones: 114**, de 2026-08-30 a 2026-09-14.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
 | Evidencia de campo y etica | 202 |
-| Documentos de raiz | 88 |
-| Evidencia de autoria | 76 |
+| Documentos de raiz | 96 |
+| Evidencia de autoria | 79 |
 | Producto minimo viable | 43 |
 | Componente empirico | 38 |
 | Manuscrito y deposito | 36 |
 | Paquete de datos | 30 |
 | Otros | 25 |
-| Trazabilidad | 21 |
+| Trazabilidad | 22 |
 | Especificacion de requisitos | 18 |
 | Modelado UML e i* | 7 |
 | Defensa | 5 |
@@ -362,6 +362,11 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `5ec910f` | 2026-09-14 | fix(manuscrito): elimina los desbordes de linea en rutas, en la tabla de trabajos relacionados y en el resumen, sin cambiar el texto |
 | `b9fd4db` | 2026-09-14 | fix(manuscrito): el apartado de uso de IA deja de afirmar parametros de generacion que el registro declara no disponibles |
 | `18bb4eb` | 2026-09-14 | chore(cierre): caratula, bitacora y manifiesto de sumas sobre el manuscrito corregido |
+| `1786a01` | 2026-09-14 | docs(changelog): registra en 2B-1.19.0 las correcciones del manuscrito |
+| `01db1c4` | 2026-09-14 | chore(autoria): pone al dia el aporte individual con el historial del cierre, listo para firmar |
+| `a0f85d3` | 2026-09-14 | docs(reporte): declara 2B-final-v5.8 como linea base vigente y deja de fijar a mano el numero de sumas del manifiesto |
+| `0a01de1` | 2026-09-14 | docs(autoria): el indice de A5 remite al nombre de las notas y a los motivos declarados en la bitacora |
+| `8d0a321` | 2026-09-14 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre la version auditada contra la guia de cierre |
 
 ---
 

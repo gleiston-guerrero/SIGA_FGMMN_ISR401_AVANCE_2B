@@ -8,8 +8,8 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 
 | | |
 |---|---|
-| Comprobado sobre | la copia de trabajo local |
-| Version | `b082104` |
+| Comprobado sobre | un clon limpio del remoto |
+| Version | `8d0a321` |
 
 ---
 
@@ -17,18 +17,18 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 
 | N.º | Comprobacion | Cumple | Detalle |
 |---|---|---|---|
-| 1 | Se clono en carpeta limpia y se compilo el documento principal | Manual | No comprobado: ejecute con --clonar |
-| 2 | El PDF resultante coincide y no tiene referencias sin resolver | Manual | No comprobado: ejecute con --clonar |
+| 1 | Se clono en carpeta limpia y se compilo el documento principal desde el .tex siguiendo unicamente el README | **Si** | Compilado sobre el clon con pdfLaTeX + BibTeX, sin errores |
+| 2 | El PDF resultante coincide con el entregado y no presenta referencias sin resolver | **Si** | 28 paginas regeneradas, 0 referencias sin resolver. La comparacion es por contenido y no por suma: pdfLaTeX incrusta la fecha de compilacion, de modo que dos PDF del mismo fuente nunca son byte a byte iguales |
 | 3 | No existe ningun archivo de cero o un byte cuyo nombre anuncie contenido de evidencia | **Si** | Cero archivos de 0 o 1 byte en todo el arbol |
-| 4 | La comprobacion de sumas termina sin error sobre el clon limpio | **Si** | 998 de 998 sumas correctas |
+| 4 | La comprobacion de sumas termina sin error sobre el clon limpio | **Si** | 1009 de 1009 sumas correctas |
 | 5 | Todos los autores del historial son integrantes declarados con correo institucional | **Si** | 3 autor(es): gsanchezc6@uteq.edu.ec, wcedenoa2@uteq.edu.ec, ymunozq@uteq.edu.ec |
-| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 11 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5, 2B-final-v5.6 |
+| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 12 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5, 2B-final-v5.6, 2B-final-v5.7 |
 | 7 | La carpeta 07_Datos existe y la orden unica de analisis se ejecuta sin error | **Si** | python 07_Datos/scripts/ejecutar.py termino con codigo 0 |
 | 8 | La carpeta 10_Autoria contiene los elementos A1 a A12 | **Si** | Los doce elementos existen y tienen contenido |
 | 9 | Todo numero que aparece en los documentos procede de la salida de un script | Manual | La correspondencia salida-script esta declarada en 07_Publicacion/dataset_zenodo/correspondencia_salidas.csv. Requiere revision humana |
 | 10 | Ningun dato personal aparece en la zona publica del repositorio | **Si** | Ninguna cedula ajena al equipo fuera de la zona restringida, incluida la capa de texto de los PDF. Las 20 apariciones detectadas son las de los propios integrantes, declaradas por ellos en la caratula y en la composicion del equipo, no datos de participantes |
 | 11 | Cada requisito del componente inteligente tiene metrica, unidad, umbral y metodo de verificacion | **Si** | 8 requisitos, todos con los seis atributos |
-| 12 | La URL declarada en la caratula abre el repositorio desde una sesion sin autenticar | Manual | Comprobar en una ventana privada del navegador: https://github.com/gsanchezc6-beep/SIGA_FGMMN_ISR401_AVANCE_2B.git |
+| 12 | La URL declarada en la caratula abre el repositorio desde una sesion sin autenticar | Manual | Comprobar en una ventana privada del navegador: https://github.com/gleiston-guerrero/SIGA_FGMMN_ISR401_AVANCE_2B.git |
 
 ---
 
@@ -96,7 +96,7 @@ el. Se comprueba con `git log --format=%ae -- <archivo>`.
 
 | Firmante | Verifica | Archivos |
 |---|---|---|
-| Cedeno Avila, Winston Damian | Todos los archivos sin ninguna confirmacion suya | 959 |
+| Cedeno Avila, Winston Damian | Todos los archivos sin ninguna confirmacion suya | 970 |
 | Munoz Quinonez, Yeranick Esther | Los que tienen confirmaciones de Cedeno Avila y ninguna suya | 31 |
 | Sanchez Cornejo, Gary Alberto | Los que tienen confirmaciones de los otros dos y ninguna suya | 2 |
 

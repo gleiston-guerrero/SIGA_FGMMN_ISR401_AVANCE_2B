@@ -91,8 +91,9 @@ def main():
                 "--pretty=format:%h" + SEP + "%ae" + SEP + "%ad" + SEP + "%s")
     commits = [l.split(SEP) for l in crudo.split("\n") if l.strip()]
 
-    # El commit que deposita la declaracion no puede constar en ella.
-    commits = commits[:-1]
+    # Se genera ANTES de crear el commit que deposita la declaracion firmada, asi
+    # que se cuentan todos los commits existentes al imprimirla. El del deposito
+    # no puede constar: todavia no existe cuando se firma.
 
     filas, nuevos = [], 0
     for h, correo, fecha, asunto in commits:
