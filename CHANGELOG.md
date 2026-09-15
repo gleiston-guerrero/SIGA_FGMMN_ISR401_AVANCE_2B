@@ -29,6 +29,8 @@ resultados ni conclusion.
 - **`08_Defensa/guion.md` y `libreto_grabacion.md`** dejan de decir que los efectos son grandes.
   `guion.pdf` se regenera desde `guion.md`, del que se habia quedado atras en otros puntos.
 - `08_Defensa/README.md` contaba 13 diapositivas; son 15.
+- Las notas del orador de la diapositiva 7 repetian «grandes en magnitud», y un comentario de
+  `manuscrito_final.tex`, que no se imprime, fijaba como destino el track Posters & Tools de 8 paginas.
 
 ### Cambiado
 
@@ -43,6 +45,7 @@ La etiqueta anotada **`2B-final-v5.9`** se crea sobre el commit final de esta ve
 
 ---
 
+## [2B-1.19.0] - 2026-09-14
 
 Atiende la guia de cierre del Proyecto Fin de Curso emitida por el docente el 2026-09-14:
 apartados 1, 3, 12, 13, 15 y 16. No cambia ningun dato crudo, ninguna puntuacion, ningun
