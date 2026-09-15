@@ -7,7 +7,7 @@ Universidad Tecnica Estatal de Quevedo · ISR-401 · Entrega Final (2B)
 
 ## 1. Correspondencia
 
-La matriz de trazabilidad referencia estos prototipos por su codigo en **22 de sus 74
+La matriz de trazabilidad referencia estos prototipos por su codigo en **22 de sus 75
 filas**, a traves de la columna `ID-Mockup`. La correspondencia entre codigo y archivo no
 estaba escrita en ningun sitio; queda fijada aqui.
 

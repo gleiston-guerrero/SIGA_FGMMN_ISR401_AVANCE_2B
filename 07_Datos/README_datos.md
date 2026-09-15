@@ -77,7 +77,7 @@ python 07_Datos/scripts/ejecutar.py --listar
 | `material_fuente_LLM.txt` | **El corpus fuente comun** del que salieron ambos conjuntos de requisitos: las transcripciones anonimizadas de la segunda ronda de campo, tal como se entregaron al modelo. EV-15 esta suprimida por retiro del consentimiento |
 | `paquete_evaluacion_ciega.md` | El instrumento entregado a los jueces: los 51 enunciados con su identificador ciego, en el orden en que se presentaron |
 | `corpus_rf_rnf_etiquetado.json` | Los requisitos elicitados por el equipo con su trazabilidad: casos de uso, evidencias, componentes y priorizacion |
-| `respuestas_cuestionario.csv` | Las 31 respuestas del cuestionario digital v2.0 (EV-17), anonimas |
+| `respuestas_cuestionario.csv` | Los 32 registros del cuestionario digital v2.0 (EV-17), anonimos; uno deja sin contestar las 18 ultimas preguntas |
 
 Las dos primeras son copias identicas byte a byte de
 `06_Experimento/prompts_llm/material_fuente_LLM.txt` y

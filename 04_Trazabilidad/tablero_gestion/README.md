@@ -73,7 +73,7 @@ usando Jira.
 
 | Archivo | Que es |
 |---|---|
-| `export_tablero_SIGA.csv` | Export del tablero del 2026-09-05, 60 filas |
+| `export_tablero_SIGA.csv` | Export del tablero del 2026-09-05, 61 filas desde que se anadio `RD-01` el 2026-09-06 |
 | `../sincronizacion_tablero.py` | Calcula el porcentaje. Solo biblioteca estandar |
 
 Del export se conservan las columnas con contenido util --clave, resumen, tipo, estado,

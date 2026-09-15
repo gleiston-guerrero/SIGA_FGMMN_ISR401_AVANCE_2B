@@ -25,6 +25,18 @@ matriz, ningun dato ni ninguna conclusion.
   retrospectiva que pedia cerrar esas trece cadenas.
 - **`01_ERS/Auditoria_Calidad/auditoria_calidad_especificacion.md`**, seccion 5 y resumen, con la
   misma medicion y su version 4.0. Se conservan las mediciones del 29 y el 31 de agosto.
+- **`reporte.tex`, grabaciones.** Seguia diciendo «ocho videos y diez audios», el recuento que el
+  docente marco en G8. Ahora da el inventario: 36 grabaciones, 19 de video y 17 de audio, nueve
+  videos y diez audios en la zona publica y diecisiete en el contenedor cifrado.
+- **`reporte.tex`** citaba dos veces `07_Datos/correspondencia_salidas.csv`, que se traslado al
+  deposito de Zenodo el 2026-09-01, y la orden `make all`. Remite ahora a la orden unica de
+  `07_Datos` y al apartado 6 de `07_Datos/README_datos.md`.
+- **Cuestionario EV-17: 32 registros, no 31.** `respuestas_cuestionario.csv` tiene 32 registros,
+  uno de ellos sin contestar las 18 ultimas preguntas, y ninguno esta documentado como excluido.
+  Corregidos `07_Datos/README_datos.md`, las 31 filas del diccionario de datos, la fila 26 de la
+  matriz y el catalogo de evidencias del ERS. Los datos no cambian.
+- `03_Modelado/12_Prototipos_Interfaz/00_LEEME.md` contaba 74 filas de matriz (son 75) y
+  `04_Trazabilidad/tablero_gestion/README.md`, 60 filas de tablero (son 61 desde el 2026-09-06).
 
 ### Cambiado
 
