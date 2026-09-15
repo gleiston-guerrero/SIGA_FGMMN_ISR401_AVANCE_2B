@@ -8,7 +8,41 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
-## [2B-1.19.0] - 2026-09-14
+## [2B-1.19.1] - 2026-09-14
+
+Auditoria final contra la guia de cierre sobre `2B-final-v5.8`: los materiales de la defensa
+seguian presentando los tamanos del efecto retirados. No cambia ningun dato, cifra de
+resultados ni conclusion.
+
+### Corregido
+
+- **`08_Defensa/presentacion.pptx` y su PDF, diapositiva 7.** El titulo y el texto decian
+  «efectos grandes» y la imagen era la figura antigua, con la d apareada sobre tres jueces y un
+  eje hasta -40. Ahora dicen que los efectos, con el requisito como unidad, son pequenos, y la
+  imagen es `07_Datos/resultados/figuras/fig03_tamanos_efecto.png`. La diapositiva 15 lleva la URL
+  del nuevo propietario.
+- **`08_Defensa/folleto_una_hoja.pdf`.** Su tabla mostraba la d apareada con intervalos como
+  [-42.72 ; 0.00]. Ahora muestra el efecto por requisito tomado de `efectos.csv`, y ademas la URL
+  nueva, el DOI del deposito de Zenodo, que figuraba como pendiente, y el track Research de REFSQ
+  2027, que figuraba como Posters & Tools. El folleto no tiene fuente en el repositorio: se
+  corrigio sobre el propio PDF, sin cambiar su maquetacion.
+- **`08_Defensa/guion.md` y `libreto_grabacion.md`** dejan de decir que los efectos son grandes.
+  `guion.pdf` se regenera desde `guion.md`, del que se habia quedado atras en otros puntos.
+- `08_Defensa/README.md` contaba 13 diapositivas; son 15.
+
+### Cambiado
+
+- Portada y historial de versiones del ERS (versiones 4.7 y 4.8), `README.md`, reporte y caratula
+  para la linea base `2B-final-v5.9`. Verificacion previa y aporte individual, de nuevo firmados
+  sobre esta version.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.9`** se crea sobre el commit final de esta version.
+`2B-final-v5.8`, publicada el 2026-09-14, queda historica.
+
+---
+
 
 Atiende la guia de cierre del Proyecto Fin de Curso emitida por el docente el 2026-09-14:
 apartados 1, 3, 12, 13, 15 y 16. No cambia ningun dato crudo, ninguna puntuacion, ningun
