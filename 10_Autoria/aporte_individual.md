@@ -15,7 +15,7 @@ desde el propio historial. El detalle confirmacion por confirmacion esta en [`..
 | Integrante | Correo institucional | Commits | Primera | Ultima |
 |---|---|---|---|---|
 | Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **173** | 2026-08-30 | 2026-09-13 |
-| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **114** | 2026-08-30 | 2026-09-14 |
+| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **119** | 2026-08-30 | 2026-09-14 |
 | Winston Damian Cedeno Avila | wcedenoa2@uteq.edu.ec | **12** | 2026-09-04 | 2026-09-09 |
 
 Comprobable con `git shortlog -sne main`. El total de esta tabla es una confirmacion
@@ -230,24 +230,24 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias
 
-**Confirmaciones: 114**, de 2026-08-30 a 2026-09-14.
+**Confirmaciones: 119**, de 2026-08-30 a 2026-09-14.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
 | Evidencia de campo y etica | 202 |
-| Documentos de raiz | 96 |
-| Evidencia de autoria | 79 |
+| Documentos de raiz | 111 |
+| Evidencia de autoria | 87 |
 | Producto minimo viable | 43 |
 | Componente empirico | 38 |
-| Manuscrito y deposito | 36 |
+| Manuscrito y deposito | 37 |
 | Paquete de datos | 30 |
 | Otros | 25 |
-| Trazabilidad | 22 |
-| Especificacion de requisitos | 18 |
+| Trazabilidad | 24 |
+| Especificacion de requisitos | 21 |
+| Defensa | 14 |
 | Modelado UML e i* | 7 |
-| Defensa | 5 |
 
 ### Confirmaciones
 
@@ -367,6 +367,11 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `a0f85d3` | 2026-09-14 | docs(reporte): declara 2B-final-v5.8 como linea base vigente y deja de fijar a mano el numero de sumas del manifiesto |
 | `0a01de1` | 2026-09-14 | docs(autoria): el indice de A5 remite al nombre de las notas y a los motivos declarados en la bitacora |
 | `8d0a321` | 2026-09-14 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre la version auditada contra la guia de cierre |
+| `82d75a3` | 2026-09-14 | feat(autoria): deposita la verificacion previa y el aporte individual firmados por los tres integrantes el 2026-09-14 |
+| `423bff1` | 2026-09-14 | fix(defensa): presentacion, guion, libreto y folleto presentan los efectos con el requisito como unidad, pequenos, y la URL del nuevo propietario |
+| `4295618` | 2026-09-14 | chore(cierre): CHANGELOG 2B-1.19.1, portada e historial del ERS, README y reporte para la linea base 2B-final-v5.9 |
+| `2ab8533` | 2026-09-14 | chore(cierre): bitacora, caratula para 2B-final-v5.9 y manifiesto de sumas |
+| `12ffaa6` | 2026-09-14 | fix(defensa): las notas del orador de la diapositiva 7 y un comentario del manuscrito dejan de arrastrar lo retirado; caratula, bitacora y manifiesto al dia |
 
 ---
 
