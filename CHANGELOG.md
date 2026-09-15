@@ -35,6 +35,12 @@ matriz, ningun dato ni ninguna conclusion.
   uno de ellos sin contestar las 18 ultimas preguntas, y ninguno esta documentado como excluido.
   Corregidos `07_Datos/README_datos.md`, las 31 filas del diccionario de datos, la fila 26 de la
   matriz y el catalogo de evidencias del ERS. Los datos no cambian.
+- **Rutas que ya no existian.** El reporte situaba el procedimiento de disociacion en
+  `07_Datos/anonimizacion.md`, trasladado al deposito el 2026-09-01, y el reporte y el ERS citaban la
+  carpeta `08_Etica/` del repositorio de la 2A. Remiten ahora a
+  `07_Publicacion/dataset_zenodo/anonimizacion.md` y a `02_Evidencias/Etica/`. Comprobado que ninguna
+  ruta citada en el reporte, el ERS o el manuscrito, ni ningun enlace relativo de los Markdown, apunta
+  a algo inexistente.
 - `03_Modelado/12_Prototipos_Interfaz/00_LEEME.md` contaba 74 filas de matriz (son 75) y
   `04_Trazabilidad/tablero_gestion/README.md`, 60 filas de tablero (son 61 desde el 2026-09-06).
 
