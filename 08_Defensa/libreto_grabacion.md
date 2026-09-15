@@ -191,8 +191,9 @@ diapositiva delante.
 
 > «La tercera parte explica **por qué** no sobrevive nada.
 >
-> Los tamaños del efecto son **grandes en magnitud**, pero sus intervalos de confianza al
-> 95 % **cruzan el cero**. Un intervalo que cruza el cero significa que
+> Los tamaños del efecto, calculados con el requisito como unidad —veinticinco requisitos
+> del equipo frente a veintiséis del modelo—, son **pequeños**, de menos cero coma doce a
+> menos cero coma veintiséis, y sus intervalos de confianza al 95 % **cruzan el cero**. Un intervalo que cruza el cero significa que
 > los datos son compatibles con que la diferencia sea a favor, en contra, o inexistente.
 >
 > Y la razón es el tamaño de muestra. Calculamos la potencia estadística real del estudio:

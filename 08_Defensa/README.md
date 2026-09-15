@@ -20,7 +20,7 @@ fecha de cada alta constan en
 
 | Archivo | Que es |
 |---|---|
-| `presentacion.pdf` | Presentacion de la defensa, 13 diapositivas |
+| `presentacion.pdf` | Presentacion de la defensa, 15 diapositivas |
 | `presentacion.pptx` | La misma presentacion en formato editable |
 | `guion.md` y `guion.pdf` | Guion de la exposicion, con los siete bloques y sus tiempos |
 | `guion_reparto_exposicion.md` | Distribucion de los 25 minutos dentro de la exposicion |

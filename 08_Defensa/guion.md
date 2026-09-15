@@ -82,9 +82,9 @@ una cadena de trazabilidad rota.
 - Mostrar la tabla de hipótesis: **antes** de corregir, Consistencia_interna daba
   p=0,012 (parecía significativo); **después** de Holm-Bonferroni, p=0,059 — ya no
   lo es. Ninguna dimensión sobrevive la corrección.
-- Mostrar la figura de tamaños de efecto con sus intervalos de confianza: efectos
-  grandes en magnitud, pero intervalos que cruzan el cero — mostrar visualmente por
-  qué eso importa.
+- Mostrar la figura de tamaños de efecto con sus intervalos de confianza: con el
+  requisito como unidad (25 frente a 26) los efectos son pequeños, de −0,12 a −0,26,
+  y todos los intervalos cruzan el cero — mostrar visualmente por qué eso importa.
 - Mostrar el cálculo de potencia: con 3 jueces, potencia real = 8,4%; se necesitarían
   34 pares para el 80% convencional. Esto explica por qué los intervalos son tan
   anchos.
