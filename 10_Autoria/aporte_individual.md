@@ -15,7 +15,7 @@ desde el propio historial. El detalle confirmacion por confirmacion esta en [`..
 | Integrante | Correo institucional | Commits | Primera | Ultima |
 |---|---|---|---|---|
 | Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **173** | 2026-08-30 | 2026-09-13 |
-| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **119** | 2026-08-30 | 2026-09-14 |
+| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **127** | 2026-08-30 | 2026-09-15 |
 | Winston Damian Cedeno Avila | wcedenoa2@uteq.edu.ec | **12** | 2026-09-04 | 2026-09-09 |
 
 Comprobable con `git shortlog -sne main`. El total de esta tabla es una confirmacion
@@ -230,24 +230,24 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias
 
-**Confirmaciones: 119**, de 2026-08-30 a 2026-09-14.
+**Confirmaciones: 127**, de 2026-08-30 a 2026-09-15.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
 | Evidencia de campo y etica | 202 |
-| Documentos de raiz | 111 |
-| Evidencia de autoria | 87 |
+| Documentos de raiz | 135 |
+| Evidencia de autoria | 98 |
 | Producto minimo viable | 43 |
 | Componente empirico | 38 |
 | Manuscrito y deposito | 37 |
-| Paquete de datos | 30 |
+| Paquete de datos | 33 |
+| Especificacion de requisitos | 29 |
+| Trazabilidad | 27 |
 | Otros | 25 |
-| Trazabilidad | 24 |
-| Especificacion de requisitos | 21 |
 | Defensa | 14 |
-| Modelado UML e i* | 7 |
+| Modelado UML e i* | 8 |
 
 ### Confirmaciones
 
@@ -372,6 +372,14 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `4295618` | 2026-09-14 | chore(cierre): CHANGELOG 2B-1.19.1, portada e historial del ERS, README y reporte para la linea base 2B-final-v5.9 |
 | `2ab8533` | 2026-09-14 | chore(cierre): bitacora, caratula para 2B-final-v5.9 y manifiesto de sumas |
 | `12ffaa6` | 2026-09-14 | fix(defensa): las notas del orador de la diapositiva 7 y un comentario del manuscrito dejan de arrastrar lo retirado; caratula, bitacora y manifiesto al dia |
+| `83d4fb4` | 2026-09-14 | feat(autoria): deposita la verificacion previa de 12ffaa6 y el aporte individual firmados de nuevo por los tres integrantes el 2026-09-14 |
+| `72dc651` | 2026-09-15 | fix(trazabilidad): el reporte y la auditoria de calidad dan las cifras vigentes de la matriz, 96,0 % de fuente y 100 % de cadena, en lugar de las del 29 y 31 de agosto |
+| `e92db9d` | 2026-09-15 | chore(cierre): CHANGELOG 2B-1.19.2, portada e historial del ERS, README y reporte para la linea base 2B-final-v5.10 |
+| `a9c2741` | 2026-09-15 | chore(cierre): bitacora, caratula para 2B-final-v5.10 y manifiesto de sumas |
+| `686c9b2` | 2026-09-15 | fix(cifras): grabaciones del reporte, referencia a la correspondencia de salidas, 32 registros de EV-17 y dos recuentos de filas, contrastados con su fuente |
+| `01641b0` | 2026-09-15 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre las cifras corregidas |
+| `5c6ed34` | 2026-09-15 | fix(rutas): el reporte y el ERS remiten a 02_Evidencias/Etica y al procedimiento de disociacion del deposito en lugar de carpetas trasladadas |
+| `08878c5` | 2026-09-15 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre las rutas corregidas |
 
 ---
 
@@ -433,4 +441,4 @@ Firma: ______________________________    Fecha: ______________
 
 ---
 
-Generado el 2026-09-14 desde el historial del repositorio.
+Generado el 2026-09-15 desde el historial del repositorio.
