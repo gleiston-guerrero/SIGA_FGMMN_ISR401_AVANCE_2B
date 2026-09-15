@@ -8,6 +8,36 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.2] - 2026-09-15
+
+Auditoria carpeta por carpeta contra la guia de cierre sobre `2B-final-v5.9`: la seccion de
+trazabilidad del reporte mezclaba cifras vigentes con las de finales de agosto. No cambia la
+matriz, ningun dato ni ninguna conclusion.
+
+### Corregido
+
+- **`reporte.tex`, trazabilidad.** Decia que el 92,0 % de los requisitos tenia fuente de campo,
+  que a la matriz le faltaban cuatro eslabones y tenia celdas en blanco, y que el 48,0 % tenia la
+  cadena adelante completa y trece no. Recalculado sobre `04_Trazabilidad/matriz_trazabilidad.csv`:
+  **24/25 = 96,0 %** con fuente (solo RF-25, de origen normativo), **25/25 = 100 %** con la cadena
+  completa desde el 2026-09-12, 18 columnas y ninguna celda en blanco. Corregidos tambien la tabla
+  de metricas de calidad, que sigue en «No cumple» por la submetrica de fuente, y la accion de la
+  retrospectiva que pedia cerrar esas trece cadenas.
+- **`01_ERS/Auditoria_Calidad/auditoria_calidad_especificacion.md`**, seccion 5 y resumen, con la
+  misma medicion y su version 4.0. Se conservan las mediciones del 29 y el 31 de agosto.
+
+### Cambiado
+
+- Portada e historial del ERS (version 4.9), `README.md`, reporte y caratula para la linea base
+  `2B-final-v5.10`. Verificacion previa y aporte individual, firmados de nuevo sobre esta version.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.10`** se crea sobre el commit final de esta version.
+`2B-final-v5.9` queda historica.
+
+---
+
 ## [2B-1.19.1] - 2026-09-14
 
 Auditoria final contra la guia de cierre sobre `2B-final-v5.8`: los materiales de la defensa
