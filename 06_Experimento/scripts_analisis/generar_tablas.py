@@ -215,16 +215,43 @@ def tabla_hipotesis(resultados_dir, salida_dir):
                   "tab:hipotesis")
 
 
-def tabla_acuerdo(resultados_dir, salida_dir):
+# Columna de la tabla de acuerdo -> valor de la columna `jueces` en
+# 07_Datos/resultados/acuerdo_interevaluador_ic.csv, que calcula la etapa
+# acuerdo_ic del paquete de datos con un intervalo por bootstrap de items.
+PARES_IC = {
+    "Cohen_kappa_juez1_juez2": "juez1-juez2",
+    "Cohen_kappa_juez1_juez3": "juez1-juez3",
+    "Cohen_kappa_juez2_juez3": "juez2-juez3",
+    "Fleiss_kappa_3jueces": "los tres",
+}
+
+
+def _intervalos_acuerdo(ruta_ic):
+    """{(criterio, jueces): (inferior, superior)} leido del CSV de intervalos."""
+    ic = pd.read_csv(ruta_ic, encoding="utf-8-sig")
+    return {(r["criterio"], r["jueces"]): (r["IC95_inferior"], r["IC95_superior"])
+            for _, r in ic.iterrows()}
+
+
+def tabla_acuerdo(resultados_dir, salida_dir, ruta_ic=None):
     ruta = os.path.join(resultados_dir, "acuerdo_interevaluador.csv")
     if not os.path.exists(ruta):
         print(f"AVISO: no existe {ruta}; se omite tabla_acuerdo.")
         return
     df = pd.read_csv(ruta, encoding="utf-8-sig")
+    titulo = "Inter-rater agreement: pairwise Cohen kappa and overall Fleiss kappa"
+    if ruta_ic and os.path.exists(ruta_ic):
+        # Cada coeficiente se imprime con su intervalo de confianza del 95 %. El
+        # valor puntual es el de esta tabla; los limites, los del paquete de datos.
+        intervalos = _intervalos_acuerdo(ruta_ic)
+        for col, jueces in PARES_IC.items():
+            df[col] = [
+                "%.3f [%.3f, %.3f]" % ((v,) + intervalos[(dim, jueces)])
+                for dim, v in zip(df["Dimension"], df[col])
+            ]
+        titulo += ", each with its 95% bootstrap confidence interval (10,000 resamples of items)"
     df["Dimension"] = df["Dimension"].str.replace(r"\(1-5\)", "", regex=True)
-    _escribir_tex(df, os.path.join(salida_dir, "tabla_acuerdo.tex"),
-                  "Inter-rater agreement: pairwise Cohen kappa and overall Fleiss kappa",
-                  "tab:acuerdo")
+    _escribir_tex(df, os.path.join(salida_dir, "tabla_acuerdo.tex"), titulo, "tab:acuerdo")
 
 
 def main():
@@ -233,6 +260,8 @@ def main():
     ap.add_argument("--salida", required=True, help="Carpeta tablas/ del reporte")
     ap.add_argument("--procesados", default=None,
                      help="Carpeta datos_procesados/ (por defecto, ../datos_procesados relativo a --entrada)")
+    ap.add_argument("--acuerdo-ic", default=None,
+                     help="CSV con los intervalos del acuerdo (07_Datos/resultados/acuerdo_interevaluador_ic.csv)")
     args = ap.parse_args()
 
     procesados = args.procesados or os.path.join(args.entrada, "..", "datos_procesados")
@@ -240,7 +269,7 @@ def main():
     tabla_descriptivos(procesados, args.salida)
     tabla_supuestos(args.entrada, args.salida)
     tabla_hipotesis(args.entrada, args.salida)
-    tabla_acuerdo(args.entrada, args.salida)
+    tabla_acuerdo(args.entrada, args.salida, args.acuerdo_ic)
 
 
 if __name__ == "__main__":

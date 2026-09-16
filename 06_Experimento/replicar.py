@@ -61,7 +61,9 @@ ETAPAS = [
     ("figuras", [os.path.join(SCRIPTS, "generar_figuras.py"),
                  "--entrada", RES, "--salida", FIGS, "--procesados", PROC]),
     ("tablas", [os.path.join(SCRIPTS, "generar_tablas.py"),
-                "--entrada", RES, "--salida", TABS, "--procesados", PROC]),
+                "--entrada", RES, "--salida", TABS, "--procesados", PROC,
+                "--acuerdo-ic", os.path.join(RAIZ, "07_Datos", "resultados",
+                                             "acuerdo_interevaluador_ic.csv")]),
 ]
 
 

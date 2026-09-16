@@ -94,7 +94,8 @@ figuras: efectos
 	$(PY) $(SCRIPTS)/generar_figuras.py --entrada $(RES) --salida $(FIGS) --procesados $(PROC)
 
 tablas: efectos
-	$(PY) $(SCRIPTS)/generar_tablas.py --entrada $(RES) --salida $(TABS) --procesados $(PROC)
+	$(PY) $(SCRIPTS)/generar_tablas.py --entrada $(RES) --salida $(TABS) --procesados $(PROC) \
+		--acuerdo-ic ../07_Datos/resultados/acuerdo_interevaluador_ic.csv
 
 # ---- Verificacion de integridad de la evidencia -------------------------
 # Todo el material audiovisual vive dentro de este repositorio. Este

@@ -101,7 +101,8 @@ def etapas():
         ("figuras", [script("generar_figuras.py"), "--entrada", EST, "--salida", FIG,
                      "--procesados", PROC]),
         ("tablas", [script("generar_tablas.py"), "--entrada", EST, "--salida", TAB,
-                    "--procesados", PROC]),
+                    "--procesados", PROC,
+                    "--acuerdo-ic", os.path.join(PAQUETE, "resultados", "acuerdo_interevaluador_ic.csv")]),
     ]
 
 
