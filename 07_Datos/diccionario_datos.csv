@@ -95,6 +95,8 @@ resultados/estadisticos/analisis_por_item.csv,IC95_inferior,decimal,n/a,libre,no
 resultados/estadisticos/analisis_por_item.csv,IC95_superior,decimal,n/a,libre,no se admiten,Limite superior del intervalo de confianza del 95 %
 resultados/estadisticos/analisis_por_item.csv,p_ajustado_holm,decimal,probabilidad,0 a 1,no se admiten,Valor p tras el ajuste de Holm-Bonferroni
 resultados/estadisticos/analisis_por_item.csv,significativo_alpha_05,categorico,n/a,Si | No,no se admiten,Si el contraste es significativo al 5 % tras el ajuste
+resultados/estadisticos/analisis_por_item.csv,n_pares,texto,pares,NA,NA cuando las muestras son independientes,"Pares efectivos del calculo; vale NA porque se comparan 25 requisitos con 26, no pares"
+resultados/estadisticos/analisis_por_item.csv,interpretable,categorico,n/a,si | no,no se admiten,"Calculado: si con al menos 10 unidades por grupo, intervalo finito y no degenerado y, para el delta de Cliff, sin cubrir [-1, 1]"
 resultados/estadisticos/efectos.csv,Dimension,categorico,n/a,Completitud(1-5) | Ausencia_ambiguedad(1-5) | Verificabilidad(1-5) | Correccion_fuente(1-5) | Consistencia_interna(1-5),no se admiten,"Generado por scripts/analisis/analizar_resultados.py, etapa efectos, ejecutado por la etapa analisis"
 resultados/estadisticos/efectos.csv,Unidad_analisis,categorico,n/a,requisito,no se admiten,"Unidad sobre la que se calcula el efecto: el requisito, promediando los tres jueces (desviacion 7)"
 resultados/estadisticos/efectos.csv,n_humano,entero,requisitos,25,no se admiten,Requisitos del brazo humano

@@ -81,6 +81,25 @@ def ic_bootstrap(a, b, fn, rng):
     return float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))
 
 
+# Columnas n_pares e interpretable, con la misma regla que la etapa efectos de
+# analizar_resultados.py. Las muestras son independientes (25 requisitos frente
+# a 26), asi que no hay pares: n_pares vale NA y las unidades efectivas son las
+# del grupo mas pequeno. El efecto es interpretable si descansa en al menos
+# UNIDADES_MINIMAS unidades, su intervalo es finito y no degenerado y, para el
+# delta de Cliff, no cubre el recorrido entero [-1, 1].
+UNIDADES_MINIMAS = 10
+
+
+def interpretable(tipo, n_a, n_b, ic_inf, ic_sup):
+    if min(n_a, n_b) < UNIDADES_MINIMAS:
+        return "no"
+    if not (np.isfinite(ic_inf) and np.isfinite(ic_sup) and ic_inf < ic_sup):
+        return "no"
+    if tipo == "delta de Cliff" and ic_inf <= -1 and ic_sup >= 1:
+        return "no"
+    return "si"
+
+
 def holm(ps):
     """p ajustados por Holm-Bonferroni, devueltos en el orden original."""
     m = len(ps)
@@ -137,6 +156,9 @@ def main():
     for f, pa in zip(filas, holm(ps)):
         f["p_ajustado_holm"] = round(pa, 4)
         f["significativo_alpha_05"] = "Si" if pa < 0.05 else "No"
+        f["n_pares"] = "NA"
+        f["interpretable"] = interpretable(f["Tipo_efecto"], f["n_humano"], f["n_llm"],
+                                           f["IC95_inferior"], f["IC95_superior"])
 
     os.makedirs(a.salida, exist_ok=True)
     campos = list(filas[0].keys())
@@ -158,19 +180,25 @@ def main():
     tex = [r"\begin{table}[htbp]", r"\centering",
            r"\caption{Sensitivity analysis with the requirement as the unit of analysis "
            r"(exploratory, post-registration). Human $n=25$, LLM $n=26$; judge scores "
-           r"averaged per item.}",
-           r"\label{tab:por-item}", r"\small", r"\begin{tabular}{lccccc}", r"\toprule",
-           r"Dimension & Human & LLM & Test statistic & $p$ (Holm) & Effect size [95\% CI] \\",
+           r"averaged per item. The groups are independent, so there are no pairs; "
+           r"an effect is interpretable when it rests on at least 10 units per group and "
+           r"its interval is finite and not degenerate.}",
+           r"\label{tab:por-item}", r"\small", r"\resizebox{\textwidth}{!}{%",
+           r"\begin{tabular}{lccccccc}", r"\toprule",
+           r"Dimension & Human & LLM & Test statistic & $p$ (Holm) & Effect size [95\% CI] "
+           r"& Pairs & Interpretable \\",
            r"\midrule"]
     corto = {"Completitud(1-5)": "Completeness", "Ausencia_ambiguedad(1-5)": "Non-ambiguity",
              "Verificabilidad(1-5)": "Verifiability", "Correccion_fuente(1-5)": "Source correctness",
              "Consistencia_interna(1-5)": "Internal consistency"}
     for f in filas:
-        tex.append("%s & %.2f & %.2f & %.3f & %.4f & %.3f [%.3f, %.3f] \\\\" % (
+        tex.append("%s & %.2f & %.2f & %.3f & %.4f & %.3f [%.3f, %.3f] & %s & %s \\\\" % (
             corto[f["Dimension"]], f["Media_Humano"], f["Media_LLM"],
             f["Estadistico"], f["p_ajustado_holm"], f["Tamano_efecto"],
-            f["IC95_inferior"], f["IC95_superior"]))
-    tex += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+            f["IC95_inferior"], f["IC95_superior"],
+            "--" if f["n_pares"] == "NA" else f["n_pares"],
+            "yes" if f["interpretable"] == "si" else "no"))
+    tex += [r"\bottomrule", r"\end{tabular}%", r"}", r"\end{table}"]
     io.open(os.path.join(a.tabla, "tabla_por_item.tex"), "w",
             encoding="utf-8", newline="\n").write("\n".join(tex) + "\n")
 
