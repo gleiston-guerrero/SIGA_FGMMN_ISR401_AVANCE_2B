@@ -142,9 +142,11 @@ indicar origen. Los tres jueces son independientes y ninguno es participante del
 → `06_Experimento/instrumentos/Paquete_Evaluacion_Ciega_Jueces.md`
 
 **D3. ¿Cual es el acuerdo entre evaluadores?**
-Kappa de Fleiss entre 0,29 y 0,34 segun la dimension. En la escala de Landis y Koch es
+Kappa de Fleiss entre 0,29 y 0,34 segun la dimension, con intervalos del 95 % entre 0,14 y
+0,48 (por ejemplo, completitud 0,338 [0,197; 0,467]). En la escala de Landis y Koch es
 acuerdo **justo**, y asi se reporta: no se presenta como bueno.
-→ `06_Experimento/resultados/acuerdo_interevaluador.csv`
+→ `06_Experimento/resultados/acuerdo_interevaluador.csv` y
+`07_Datos/resultados/acuerdo_interevaluador_ic.csv`
 
 **D4. ¿Que resultados obtuvieron?**
 Ninguno significativo tras la correccion de Holm-Bonferroni. La unica dimension con p por

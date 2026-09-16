@@ -11,11 +11,15 @@ Este README declara el estado real de cada elemento. **Los doce estan depositado
 
 ---
 
+La retrospectiva del cierre, con los reclamos presentados y su resolucion, quien hizo que y lo
+aprendido, esta en [`retrospectiva_equipo.md`](retrospectiva_equipo.md); no es uno de los doce
+elementos, pero se guarda aqui porque documenta la autoria de la fase de cierre.
+
 ## Estado de los doce elementos
 
 | Cod. | Elemento | Estado | Que contiene |
 |---|---|---|---|
-| A1 | `bitacora_sesiones.csv` | **Depositado** | Una fila por persona y dia con confirmaciones, desde el 2026-08-30 hasta el ultimo dia con commits del historial. Derivado del historial por `generar_bitacora.py`, que se ejecuta en cada cierre; el numero de filas y la ultima fecha son los del propio archivo. Ningun campo se escribe a mano |
+| A1 | `bitacora_sesiones.csv` | **Depositado** | Una fila por persona y dia con confirmaciones, desde el 2026-08-30 hasta el ultimo dia con commits del historial. Derivado del historial por `generar_bitacora.py`, que se ejecuta en cada cierre; el numero de filas y la ultima fecha son los del propio archivo. Registra todos los commits anteriores al que la regenera: el commit de cierre que la contiene no puede figurar en ella, igual que la caratula no puede nombrar el commit que la deposita. Ningun campo se escribe a mano |
 | A2 | `capturas/` | **Depositado. 3 de 3 por integrante** | Nueve capturas, tres por persona, cada una en su propia maquina. En todas se ven el archivo del proyecto abierto, el reloj del sistema y la sesion de usuario |
 | A3 | Fuentes editables | **Depositado** | En el propio arbol, junto a cada imagen exportada: 44 fuentes y 90 imagenes. Cada fuente con su imagen en la tabla del apartado siguiente y en `fuentes_editables.md`, generados por `generar_fuentes_editables.py` |
 | A4 | `grabaciones/` | **Depositado** | Dos sesiones de trabajo de 15:18 y 15:43 con pantalla compartida y discusion audible, mas 18 capturas tomadas durante ellas |
