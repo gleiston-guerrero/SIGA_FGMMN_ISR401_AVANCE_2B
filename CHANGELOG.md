@@ -8,6 +8,54 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.3] - 2026-09-16
+
+Informe del examen suspenso del 2026-09-16 sobre `2B-final-v5.10` (`98f1a6b`): §3, §15 y §16
+por modificar. No cambia ningun dato, ningun valor estadistico ni ninguna conclusion.
+
+### Anadido
+
+- **`10_Autoria/retrospectiva_equipo.md`** (§16): retrospectiva del cierre, del 12 al 16 de
+  septiembre, con los reclamos presentados y su resolucion, quien hizo que y lo aprendido.
+  Complementa la del 2026-09-05, que sigue en el anexo del reporte.
+- **`10_Autoria/generar_fuentes_editables.py`** (§15): empareja cada una de las 44 fuentes
+  editables con su imagen y escribe la tabla en `10_Autoria/README.md` y en
+  `fuentes_editables.md`. Falla si una fuente queda sin imagen o una imagen sin fuente.
+
+### Cambiado
+
+- **Acuerdo entre evaluadores** (§16). `generar_tablas.py` acepta `--acuerdo-ic` y la tabla de
+  acuerdo imprime cada kappa con su intervalo del 95 %, tomado de
+  `07_Datos/resultados/acuerdo_interevaluador_ic.csv`; el reporte y el manuscrito dan tambien en
+  el texto el intervalo del kappa de Fleiss.
+- **Tabla por requisito** (§16). `analisis_por_item.py` anade `n_pares` (NA, grupos
+  independientes) e `interpretable`, con la misma regla que `efectos.csv`, al CSV, al
+  diccionario de datos y a `tabla_por_item.tex` (columnas *Pairs* e *Interpretable*).
+- **Reporte**: la seccion de retrospectiva enlaza la del cierre, y la tabla de observaciones
+  recoge los tres reclamos del equipo y las observaciones del informe del 2026-09-16 con su
+  resolucion.
+- Portada e historial del ERS (version 4.10), `README.md`, reporte y caratula para la linea base
+  `2B-final-v5.11`.
+
+### Corregido
+
+- **Manuscrito** (§16): la justificacion de la desviacion 4 ya no repite el intervalo apareado
+  retirado.
+- **`10_Autoria/README.md`** (§15): A1 decia «24 filas, del 2026-08-30 al 2026-09-12» y la
+  bitacora tenia 47 hasta el 15/09; ahora remite al propio archivo. A10 y la verificacion previa
+  citan la version firmada vigente (2026-09-15, sobre `08878c5`). `fuentes_editables.md` decia
+  «54 png»: son 47 `.png` y 43 `.svg`.
+- **`10_Autoria/declaracion_uso_ia.md`**: la fecha de actualizacion decia 2026-09-14 con filas
+  del 15; se anade el trabajo del 16 y se precisa quien preparo los paquetes del tramo de cierre.
+- **Bitacora** regenerada: registra `98f1a6b` y los commits de esta version.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.11`** se crea sobre el commit final de esta version.
+`2B-final-v5.10` queda historica.
+
+---
+
 ## [2B-1.19.2] - 2026-09-15
 
 Auditoria carpeta por carpeta contra la guia de cierre sobre `2B-final-v5.9`: la seccion de

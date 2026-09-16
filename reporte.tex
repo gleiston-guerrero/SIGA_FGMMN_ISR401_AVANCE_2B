@@ -775,9 +775,9 @@ Las cifras de esta secci\'on se recalculan desde \texttt{04\_Trazabilidad/matriz
 \subsection{L\'inea base congelada}
 
 {\sloppy
-La versi\'on entregada corresponde a la etiqueta anotada \texttt{2B-final-v5.10}, la
+La versi\'on entregada corresponde a la etiqueta anotada \texttt{2B-final-v5.11}, la
 \'unica vigente, publicada en el remoto y alcanzable desde la rama por defecto. Las
-anteriores, de \texttt{2B-final} a \texttt{2B-final-v5.9}, se conservan solo como referencia
+anteriores, de \texttt{2B-final} a \texttt{2B-final-v5.10}, se conservan solo como referencia
 hist\'orica, tal como declaran \texttt{README.md} y \texttt{CHANGELOG.md}. El manifiesto
 \texttt{checksums.sha256} se genera con \nolinkurl{10_Autoria/generar_manifiesto.py} sobre todos
 los archivos versionados, salvo el propio manifiesto, y comprueba sin error sobre un clon limpio.\par}
@@ -814,7 +814,10 @@ Personales del Ecuador~\cite{asamblea2021lopdp}.
 
 El detalle por categor\'ia, con responsable y acci\'on, est\'a en el
 Anexo~\ref{anx:retrospectiva}, junto con las observaciones que el docente hizo durante
-el proyecto y c\'omo se resolvi\'o cada una (Tabla~\ref{tab:observaciones}). Tres
+el proyecto y c\'omo se resolvi\'o cada una (Tabla~\ref{tab:observaciones}). La
+retrospectiva del cierre, del 12 al 16/09/2026, con los reclamos que present\'o el equipo y su
+resoluci\'on, qui\'en hizo qu\'e y lo aprendido, est\'a en
+\nolinkurl{10_Autoria/retrospectiva_equipo.md}. Tres
 aprendizajes resumen el proyecto.
 
 \textbf{El registro previo no admite improvisaci\'on.} La desviaci\'on m\'as costosa de
@@ -1043,6 +1046,13 @@ Evaluaci\'on 2026-09-14, B4 & Tama\~nos del efecto con intervalos sin sentido so
 Evaluaci\'on 2026-09-14, B1 & La cadena de las tablas segu\'ia en \texttt{06\_Experimento}. & La orden \'unica ejecuta la cadena desde \texttt{07\_Datos}; \texttt{06\_Experimento} conserva la suya, protegida por la regla de no retroceso. & \nolinkurl{07_Datos/scripts/run_all.py} \\
 Gu\'ia de cierre 2026-09-14, \S15 & Faltaban notas de campo frente a las sesiones de elicitaci\'on. & Las seis notas existentes, con el nombre pedido; la bit\'acora declara por qu\'e las otras catorce sesiones no tienen nota. No se elaboraron notas a posteriori. & \nolinkurl{10_Autoria/bitacora_sesiones.csv} \\
 Gu\'ia de cierre 2026-09-14, \S1 & La URL dej\'o de ser can\'onica tras el cambio de propietario. & Car\'atula, \texttt{CITATION.cff}, \texttt{README.md} y enlaces a la entrega 2A actualizados. & \nolinkurl{CITATION.cff} \\
+Reclamo del equipo, 2026-09-12 & Objeciones a la r\'ubrica de cierre: A3, fuentes editables, capturas y EXIF, y composici\'on del equipo. & Aceptadas las cuatro el 2026-09-13. & \nolinkurl{10_Autoria/retrospectiva_equipo.md} \\
+Reclamo del equipo, 2026-09-14 & Escala de factores y factor individual proporcional a los commits. & El docente respondi\'o con la gu\'ia de cierre del examen suspenso, que calcula la nota de otra forma. & \nolinkurl{10_Autoria/retrospectiva_equipo.md} \\
+Reclamo del equipo, 2026-09-16 & El informe recibido citaba un commit, una etiqueta y archivos de otro repositorio. & El docente reconoci\'o el error y recalific\'o sobre \texttt{98f1a6b}. & \nolinkurl{10_Autoria/retrospectiva_equipo.md} \\
+Informe 2026-09-16, \S16 & El manuscrito repet\'ia el intervalo retirado; los $\kappa$ no ten\'ian intervalo; la tabla por requisito no declaraba pares ni interpretabilidad. & Cifra retirada; cada $\kappa$ con su intervalo del 95\,\% en las tablas y en el texto; columnas de pares e interpretabilidad calculadas por script. & \nolinkurl{07_Publicacion/manuscrito_final.tex} \\
+Informe 2026-09-16, \S16 & Faltaba una retrospectiva con el reclamo y su resoluci\'on, qui\'en hizo qu\'e y lo aprendido. & Retrospectiva del cierre, posterior a las correcciones. & \nolinkurl{10_Autoria/retrospectiva_equipo.md} \\
+Informe 2026-09-16, \S15 & Faltaba emparejar cada fuente editable con su imagen, y la descripci\'on de la bit\'acora estaba desfasada. & Tabla fuente-imagen generada por script; la bit\'acora se describe sin un recuento fijo y se regenera en cada cierre. & \nolinkurl{10_Autoria/README.md} \\
+Informe 2026-09-16, \S3 & La etiqueta congelaba un estado con \S15 y \S16 por modificar. & Nueva etiqueta anotada \texttt{2B-final-v5.11} sobre el \'ultimo commit. & \nolinkurl{README.md} \\
 \bottomrule
 \end{longtable}}
 
