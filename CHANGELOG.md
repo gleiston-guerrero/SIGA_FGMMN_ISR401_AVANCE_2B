@@ -8,6 +8,35 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.6] - 2026-09-17
+
+Deposito de la evidencia de autoria firmada sobre la linea base anterior. No cambia ningun
+dato, ningun valor estadistico ni ninguna conclusion.
+
+### Anadido
+
+- **`10_Autoria/verificacion_previa.md` y `.pdf`**: las doce comprobaciones ejecutadas sobre un
+  clon limpio de `e3857ca`, con las diez automaticas en **Si** (la 9 y la 12 son manuales por
+  diseno), firmadas a mano por los tres integrantes el 2026-09-17.
+- **`10_Autoria/aporte_individual.md` · `.pdf` y `04_Trazabilidad/aporte_individual.csv`**:
+  regenerados desde el historial hasta `e3857ca` (173 / 142 / 12 confirmaciones) y firmados por
+  los tres integrantes el 2026-09-17.
+
+### Cambiado
+
+- `10_Autoria/README.md`: A10 y la nota sobre la verificacion previa citan la version firmada
+  vigente (2026-09-17, sobre `e3857ca`) y explican que el PDF son las paginas generadas por el
+  script mas la pagina de firmas escaneada.
+- Portada e historial del ERS (version 4.13), `README.md`, reporte y caratula para la linea base
+  `2B-final-v5.14`; declaracion de IA y bitacora al dia.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.14`** se crea sobre el commit final de esta version.
+`2B-final-v5.13` queda historica.
+
+---
+
 ## [2B-1.19.5] - 2026-09-16
 
 Segunda auditoria del remoto, sobre `2B-final-v5.12` y un clon limpio, contra el informe del
