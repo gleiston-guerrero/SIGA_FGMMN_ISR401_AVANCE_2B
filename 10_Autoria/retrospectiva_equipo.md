@@ -2,7 +2,7 @@
 
 **Proyecto SIGA · Equipo FGMMN · ISR-401 · Universidad Tecnica Estatal de Quevedo**
 
-Fecha: 2026-09-16
+Fecha: 2026-09-16, completada despues de la ultima correccion (`15cfc93`)
 Redactada por: Munoz Quinonez, Yeranick Esther
 
 Complementa la retrospectiva del 2026-09-05, que esta en el anexo «Retrospectiva del equipo»
@@ -25,6 +25,8 @@ que presentamos, como se resolvieron, que hizo cada integrante y que aprendimos.
 | 2026-09-16 | Llega un informe que no corresponde a SIGA: cita el commit `cc6d886` y la etiqueta `cierre-v1.0-final`, que no existen en nuestro repositorio. Se lo indico al docente, que reconoce el error y recalifica | Comunicado por WhatsApp |
 | 2026-09-16 | Informe del examen suspenso sobre `98f1a6b`: 4,00, con §3, §15 y §16 por modificar | Informe del docente |
 | 2026-09-16 | Correcciones de §15 y §16: kappa con intervalo, tabla por requisito con pares e interpretabilidad, cifra retirada del manuscrito, tabla fuente-imagen y esta retrospectiva | Commits `900b9f7` a `7716773`, este archivo y la etiqueta `2B-final-v5.11` |
+| 2026-09-16 | Auditoria del remoto sobre un clon limpio. El manuscrito todavia daba sin intervalo dos kappa del panel ampliado (amenaza T2), y el reporte y el banco de preguntas daban el kappa de Fleiss sin su intervalo. Se corrigen, y el README de autoria explica por que la bitacora no registra su propio commit de cierre | Commit `15cfc93` y etiqueta `2B-final-v5.12` |
+| 2026-09-16 | Segunda auditoria del remoto. Esta retrospectiva era anterior a `15cfc93` y no la recogia; se completa con esa correccion, se corrige una coma en la descripcion de la linea base del `README.md` y se cierra la entrega sobre el ultimo commit | Este archivo y la etiqueta `2B-final-v5.13` |
 
 ## 2. Reclamos presentados y como se resolvieron
 
@@ -39,7 +41,7 @@ que presentamos, como se resolvieron, que hizo cada integrante y que aprendimos.
 | Integrante | Rol declarado | Trabajo en el repositorio |
 |---|---|---|
 | Sanchez Cornejo, Gary Alberto | Analista lider; especificacion, componente empirico e integracion | 173 commits del 2026-08-30 al 2026-09-13: ERS, modelado, componente empirico, paquete de datos hasta `2B-final-v5.7` |
-| Munoz Quinonez, Yeranick Esther | Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias | Commits desde el 2026-08-30. Desde el 2026-09-14, todos los commits de la fase de cierre: correcciones de B4 y B1, guia de cierre, etiquetas `2B-final-v5.8` a `v5.10`, las correcciones de §15 y §16 y la etiqueta `2B-final-v5.11` |
+| Munoz Quinonez, Yeranick Esther | Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias | Commits desde el 2026-08-30. Desde el 2026-09-14, todos los commits de la fase de cierre: correcciones de B4 y B1, guia de cierre, etiquetas `2B-final-v5.8` a `v5.10`, las correcciones de §15 y §16, las dos auditorias posteriores y las etiquetas `2B-final-v5.11` a `v5.13` |
 | Cedeno Avila, Winston Damian | Transcripcion y anonimizacion del corpus | 12 commits del 2026-09-04 al 2026-09-09: transcripciones EV-20 a EV-28, codificacion tematica, doble codificacion, inspecciones INS-01 y REINS-01 y defensa grabada |
 
 Mendoza Palma, Allan Jeremy y Gilces Carranza, Jose Ignacio estan retirados del equipo y no
