@@ -8,6 +8,34 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.4] - 2026-09-16
+
+Auditoria posterior a `2B-final-v5.11` contra el informe del examen suspenso, sobre un clon
+limpio del remoto. No cambia ningun dato, ningun valor estadistico ni ninguna conclusion.
+
+### Corregido
+
+- **Manuscrito, amenaza T2**: decia «with ten raters, Fleiss' kappa fell to −0.008 … −0.026»,
+  pero son medias de las cuatro dimensiones calculadas sobre los siete evaluadores nuevos
+  (`06_Experimento/panel_ampliado/`), y no tienen intervalo. Ahora el texto dice que la media
+  quedo por debajo de cero en las dos vueltas y remite al deposito. Sigue en 15 paginas.
+- **Reporte**: la discusion y las conclusiones dan tambien el intervalo del kappa de Fleiss.
+- **`08_Defensa/banco_preguntas.md`**, respuesta D3: el kappa con su intervalo.
+- **`10_Autoria/README.md`**: A1 explica que la bitacora no puede registrar el commit de
+  cierre que la contiene, y el README enlaza la retrospectiva.
+
+### Cambiado
+
+- Portada e historial del ERS (version 4.11), `README.md`, reporte y caratula para la linea base
+  `2B-final-v5.12`; declaracion de IA y bitacora al dia.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.12`** se crea sobre el commit final de esta version.
+`2B-final-v5.11` queda historica.
+
+---
+
 ## [2B-1.19.3] - 2026-09-16
 
 Informe del examen suspenso del 2026-09-16 sobre `2B-final-v5.10` (`98f1a6b`): §3, §15 y §16
