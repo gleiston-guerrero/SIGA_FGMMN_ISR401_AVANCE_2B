@@ -8,6 +8,33 @@ que existen en el arbol del repositorio en el commit correspondiente.
 
 ---
 
+## [2B-1.19.5] - 2026-09-16
+
+Segunda auditoria del remoto, sobre `2B-final-v5.12` y un clon limpio, contra el informe del
+examen suspenso y la guia de cierre. No cambia ningun dato, ningun valor estadistico ni
+ninguna conclusion.
+
+### Corregido
+
+- **`10_Autoria/retrospectiva_equipo.md`**: se habia confirmado antes de la ultima correccion
+  (`15cfc93`) y no la recogia, aunque el informe pide la retrospectiva fechada despues de las
+  ultimas correcciones. La cronologia registra la auditoria de `2B-final-v5.12` y esta, y la
+  fila de quien hizo que llega hasta `2B-final-v5.13`.
+- **`README.md`**: faltaba una coma en la descripcion de la linea base.
+
+### Cambiado
+
+- Portada e historial del ERS (version 4.12; pasa a 136 paginas), `README.md`, reporte (fila del apartado 3 en la
+  tabla de observaciones) y caratula para la linea base `2B-final-v5.13`; declaracion de IA y
+  bitacora al dia.
+
+### Linea base
+
+La etiqueta anotada **`2B-final-v5.13`** se crea sobre el commit final de esta version.
+`2B-final-v5.12` queda historica.
+
+---
+
 ## [2B-1.19.4] - 2026-09-16
 
 Auditoria posterior a `2B-final-v5.11` contra el informe del examen suspenso, sobre un clon
