@@ -9,7 +9,7 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 | | |
 |---|---|
 | Comprobado sobre | un clon limpio del remoto |
-| Version | `08878c5` |
+| Version | `e3857ca` |
 
 ---
 
@@ -18,11 +18,11 @@ Seccion 11 de la guia de desarrollo del 2026-09-02. Las doce comprobaciones se
 | N.º | Comprobacion | Cumple | Detalle |
 |---|---|---|---|
 | 1 | Se clono en carpeta limpia y se compilo el documento principal desde el .tex siguiendo unicamente el README | **Si** | Compilado sobre el clon con pdfLaTeX + BibTeX, sin errores |
-| 2 | El PDF resultante coincide con el entregado y no presenta referencias sin resolver | **Si** | 28 paginas regeneradas, 0 referencias sin resolver. La comparacion es por contenido y no por suma: pdfLaTeX incrusta la fecha de compilacion, de modo que dos PDF del mismo fuente nunca son byte a byte iguales |
+| 2 | El PDF resultante coincide con el entregado y no presenta referencias sin resolver | **Si** | 29 paginas regeneradas, 0 referencias sin resolver. La comparacion es por contenido y no por suma: pdfLaTeX incrusta la fecha de compilacion, de modo que dos PDF del mismo fuente nunca son byte a byte iguales |
 | 3 | No existe ningun archivo de cero o un byte cuyo nombre anuncie contenido de evidencia | **Si** | Cero archivos de 0 o 1 byte en todo el arbol |
-| 4 | La comprobacion de sumas termina sin error sobre el clon limpio | **Si** | 1009 de 1009 sumas correctas |
+| 4 | La comprobacion de sumas termina sin error sobre el clon limpio | **Si** | 1011 de 1011 sumas correctas |
 | 5 | Todos los autores del historial son integrantes declarados con correo institucional | **Si** | 3 autor(es): gsanchezc6@uteq.edu.ec, wcedenoa2@uteq.edu.ec, ymunozq@uteq.edu.ec |
-| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 14 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5, 2B-final-v5.6, 2B-final-v5.7, 2B-final-v5.8, 2B-final-v5.9 |
+| 6 | Existe etiqueta anotada de linea base, publicada y alcanzable desde la rama por defecto | **Si** | 18 etiqueta(s) anotada(s) y alcanzable(s) desde main: 2B-final, 2B-final-v2.1, 2B-final-v3.0, 2B-final-v4.0, 2B-final-v5.0, 2B-final-v5.1, 2B-final-v5.10, 2B-final-v5.11, 2B-final-v5.12, 2B-final-v5.13, 2B-final-v5.2, 2B-final-v5.3, 2B-final-v5.4, 2B-final-v5.5, 2B-final-v5.6, 2B-final-v5.7, 2B-final-v5.8, 2B-final-v5.9 |
 | 7 | La carpeta 07_Datos existe y la orden unica de analisis se ejecuta sin error | **Si** | python 07_Datos/scripts/ejecutar.py termino con codigo 0 |
 | 8 | La carpeta 10_Autoria contiene los elementos A1 a A12 | **Si** | Los doce elementos existen y tienen contenido |
 | 9 | Todo numero que aparece en los documentos procede de la salida de un script | Manual | La correspondencia salida-script esta declarada en 07_Publicacion/dataset_zenodo/correspondencia_salidas.csv. Requiere revision humana |
@@ -96,7 +96,7 @@ el. Se comprueba con `git log --format=%ae -- <archivo>`.
 
 | Firmante | Verifica | Archivos |
 |---|---|---|
-| Cedeno Avila, Winston Damian | Todos los archivos sin ninguna confirmacion suya | 970 |
+| Cedeno Avila, Winston Damian | Todos los archivos sin ninguna confirmacion suya | 972 |
 | Munoz Quinonez, Yeranick Esther | Los que tienen confirmaciones de Cedeno Avila y ninguna suya | 30 |
 | Sanchez Cornejo, Gary Alberto | Los que tienen confirmaciones de los otros dos y ninguna suya | 2 |
 

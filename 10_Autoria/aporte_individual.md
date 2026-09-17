@@ -15,7 +15,7 @@ desde el propio historial. El detalle confirmacion por confirmacion esta en [`..
 | Integrante | Correo institucional | Commits | Primera | Ultima |
 |---|---|---|---|---|
 | Gary Alberto Sanchez Cornejo | gsanchezc6@uteq.edu.ec | **173** | 2026-08-30 | 2026-09-13 |
-| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **127** | 2026-08-30 | 2026-09-15 |
+| Yeranick Esther Munoz Quinonez | ymunozq@uteq.edu.ec | **142** | 2026-08-30 | 2026-09-16 |
 | Winston Damian Cedeno Avila | wcedenoa2@uteq.edu.ec | **12** | 2026-09-04 | 2026-09-09 |
 
 Comprobable con `git shortlog -sne main`. El total de esta tabla es una confirmacion
@@ -230,23 +230,23 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 
 **Rol:** Documentacion, trazabilidad, auditoria de calidad y gestion de evidencias
 
-**Confirmaciones: 127**, de 2026-08-30 a 2026-09-15.
+**Confirmaciones: 142**, de 2026-08-30 a 2026-09-16.
 
 ### Areas sobre las que trabajo
 
 | Area | Archivos tocados |
 |---|---|
 | Evidencia de campo y etica | 202 |
-| Documentos de raiz | 135 |
-| Evidencia de autoria | 98 |
+| Documentos de raiz | 169 |
+| Evidencia de autoria | 115 |
+| Componente empirico | 43 |
 | Producto minimo viable | 43 |
-| Componente empirico | 38 |
-| Manuscrito y deposito | 37 |
-| Paquete de datos | 33 |
-| Especificacion de requisitos | 29 |
-| Trazabilidad | 27 |
+| Manuscrito y deposito | 43 |
+| Paquete de datos | 42 |
+| Especificacion de requisitos | 38 |
+| Trazabilidad | 28 |
 | Otros | 25 |
-| Defensa | 14 |
+| Defensa | 15 |
 | Modelado UML e i* | 8 |
 
 ### Confirmaciones
@@ -380,6 +380,21 @@ menor que el historial completo, porque la declaracion no puede incluir el commi
 | `01641b0` | 2026-09-15 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre las cifras corregidas |
 | `5c6ed34` | 2026-09-15 | fix(rutas): el reporte y el ERS remiten a 02_Evidencias/Etica y al procedimiento de disociacion del deposito en lugar de carpetas trasladadas |
 | `08878c5` | 2026-09-15 | chore(cierre): bitacora, caratula y manifiesto de sumas sobre las rutas corregidas |
+| `98f1a6b` | 2026-09-15 | feat(autoria): deposita la verificacion previa de 08878c5 y el aporte individual firmados por los tres integrantes el 2026-09-15 |
+| `900b9f7` | 2026-09-16 | feat(analisis): la tabla de acuerdo imprime cada kappa con su intervalo de confianza del 95 % |
+| `ab813d8` | 2026-09-16 | feat(analisis): la tabla por requisito declara pares efectivos e interpretabilidad de cada efecto |
+| `0d01a85` | 2026-09-16 | docs(manuscrito): retira la cifra del intervalo apareado y da los kappa con su intervalo de confianza |
+| `d6e4c5f` | 2026-09-16 | docs(reporte): el acuerdo entre evaluadores se presenta con sus intervalos de confianza |
+| `7716773` | 2026-09-16 | feat(autoria): cada fuente editable se empareja con su imagen, y el README de autoria describe la bitacora, el aporte y la verificacion vigentes |
+| `03a26c0` | 2026-09-16 | docs(autoria): retrospectiva del cierre con los reclamos, su resolucion, quien hizo que y lo aprendido |
+| `0f1e4ac` | 2026-09-16 | chore(cierre): CHANGELOG 2B-1.19.3, portada e historial del ERS, README, reporte y declaracion de IA para la linea base 2B-final-v5.11 |
+| `98889b9` | 2026-09-16 | chore(cierre): bitacora, caratula para 2B-final-v5.11 y manifiesto de sumas |
+| `15cfc93` | 2026-09-16 | fix(auditoria): el manuscrito deja de dar sin intervalo los kappa del panel ampliado, el reporte y el banco de preguntas dan el intervalo del kappa de Fleiss, y el README de autoria explica por que la bitacora no registra su commit de cierre |
+| `6688657` | 2026-09-16 | chore(cierre): CHANGELOG 2B-1.19.4, portada e historial del ERS, README, reporte y declaracion de IA para la linea base 2B-final-v5.12 |
+| `1426e4f` | 2026-09-16 | chore(cierre): bitacora, caratula para 2B-final-v5.12 y manifiesto de sumas |
+| `2258a19` | 2026-09-16 | docs(autoria): la retrospectiva recoge la auditoria posterior a 2B-final-v5.11 y queda fechada despues de la ultima correccion, y el README corrige una coma en la linea base |
+| `022028e` | 2026-09-16 | chore(cierre): CHANGELOG 2B-1.19.5, portada e historial del ERS, README, reporte y declaracion de IA para la linea base 2B-final-v5.13 |
+| `e3857ca` | 2026-09-16 | chore(cierre): bitacora, caratula para 2B-final-v5.13 y manifiesto de sumas |
 
 ---
 
@@ -441,4 +456,4 @@ Firma: ______________________________    Fecha: ______________
 
 ---
 
-Generado el 2026-09-15 desde el historial del repositorio.
+Generado el 2026-09-16 desde el historial del repositorio.

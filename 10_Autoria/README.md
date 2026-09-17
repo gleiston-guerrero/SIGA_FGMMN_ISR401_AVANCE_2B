@@ -28,7 +28,7 @@ elementos, pero se guarda aqui porque documenta la autoria de la fase de cierre.
 | A7 | `doble_codificacion/` | **Depositado** | Las dos hojas de codificacion independientes sobre los mismos 39 fragmentos, el script del acuerdo y sus resultados. Kappa de Cohen **0,548** para el codigo y **0,911** para la categoria, con intervalo por bootstrap |
 | A8 | `correspondencia/` | **Depositado** | Tres capturas de la coordinacion de la ronda terminal y la consulta al docente sobre las firmas de A10 con su respuesta. Datos de terceros censurados |
 | A9 | `declaracion_uso_ia.md` | **Depositado** | Por seccion, incluidas aquellas en las que no se empleo ninguna herramienta |
-| A10 | `aporte_individual.md` · `.pdf` | **Depositado y firmado** | Generado desde el historial por `04_Trazabilidad/generar_aporte_individual.py`. La version firmada vigente cubre el historial hasta `08878c5` y la **firmaron los tres integrantes acreditados el 2026-09-15**; sustituye a las firmadas el 2026-09-04, el 2026-09-12 y el 2026-09-14 |
+| A10 | `aporte_individual.md` · `.pdf` | **Depositado y firmado** | Generado desde el historial por `04_Trazabilidad/generar_aporte_individual.py`. La version firmada vigente cubre el historial hasta `e3857ca` y la **firmaron los tres integrantes acreditados el 2026-09-17**; sustituye a las firmadas el 2026-09-04, el 2026-09-12, el 2026-09-14 y el 2026-09-15. El PDF depositado son las paginas generadas por el script mas la pagina de firmas escaneada tras firmarla a mano |
 | A11 | `exif_inventario.csv` | **Depositado** | Las dos fotografias de A6 con su fecha de captura leida de los metadatos, el dispositivo y el hash. Las dos conservan la fecha |
 | A12 | `.mailmap` | **Depositado** | En la raiz del repositorio, que es donde Git lo lee |
 
@@ -108,8 +108,9 @@ El documento lo firman los tres integrantes acreditados y no nombra a nadie mas.
 seccion 11 de la guia, **ejecutadas sobre un clon limpio del remoto**, no marcadas a mano:
 el detalle de cada una es la salida real de `verificacion_previa.py`.
 
-La version vigente va firmada por **los tres integrantes** el 2026-09-15, sobre el clon limpio
-de `08878c5`, y sustituye a las firmadas el 2026-09-12 y el 2026-09-14. La
+La version vigente va firmada por **los tres integrantes** el 2026-09-17, sobre el clon limpio
+de `e3857ca`, y sustituye a las firmadas el 2026-09-12, el 2026-09-14 y el 2026-09-15. Como en
+A10, el PDF son las paginas generadas por el script mas la pagina de firmas escaneada. La
 guia exige que quien comprueba sea una persona distinta de quien produjo cada artefacto, y
 con un solo firmante eso no se puede cumplir sobre el arbol entero. El reparto **lo calcula
 el script desde el historial, archivo por archivo**: Cedeno Avila verifica lo que no toco,
